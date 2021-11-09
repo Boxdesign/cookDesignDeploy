@@ -1,0 +1,779 @@
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>CookDesign</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" media="print">
+	<link href="https://fonts.googleapis.com/css?family=Lato:400,300,600,700&subset=all" rel="stylesheet" type="text/css"/>
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:400,300,600,700&subset=all" rel="stylesheet" type="text/css" />
+	<style>
+	.table>thead>tr>th {
+		padding: 8px;
+		line-height: 1.42857143;
+		vertical-align: top;
+		border-top: 1px solid #ddd;  
+		font-size: 6px; 
+		font-family: Montserrat;  
+		border-bottom: 1px solid #e2e2d0;   
+
+	}
+
+	.table > tbody > tr > td {
+		font-size: 6px;
+		font-weight: 300 !important;   
+		page-break-before:  always;   
+		margin-top: 4px;  
+		background-color: #F1ECEC;
+		border-bottom: 1px solid #e2e2d0;
+		line-height: 7px;
+	}
+
+	.table-cd > .table > thead > tr > th {
+		text-transform: uppercase;
+		padding-top: 10px;
+		/*background-color: #B3B5B3;*/
+		color: rgba(253, 255, 34, 0.63);
+		font-weight: 400 !important;
+		border-bottom: 1px solid #e2e2d0;
+		background-image: url(<%=images.imgTexture%>);
+		background-color: #F1ECEC;
+		box-shadow: inset 0px -15px 20px -15px rgba(0, 0, 0, 0.47);
+		position: relative;
+		font-family: Lato;
+		page-break-before: auto;
+		/*padding-bottom: 15px !important;*/
+		vertical-align: middle;	
+		line-height: 7px;					
+	}
+
+		/* .table-cd > .tablee > tbody > tr > td {
+			text-transform: uppercase;
+			padding-top: 15px;
+			/*background-color: #B3B5B3;*/
+			/*color: rgba(253, 255, 34, 0.63);
+			font-weight: 400 !important;
+			border-bottom: 2px solid #a0a127;
+			background-image: url(<%=images.imgTexture%>);
+			background-color: #F1ECEC;
+			box-shadow: inset 0px -15px 20px -15px rgba(0, 0, 0, 0.47);
+			position: relative;
+			font-family: Lato;
+			page-break-before: auto;
+			/*padding-bottom: 15px !important;*/
+			/*vertical-align: middle;			
+			} */
+
+			.form-control {
+				width: 100%;
+				/*border: 1px solid rgba(161, 162, 4, 0.31);*/
+				font-weight: 300;
+				font-size: 8px;
+				font-family: "Lato" !important;
+				color: #606051;
+				background: rgba(255, 255, 255, 0.64);
+				margin-bottom: 10px;
+			}
+
+			.control-label {
+				font-size: 8px;
+				margin-bottom: 4px;
+				color: #31312e;
+				font-weight: 400 !important;
+				text-transform: uppercase;
+			}
+
+			body {
+				color: #606051;
+				font-family: "Lato" !important;
+				padding: 0px !important;
+				margin: 0px !important;
+				direction: "ltr";
+				font-size: 8px;
+				font-weight: 300;
+			}
+
+			.form{
+				font-size: 8px;
+				text-transform: uppercase;
+			}
+
+			.form-name{
+				font-size: 12px;
+				text-transform: uppercase;
+				font-family: "Lato" !important;
+
+			}
+
+			.avoid-page-break {
+				page-break-inside: avoid !important;
+				margin: 4px 0 4px 0;  /* to keep the page break from cutting too close to the text in the div */
+				border-bottom: #F1ECEC;
+			}
+			.page-break {
+				page-break-after:always;
+			}
+
+			.page-break-before{
+				page-break-before: always !important;
+			}
+
+			@media print {
+
+				.image{
+					width: 180px !important;
+					height: 165px !important;
+				}
+				.image2{
+					padding-left: 10px !important;
+					margin-left: 10px !important;
+				}
+
+				.cd-line {
+					border-color: #a0a127 !important;
+					margin-top: 4px;
+					margin-bottom: 8px;
+				}
+				.cd-linee {
+					border-color: #FFFFFF !important;
+					margin-top: 0px;
+					margin-bottom: 8px;
+				}
+
+				.cd-line-footer {
+					border-color: #ddd !important;
+					margin-bottom: 6px;
+					height: 0.5px;
+
+				}
+
+				.cd-line-header {
+					border-color: #ddd !important;
+					margin-top: 6px;
+					height: 1px;
+
+				}
+
+				#pageHeader, #pageFooter {
+					font-color: #dddddd !important;
+					font-size: 5px;
+				}
+
+				.title {
+					color: #a0a127 !important;
+					text-align: right;
+					font-size: 10px;
+				}
+
+				.title1 {
+					color: #a0a127 !important;
+					text-align: left;
+					font-size: 10px;
+					margin-left: -15px !important;
+				}
+
+				.contains {
+					color: red !important;
+					font-size: 8px;
+
+				}
+
+				.contains-traces {
+					color: orange !important;
+					font-size: 8px;
+
+				}
+
+				.does-not-contain {
+					color: grey !important;
+					font-size: 8px;
+				}
+
+				.table-cd > .table > thead > tr > th {
+					border-bottom: #F1ECEC !important;
+					color: rgba(253, 255, 34, 0.63) !important;
+
+					/*border-bottom: none !important;*/
+				}
+
+				.form-control {
+					border:none;
+				}
+
+				.table-cd > .table > tbody > tr:first-child> td {
+					border-top: none !important;
+					border-bottom: 1px solid #e2e2d0;
+					color: rgba(253, 255, 34, 0.63) !important;
+					font-size: 7px;
+					font-weight: 300 !important;   
+					page-break-before:  always;   
+					margin-top: 6px;  
+					line-height:px;
+
+
+				}
+				.table-cd > .table > tbody > tr > td {
+					border-top: none !important;
+					/*background-color: #F1ECEC !important;*/
+					color: rgba(253, 255, 34, 0.63) !important;
+					font-size: 7px;
+					font-weight: 300 !important;   
+					page-break-before:  always;   
+					margin-top: 6px;  
+					border-bottom: 1px solid #e2e2d0;
+					line-height: 7px;
+
+
+				}
+
+				.table-cd > .tablee > tbody > tr > td {
+					border-top: none !important;
+					background-color: #F1ECEC !important;
+					color: rgba(253, 255, 34, 0.63) !important;
+					font-size: 7px;
+					font-weight: 300 !important;   
+					page-break-before:  always;   
+					margin-top: 6px;  
+					border-bottom: none;	
+					line-height: 7px;	
+					width: 100%;		
+
+				}
+				.mainProduct {
+					vertical-align: middle;
+				}
+
+				.sauce {
+					vertical-align: middle;
+				}
+
+				.dressing {
+					vertical-align: middle;
+				}
+				.addition {
+					vertical-align: middle;
+				}
+
+
+				#tablecomp tr td:nth-child(1), #tablecomp tr th:nth-child(1){
+					width:290px !important;
+					line-height: 7px;
+					font-size: 6px !important;
+				}
+				#tablecomp tr td:nth-child(2), #tablecomp tr th:nth-child(2){
+					width:90px !important;
+					line-height: 7px;
+					font-size: 6px !important;
+				}
+
+				#tablecomp2 tr td:nth-child(1), #tablecomp2 tr th:nth-child(1){
+					width:30px !important;
+					vertical-align: middle;
+					line-height: 7px;
+					font-size: 6px !important;
+				}
+				#tablecomp2 tr td:nth-child(2), #tablecomp2 tr th:nth-child(2){
+					width:265px !important;
+					line-height: 7px;
+					font-size: 6px !important;
+				}
+				#tablecomp2 tr td:nth-child(3), #tablecomp2 tr th:nth-child(3){
+					width:85px !important;
+					line-height: 7px;
+					font-size: 6px !important;
+				}
+				#dishTable tr td:nth-child(1), #dishTable tr th:nth-child(1){
+					width:20% !important;
+					line-height: 7px;
+					font-size: 7px;
+					vertical-align: middle !important;
+				}
+				#dishTable tr td:nth-child(2), #dishTable tr th:nth-child(2){
+					width:60% !important;
+					line-height: 7px;
+					font-size: 7px;
+					vertical-align: middle !important;
+				}
+				#dishTable tr td:nth-child(3), #dishTable tr th:nth-child(3){
+					width:20% !important;
+					line-height: 7px;
+					font-size: 7px;
+					vertical-align: middle !important;
+				}
+
+				#dishTable2 tr td:nth-child(1), #dishTable2 tr th:nth-child(1){
+					width: 250px !important;
+					line-height: 7px;
+					font-size: 7px;
+					vertical-align: middle !important;
+				}
+				#dishTable2 tr td:nth-child(2), #dishTable2 tr th:nth-child(2){
+					width: 50px !important;
+					line-height: 7px;
+					font-size: 7px;
+					vertical-align: middle !important;
+				}
+				img.resize{
+					width: 130px !important;
+					height: 120px !important;
+				}
+				.paddingTop{
+					margin-top: 10px !important;
+					padding-top: 10px !important;
+					padding-bottom: 5px!important;
+				}
+
+				.imageAllergen{
+					margin-top: 8px !important;
+					align-content: center !important;
+					margin-right: 5px !important;
+					margin-bottom: 2px !important;
+					width: 18px !important;
+					height: 18px !important;
+				}
+
+				.textAllergen{
+					text-align: center !important;
+					margin-right: 5px !important;
+					margin-bottom: 2px !important;
+				}
+
+				.allergens1 {
+					color: red !important;
+					font-size: 4px;
+
+				}
+
+				.allergens2 {
+					color: orange !important;
+					font-size: 4px;
+				}
+
+				img.pageHeaderDefault{
+					width: 27px !important;
+					height:20px !important;
+					margin-bottom: 8px !important;
+				}
+
+				.compostionElementMargin{
+					float: left;
+					margin-bottom: 3px !important;
+					display: block !important;
+					font-weight: normal;
+					margin-left: -40px;
+					width: 100%;
+				}
+
+				.category{
+					float: left;
+					margin-bottom: 10px;
+					display: block !important;
+					font-weight: bold;
+					margin-left: -40px;
+					width: 100%;
+					margin-top: 7px;
+				}
+
+				.totalsColor{
+					color: #a0a127 !important;
+					font-size: 8px !important; 
+					font-weight: normal !important;
+				}
+			}
+		</style>		
+	</head>
+	<body>
+		<div class="row">
+			<div class="col-xs-4">
+
+			</div>
+			<div class="col-xs-offset-11">
+				<img src="<%=images.imgLogo%>" style="align-content: right;">
+			</div>
+
+		</div>
+		<div id="pageHeader-first">
+
+		</div> 
+		<div id="pageHeader">
+			<span class="pull-right"><%= i18n.__('recipe').toUpperCase() %>: <%= recipe.versions.lang.name.toUpperCase() %></span>
+		</div>
+		<h6 class="title"><%= i18n.__('descriptive').toUpperCase() %></h6>
+		<hr class="cd-line" size="3" />
+		<div class="row">
+			<div class="col-xs-12">
+				<div class="form-body">
+					<div class="row" >
+						<div class="col-xs-12"  style="margin-bottom: -40px !important;">
+							<div class="row">
+								<div class="col-xs-7">
+									<div class="row">
+										<div class="col-xs-12">
+											<div class="form-name">
+												<%= recipe.versions.lang.name %>                       
+											</div>
+										</div>
+									</div>
+									<hr class="cd-linee" size="0" />
+									<div class="row">
+										<div class="col-xs-5">
+											<h7 class="title"><%= i18n.__('family').toUpperCase() %></h7>
+											<hr class="cd-line" size="1" />
+											<div class="form-group">
+												<!-- <label for="family" class="control-label"><%= i18n.__('family').toUpperCase() %></label> -->
+												<% if (recipe.family) { %>
+												<%= recipe.family.lang[0].name.toUpperCase() %>
+												<% } else { %>
+												---
+												<% } %>    
+											</div>
+										</div>
+										<div class="col-xs-5">
+											<h7 class="title"><%= i18n.__('subfamily').toUpperCase() %></h7>
+											<hr class="cd-line" size="1" />
+											<div class="form-group">
+												<!-- <label for="subfamily" class="control-label"><%= i18n.__('subfamily').toUpperCase() %></label> -->
+												<% if (recipe.subfamily) { %>
+												<%= recipe.subfamily.lang[0].name.toUpperCase() %>
+												<% } else { %>
+												---
+												<% } %>                        
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="col-xs-4 pull-right border-top image">
+									<div>
+										<% if(recipe.versions.gallery) { %>
+										<img class="img-fluid" src="<%=recipe.versions.gallery.sizes[1].url%>" alt="Responsive image">
+										<% } else { %>
+										<img class="image2 img-fluid" src="<%=images.imgPlaceholder%>" alt="Responsive image">
+										<% } %>
+									</div>
+								</div>
+							</div>	
+						</div>
+						<div class="col-xs-12" style="width: 100% !important; margin-bottom: 10px !important;">
+							<div class="row">
+								<div class="col-xs-6">
+									<h7 class="title"><%= i18n.__('allergen').toUpperCase() %></h7>
+									<hr class="cd-line" size="1" />
+									<div class="row">
+										<div class="col-xs-12">
+											<% if(allergens.length > 0){%>
+											<%_.each(allergens,function(allergen,key,list) {%>
+											<div class="pull-left">
+												<div class="imageAllergen">
+													<img src="<%= allergen.allergen.gallery.sizes[0].url %>">
+												</div>
+												<div class="textAllergen">
+													<% if (allergen.level==1){%>
+													<span class="allergens2"><%= allergen.allergen.lang[0].name %></span>
+													<%} else {%>
+													<span class="allergens1"><%= allergen.allergen.lang[0].name %></span>
+													<%}%>
+												</div>
+											</div>												
+											<%});%>
+											<%} else {%>
+											<span>---</span>
+											<%}%>
+										</div>
+									</div>
+								</div>
+								<div class="col-xs-6">
+									<h7 class="title"><%= i18n.__('caducity').toUpperCase() %></h7>
+									<hr class="cd-line" size="1" />
+									<div class="row" style="margin-top: 10px !important; font-size: 8px !important;">
+										<div class="col-xs-5">
+											<% if(recipe.caducityFresh && recipe.caducityFresh.value){%>
+											<span class="form-group" style="margin-right: 3px !important; color: #a0a127 !important;"><%= i18n.__('fresh').toUpperCase() %>:</span><span><%= recipe.caducityFresh.value %>&nbsp;<%= recipe.caducityFresh.timeUnit %></span>
+											<% } else { %>
+											<span class="form-group" style="margin-right: 3px !important;color: #a0a127 !important;"><%= i18n.__('fresh').toUpperCase() %>:</span><span>---</span>
+											<%}%>
+										</div>
+										<div class="col-xs-5">
+											<% if(recipe.caducityFresh && recipe.caducityFreeze.value){%>
+											<span class="form-group" style="margin-right: 3px !important; color: #a0a127 !important;"><%= i18n.__('freeze').toUpperCase() %>:</span><span><%= recipe.caducityFreeze.value %>&nbsp;<%= recipe.caducityFreeze.timeUnit %></span>
+											<% } else { %>
+											<span class="form-group" style="margin-right: 3px !important;color: #a0a127 !important;"><%= i18n.__('freeze').toUpperCase() %>:</span><span>---</span>
+											<%}%>
+										</div><br>
+										<div class="col-xs-5" style="margin-top: 5px !important;">
+											<% if(recipe.caducityFresh && recipe.daysToUse.value){%>
+											<span class="form-group" style="margin-right: 3px !important;color: #a0a127 !important;"><%= i18n.__('daysToUse').toUpperCase() %>:</span><span><%= recipe.daysToUse.value %>&nbsp;<%= recipe.daysToUse.timeUnit %></span>
+											<% } else { %>
+											<span class="form-group" style="margin-right: 3px !important;color: #a0a127 !important;"><%= i18n.__('daysToUse').toUpperCase() %>:</span><span>---</span>
+											<%}%>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-xs-12">			
+							<div class="row">
+								<div class="col-xs-5">
+									<h7 class="title"><%= i18n.__('composition').toUpperCase() %></h7>
+								</div>
+								<div class="col-xs-7">
+									<h7 class="title"><%= i18n.__('cookingSteps').toUpperCase() %></h7>
+								</div>
+							</div>
+							<hr class="cd-line" size="1" />
+							<div class="avoid-page-break">
+								<div class="row">
+									<div class="col-xs-5">
+										<div class="table-cd">
+											<% if (recipeType == 'dish') { %>
+												<ul>
+													<%_.each(composition,function(compositionElement,key,list){%>
+													<% if(compositionElement.init == true){ %>
+													<div class="category">
+														<% if(compositionElement.category =='mainProduct'){ %>							
+														<span class="mainProduct"><%= i18n.__('P').toUpperCase() %></span>			
+														<% } else if(compositionElement.category =='sauce'){ %>
+														<span class="sauce"><%= i18n.__('S').toUpperCase() %></span>	
+														<% } else if(compositionElement.category =='dressing'){ %>
+														<span class="dressing"><%= i18n.__('D').toUpperCase() %></span>
+														<%} else if(compositionElement.category =='addition'){ %>
+														<span class="addition"><%= i18n.__('A').toUpperCase() %></span>
+														<%}%>
+													</div><br>
+													<div class="compostionElementMargin">
+														<div class="pull-left">
+															<span style="font-size: 8px !important; font-weight: normal !important;"><%=compositionElement.name%></span>
+														</div>
+														<div class="pull-right" style="margin-right: -20px !important;">
+															<% if(compositionElement.grossWeight) { %>
+															<span style="font-size: 8px !important; font-weight: normal !important;"><%= compositionElement.grossWeight.toFixed(3) %> <%=compositionElement.baseUnitShortName%></span>	
+															<% } else { %>
+															<span style="font-size: 8px !important; font-weight: normal !important;">---</span>
+															<%}%>
+														</div>
+													</div>
+													<br>
+													<% } else { %>
+													<div class="compostionElementMargin">
+														<div class="pull-left">
+															<span style="margin-right: 3px !important; font-size: 8px !important; font-weight: normal !important;"><%=compositionElement.name%></span>
+														</div>
+														<div class="pull-right" style="margin-right: -20px !important;">
+															<% if(compositionElement.grossWeight) { %>
+															<span style="font-size: 8px !important; font-weight: normal !important;"><%=compositionElement.grossWeight.toFixed(3) %>  <%=compositionElement.baseUnitShortName %></span>	
+															<% } else { %>
+															<span style="font-size: 8px !important; font-weight: normal !important;">---</span>
+															<%}%>
+														</div>
+													</div>
+													<br>
+													<%}%>
+													<%});%>
+													<div class="compostionElementMargin">
+														<div class="pull-left">
+															<span class="totalsColor" style="margin-right: 3px !important;"><%= i18n.__('totals')%></span>
+														</div>
+														<div class="pull-right" style="margin-right: -20px !important;">
+															<% if(compTotals) { %>
+															<span class="totalsColor"><%= (compTotals.grossWeight).toFixed(3) %> <%=recipe.measurementUnit.referenceCode%></span>	
+															<% } else { %>
+															<span class="totalsColor">---</span>
+															<%}%>
+														</div>
+													</div>
+												</ul>
+											<% }; %>
+											<% if (recipeType == 'drink') { %>
+												<ul>
+													<%_.each(composition,function(compositionElement,key,list){%>
+													<% if(compositionElement.init == true){ %>
+													<div class="category">
+														<% if(compositionElement.category =='mainProduct'){ %>							
+														<span class="mainProduct"><%= i18n.__('P').toUpperCase() %></span>			
+														<% } else if(compositionElement.category =='dressing'){ %>
+														<span class="dressing"><%= i18n.__('D').toUpperCase() %></span>
+														<%} else if(compositionElement.category =='addition'){ %>
+														<span class="addition"><%= i18n.__('A').toUpperCase() %></span>
+														<%}%>
+													</div><br>
+													<div class="compostionElementMargin">
+														<div class="pull-left">
+															<span style="font-size: 8px !important; font-weight: normal !important;"><%=compositionElement.name%></span>
+														</div>
+														<div class="pull-right" style="margin-right: -20px !important;">
+															<% if(compositionElement.grossWeight) { %>
+															<span style="font-size: 8px !important; font-weight: normal !important;"><%= compositionElement.grossWeight.toFixed(3) %> <%=compositionElement.baseUnitShortName%></span>	
+															<% } else { %>
+															<span style="font-size: 8px !important; font-weight: normal !important;">---</span>
+															<%}%>
+														</div>
+													</div>
+													<br>
+													<% } else { %>
+													<div class="compostionElementMargin">
+														<div class="pull-left">
+															<span style="margin-right: 3px !important; font-size: 8px !important; font-weight: normal !important;"><%=compositionElement.name%></span>
+														</div>
+														<div class="pull-right" style="margin-right: -20px !important;">
+															<% if(compositionElement.grossWeight) { %>
+															<span style="font-size: 8px !important; font-weight: normal !important;"><%=compositionElement.grossWeight.toFixed(3) %>  <%=compositionElement.baseUnitShortName %></span>	
+															<% } else { %>
+															<span style="font-size: 8px !important; font-weight: normal !important;">---</span>
+															<%}%>
+														</div>
+													</div>
+													<br>
+													<%}%>
+													<%});%>
+													<div class="compostionElementMargin">
+														<div class="pull-left">
+															<span class="totalsColor" style="margin-right: 3px !important;"><%= i18n.__('totals')%></span>
+														</div>
+														<div class="pull-right" style="margin-right: -20px !important;">
+															<% if(compTotals) { %>
+															<span class="totalsColor"><%= (compTotals.grossWeight).toFixed(3) %> <%=recipe.measurementUnit.referenceCode%></span>	
+															<% } else { %>
+															<span class="totalsColor">---</span>
+															<%}%>
+														</div>
+													</div>
+												</ul>
+											<% }; %>
+											<% if(recipeType == 'subproduct') { %>
+												<ul>
+													<%_.each(composition,function(compositionElement,key,list){%>
+													<div class="compostionElementMargin">
+														<div class="pull-left">
+															<span style="margin-right: 3px !important; font-size: 8px !important; font-weight: normal !important;"><%=compositionElement.name%></span>
+														</div>
+														<div class="pull-right" style="margin-right: -20px !important;">
+															<% if(compositionElement.grossWeight) { %>
+															<span style="font-size: 8px !important; font-weight: normal !important;"><%=compositionElement.grossWeight.toFixed(3) %>  <%=compositionElement.baseUnitShortName %></span>	
+															<% } else { %>
+															<span style="font-size: 8px !important; font-weight: normal !important;">---</span>
+															<%}%>
+														</div>
+													</div>
+													<br>
+													<%});%>
+													<div class="compostionElementMargin">
+														<div class="pull-left">
+															<span class="totalsColor" style="margin-right: 3px !important;"><%= i18n.__('totals')%></span>
+														</div>
+														<div class="pull-right" style="margin-right: -20px !important;">
+															<% if(compTotals) { %>
+															<span class="totalsColor"><%= (compTotals.grossWeight).toFixed(3) %> <%=recipe.measurementUnit.referenceCode%></span>	
+															<% } else { %>
+															<span class="totalsColor">---</span>
+															<%}%>
+														</div>
+													</div>
+												</ul>
+											<%};%>
+											<% if(recipeType == 'product') { %>
+												<ul>
+													<%_.each(composition,function(compositionElement,key,list){%>
+													<div class="compostionElementMargin">
+														<div class="pull-left">
+															<span style="margin-right: 3px !important; font-size: 8px !important; font-weight: normal !important;"><%=compositionElement.name%></span>
+														</div>
+														<div class="pull-right" style="margin-right: -20px !important;">
+															<% if(compositionElement.grossWeight) { %>
+															<span style="font-size: 8px !important; font-weight: normal !important;"><%=compositionElement.grossWeight.toFixed(3) %>  <%=compositionElement.baseUnitShortName %></span>	
+															<% } else { %>
+															<span style="font-size: 8px !important; font-weight: normal !important;">---</span>
+															<%}%>
+														</div>
+													</div>
+													<br>
+													<%});%>
+													<div class="compostionElementMargin">
+														<div class="pull-left">
+															<span class="totalsColor" style="margin-right: 3px !important;"><%= i18n.__('totals')%></span>
+														</div>
+														<div class="pull-right" style="margin-right: -20px !important;">
+															<% if(compTotals) { %>
+															<span class="totalsColor"><%= (compTotals.grossWeight).toFixed(3) %> <%=recipe.measurementUnit.referenceCode%></span>	
+															<% } else { %>
+															<span class="totalsColor">---</span>
+															<%}%>
+														</div>
+													</div>
+												</ul>
+											<%};%>
+										</div>						
+									</div>
+									<div class="col-xs-7">
+							<!-- <h7 class="title"><%= i18n.__('cookingSteps').toUpperCase() %></h7>
+								<hr class="cd-line" size="3" /> -->
+								<% if(cookingSteps.length > 0) { %>
+								<div class="table-cd">
+									<table class="table table-condensed">
+									<!-- <thead class="border: green;">
+										<tr>
+											<th>#</th>
+											<th>PROCESO&nbsp;CULINARIO</th>
+											<th>DESCRIPCION</th>
+										</tr>
+									</thead> -->
+									<tbody>
+										<%_.each(cookingSteps,function(cookingStep,key,list){%>
+										<tr>
+											<td width="5%"><div><%= key+1 %></div></td>
+											<td width="15%"><div><%=cookingStep.process.lang[0].name%></div></td>
+											<td width="40%"><div><%=cookingStep.lang.description%></div></td>
+											<td width="20%"><div><%=cookingStep.utensil.lang[0].name %></div></td>
+											<% if(cookingStep.time == 0 || !cookingStep.time){ %> 
+											<td width="10%"><div>---</div></td>
+											<%} else { %> 
+											<% if(cookingStep.timeUnit){ %>
+											<td width="10%"><div><%=cookingStep.time  %> <span><% if(cookingStep.timeUnit == 'seconds'){ %> s. <%} else if(cookingStep.timeUnit == 'minutes'){ %> m. <%} else if(cookingStep.timeUnit == 'hours'){%> h.<%}%></span></div></td>
+											<% } else { %>
+											<td width="10%"><div><%=cookingStep.time  %> <%=i18n.__('min')%></div></td>
+											<%}%>
+											<%}%>
+											<% if(cookingStep.temperature == 0 || !cookingStep.temperature){ %> 
+											<td width="10%"><div>---</div></td>
+											<%} else { %> 
+											<td width="10%"><div><%=cookingStep.temperature %> <%='ºC'%></div></td>
+											<%}%>
+										</tr>
+										<%
+									});
+									%>
+								</tbody>
+							</table>						
+						</div>
+						<% } else { %> 
+						<div>
+							<span><%= i18n.__('noCookingSteps').toUpperCase() %></span>
+						</div>
+						<%}%>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-xs-12">
+			<%= subCompiled %>
+		</div>
+	</div>
+	<!-- <div style="page-break-after:always;"></div> -->
+	<div id="pageFooter">
+		<hr class="cd-line-footer">
+		<div class="row">
+			<div class="col-xs-5">		
+				<span class="pull-left"><div><%= i18n.__('user').toLowerCase() %><%=':'%><%= recipe.versions.last_account.name.toLowerCase()%></div><div><%= i18n.__('printTime').toLowerCase() %><%= ':'%> <%= date %></div></span>
+			</div>
+			<div class="col-xs-3">
+				<span><p>{{page}}/{{pages}}</p></span>
+			</div>
+			<div class="col-xs-4">
+				<span class="pull-right">CookDesign</span>
+			</div>
+		</div>
+	</div>
+</div>
+</div>
+</body>
+</html>

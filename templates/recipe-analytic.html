@@ -1,0 +1,1378 @@
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>CookDesign</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" media="print">
+	<link href="https://fonts.googleapis.com/css?family=Lato:400,300,600,700&subset=all" rel="stylesheet" type="text/css"/>
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:400,300,600,700&subset=all" rel="stylesheet" type="text/css" />
+	<style>
+		.table>thead>tr>th {
+			padding: 8px;
+			line-height: 1.42857143;
+			vertical-align: top;
+			font-size: 7px; 
+			font-family: Montserrat;         	
+		}
+
+		.tablecomp > tbody > tr > td {
+			font-size: 7px;
+			font-weight: 300 !important;   
+			page-break-before:  always;   
+			margin-top: 4px;  
+			background-color: #F1ECEC !important;
+			line-height: 8px;
+			border-bottom: none !important;
+		}
+
+		.table-cd > .tablee > tbody > tr > td {
+			font-size: 7px;
+			font-weight: 300 !important;   
+			page-break-before:  always;   
+			margin-top: 4px;  
+			background-color: #F1ECEC !important;
+			line-height: 8px;
+			border-bottom: none !important;
+		}
+
+		.table-cd > .tablee > thead > tr > th {
+			text-transform: uppercase;
+			padding-top: 10px;
+			background-color: #B3B5B3;
+			color: rgba(253, 255, 34, 0.63);
+			font-weight: 400 !important;
+			border-bottom: 1px solid #a0a127 !important;
+			background-image: url(<%=images.imgTexture%>);
+			box-shadow: inset 0px -15px 20px -15px rgba(0, 0, 0, 0.47);
+			position: relative;
+			font-family: Lato;
+			page-break-before: auto;
+			/*padding-bottom: 15px !important;*/
+			vertical-align: middle;	
+			font-size: 7px;	
+			line-height: 8px;	
+		}
+		.tablecomp-cd > .tablecomp > thead > tr > th{
+			text-transform: uppercase;
+			padding-top: 10px;
+			background-color: #B3B5B3;
+			color: rgba(253, 255, 34, 0.63);
+			font-weight: 400 !important;
+			box-shadow: inset 0px -15px 20px -15px rgba(0, 0, 0, 0.47);
+			/*position: relative;*/
+			font-family: Lato;
+			page-break-before: auto;
+			/*padding-bottom: 15px !important;*/
+			vertical-align: middle;
+			width: 100%;
+			border-bottom: 1px solid #a0a127 !important;
+
+		}
+
+		.form-control {
+			width: 100%;
+			/*border: 1px solid rgba(161, 162, 4, 0.31);*/
+			font-weight: 300;
+			font-size: 8px;
+			font-family: "Lato" !important;
+			color: #606051;
+			background: rgba(255, 255, 255, 0.64);
+			margin-bottom: 10px;
+		}
+
+		.control-label {
+			font-size: 8px;
+			margin-bottom: 4px;
+			color: #31312e;
+			font-weight: 400 !important;
+			text-transform: uppercase;
+		}
+
+		body {
+			color: #606051;
+			font-family: "Lato" !important;
+			padding: 0px !important;
+			margin: 0px !important;
+			direction: "ltr";
+			font-size: 8px;
+			font-weight: 300;
+		}
+
+		.form{
+			font-size: 8px;
+			text-transform: uppercase;
+		}
+
+		.form-name{
+			font-size: 12px;
+			text-transform: uppercase;
+			font-family: "Lato" !important;
+		}
+
+		.avoid-page-break {
+			page-break-inside: avoid !important;
+			margin: 4px 0 4px 0;  /* to keep the page break from cutting too close to the text in the div */
+		}
+		.avoidcom-page-break {
+			page-break-inside: avoid !important;
+			margin: 4px 0 4px 0;  /* to keep the page break from cutting too close to the text in the div */
+			width: 100%;
+		}
+		.costRecipe > table > tbody> tr >td{
+			background-color: #B5AEAC;
+			font-size: 8px;
+			font-family: "Lato" !important;
+
+		}
+		.page-break-before {
+			page-break-before: always !important;
+			margin: 4px 0 4px 0;  /* to keep the page break from cutting too close to the text in the div */
+		}
+
+		.page-break {
+				page-break-after:always !important;
+		}
+
+		@media print {
+
+			.image{
+				width: 180px !important;
+				height: 165px !important;
+				padding-left: 12px !important;
+				margin-left: 12px !important;
+			}
+			.image2{
+				padding-left: 10px !important;
+				margin-left: 10px !important;
+				margin-bottom: -20px !important;
+			}
+
+
+			.cd-line {
+				border-color: #a0a127 !important;
+				margin-top: 4px;
+				margin-bottom: 8px;
+			}
+			.cd-linee {
+				border-color: #FFFFFF !important;
+				margin-top: 0px;
+				margin-bottom: 8px;
+			}
+
+			.cd-line-footer {
+				border-color: #ddd !important;
+				margin-bottom: 6px;
+				height: 0.5px;
+			}
+
+			.cd-line-header {
+				border-color: #ddd !important;
+				margin-top: 6px;
+				height: 1px;
+			}
+
+			#pageHeader, #pageFooter {
+				font-color: #dddddd !important;
+				font-size: 5px;
+			}
+
+			.title {
+				color: #a0a127 !important;
+				text-align: right;
+				font-size: 10px;
+			}
+
+			.title1 {
+				color: #a0a127 !important;
+				text-align: left;
+				font-size: 10px;
+				margin-left: -15px !important;
+			}
+
+			.contains {
+				color: red !important;
+				font-size: 8px;
+
+			}
+
+			.contains-traces {
+				color: orange !important;
+				font-size: 8px;
+			}
+
+			.does-not-contain {
+				color: grey !important;
+				font-size: 8px;
+			}
+
+			.max{
+				width: 100%;
+			}
+
+			.table-cd > .tablee > thead > tr > th {
+				background-color: #F1ECEC !important;
+				/*color: rgba(253, 255, 34, 0.63) !important;*/
+				line-height: 8px;
+				font-size: 7px;
+				/*border-bottom: 1px solid #a0a127 !important;*/
+				
+			}
+			.tablecomp-cd > .tablecomp > thead > tr > th {
+				background-color: #F1ECEC !important;
+				font-size: 7px;
+				line-height: 8px;
+				/*color: rgba(253, 255, 34, 0.63) !important;*/
+				/*border-bottom: 1px solid #a0a127 !important;*/
+			}
+			.form-control {
+				border:none;
+			}
+
+			.table-cd > .tablee > tbody > tr:first-child > td {
+				/*border-top: none !important;*/
+				background-color: #F1ECEC !important;
+				margin-top: 6px;
+				line-height: 8px;
+				vertical-align: middle !important;
+				/*border-bottom: 0px !important;*/
+			}
+			.tablecomp-cd > tbody > tr:first-child > td {
+				/*border-top: none !important;*/
+				background-color: #F1ECEC !important;
+				margin-top: 6px;
+				line-height: 8px;
+				vertical-align: middle !important;
+				/*border-bottom: 0px !important;*/
+			}
+
+			.tablecomp2-cd > tbody > tr:first-child > td {
+				/*border-top: none !important;*/
+				background-color: #F1ECEC !important;
+				margin-top: 6px;
+				line-height: 8px;
+				vertical-align: middle !important;
+				/*border-bottom: 0px !important;*/
+			}
+
+			.costRecipe > .tablecost > tbody> tr >td{
+				background-color: #B5AEAC;
+				font-size: 8px;
+				font-family: "Lato" !important;
+				color: #a0a127 !important;
+
+			}
+			.mainProduct {
+				font-size: 7px;
+				vertical-align: middle;
+				
+			}
+
+			.sauce {
+				font-size: 7px;
+				vertical-align: middle;
+				
+			}
+
+			.dressing {
+				
+				font-size: 7px;
+				vertical-align: middle;
+				
+			}
+			.addition {
+				
+				font-size: 7px;
+				vertical-align: middle;
+				
+			}
+
+			#tablecomp tr td:nth-child(1), #tablecomp tr th:nth-child(1){
+				width:20% !important;
+				line-height: 7px;
+				font-size: 7px;
+				vertical-align: middle !important;
+			}
+			#tablecomp tr td:nth-child(2), #tablecomp tr th:nth-child(2){
+				width:10% !important;
+				background-color: #BDBDBD !important;
+				text-align: center !important;
+				line-height: 7px;
+				font-size: 7px;
+				vertical-align: middle !important;
+			}
+			#tablecomp tr td:nth-child(3), #tablecomp tr th:nth-child(3){
+				width:10% !important;
+				text-align: center !important;
+				line-height: 7px;
+				font-size: 7px;
+				vertical-align: middle !important;
+			}
+			#tablecomp tr td:nth-child(4), #tablecomp tr th:nth-child(4){
+				width:10% !important;
+				text-align: center !important;
+				line-height: 7px;
+				font-size: 7px;
+				vertical-align: middle !important;
+			}
+			#tablecomp tr td:nth-child(5), #tablecomp tr th:nth-child(5){
+				width:10% !important;
+				background-color: #BDBDBD !important;
+				text-align: center !important;
+				line-height: 7px;
+				font-size: 7px;
+			}
+			#tablecomp tr td:nth-child(6), #tablecomp tr th:nth-child(6){
+				width:10% !important;
+				text-align: center !important;
+				line-height: 7px;
+				font-size: 7px;
+			}
+			#tablecomp tr td:nth-child(7), #tablecomp tr th:nth-child(7){
+				width:10% !important;
+				text-align: center !important;
+				line-height: 7px;
+				font-size: 7px;
+			}
+			#tablecomp tr td:nth-child(8), #tablecomp tr th:nth-child(8){
+				width:10% !important;
+				background-color: #BDBDBD !important;
+				text-align: center !important;
+				line-height: 7px;
+				font-size: 7px;
+			}
+			#tablecomp tr td:nth-child(9), #tablecomp tr th:nth-child(9){
+				width:10% !important;
+				text-align: center !important;
+				line-height: 7px;
+				font-size: 7px;
+			}
+			
+			
+			#tablecomp2 tr td:nth-child(1), #tablecomp2 tr th:nth-child(1){
+				width:3% !important;
+				vertical-align: middle !important;
+				text-align: center !important;
+				line-height: 7px;
+				font-size: 7px;
+				vertical-align: middle !important;
+			}
+
+			#tablecomp2 tr td:nth-child(2), #tablecomp2 tr th:nth-child(2){
+				width:20% !important;
+				line-height: 7px;
+				font-size: 7px;
+				vertical-align: middle !important;
+			}
+			#tablecomp2 tr td:nth-child(3), #tablecomp2 tr th:nth-child(3){
+				width:9% !important;
+				background-color: #BDBDBD !important;
+				text-align: center !important;
+				line-height: 7px;
+				font-size: 7px;
+				vertical-align: middle !important;
+			}
+			#tablecomp2 tr td:nth-child(4), #tablecomp2 tr th:nth-child(4){
+				width:9% !important;
+				text-align: center !important;
+				line-height: 7px;
+				font-size: 7px;
+				vertical-align: middle !important;
+			}
+			#tablecomp2 tr td:nth-child(5), #tablecomp2 tr th:nth-child(5){
+				width:9% !important;
+				text-align: center !important;
+				line-height: 7px;
+				font-size: 7px;
+				vertical-align: middle !important;
+			}
+			#tablecomp2 tr td:nth-child(6), #tablecomp2 tr th:nth-child(6){
+				width:9% !important;
+				background-color: #BDBDBD !important;
+				text-align: center !important;
+				line-height: 7px;
+				font-size: 7px;
+
+			}
+			#tablecomp2 tr td:nth-child(7), #tablecomp2 tr th:nth-child(7){
+				width:9% !important;
+				text-align: center !important;
+				line-height: 7px;
+				font-size: 7px;
+			}
+			#tablecomp2 tr td:nth-child(8), #tablecomp2 tr th:nth-child(8){
+				width:9% !important;
+				text-align: center !important;
+				line-height: 7px;
+				font-size: 7px;
+			}
+			#tablecomp2 tr td:nth-child(9), #tablecomp2 tr th:nth-child(9){
+				width:9% !important;
+				background-color: #BDBDBD !important;
+				text-align: center !important;
+				line-height: 7px;
+				font-size: 7px;
+			}
+			#tablecomp2 tr td:nth-child(10), #tablecomp2 tr th:nth-child(10){
+				width:9% !important;
+				text-align: center !important;
+				line-height: 7px;
+				font-size: 7px;
+			}
+			
+			.values{
+				margin-top: 30px !important;
+				/*padding-top: 20px !important;*/
+				vertical-align: left !important;
+				align-content: left !important;
+				margin-left: -50px !important;
+				padding-left: -50px !important;
+				font-size: 8px !important;
+			}
+
+			.valuess{
+				margin-top: 5px !important;
+				/*padding-top: 20px !important;*/
+				vertical-align: left !important;
+				align-content: left !important;
+				margin-left: -50px !important;
+				padding-left: -50px !important;
+				font-size: 8px !important;
+			}
+
+			.value{
+				margin-top: 30px !important;
+				/*padding-top: 20px !important;*/
+				vertical-align: left !important;
+				align-content: left !important;
+				margin-left: -65px !important;
+				padding-left: -65px !important;
+				font-size: 8px !important;
+			}
+
+			.valuee{
+				margin-top: 15px !important;
+				/*padding-top: 20px !important;*/
+				vertical-align: left !important;
+				align-content: left !important;
+				margin-left: -65px !important;
+				padding-left: -65px !important;
+				font-size: 8px !important;
+				margin-bottom: 10px !important;
+			}
+
+
+			.values1{
+				margin-top: 50% !important;
+				padding-top: 40% !important;
+				vertical-align: left !important;
+				align-content: left !important;
+				margin-left: -50px !important;
+				padding-left: -50px !important;
+				color: #a0a127 !important;
+			}
+			.values2{
+				margin-top: 20px !important;
+				/*padding-top: 20px !important;*/
+				vertical-align: left !important;
+				align-content: left !important;
+				margin-left: -10px !important;
+				padding-left: -10px !important;
+				font-size: 7px !important;
+			}
+			.values3{
+				margin-top: 20px !important;
+				/*padding-top: 20px !important;*/
+				vertical-align: left !important;
+				/*align-content: left !important;*/
+				margin-left: -15px !important;
+				font-size: 7px !important;
+			}
+			.values2drink{
+				margin-top: 30px !important;
+				/*padding-top: 20px !important;*/
+				vertical-align: left !important;
+				align-content: left !important;
+				margin-left: -10px !important;
+				padding-left: -10px !important;
+				font-size: 7px !important;
+			}
+			.values3drink{
+				margin-top: 30px !important;
+				/*padding-top: 20px !important;*/
+				vertical-align: left !important;
+				/*align-content: left !important;*/
+				margin-left: -15px !important;
+				font-size: 7px !important;
+			}
+			img.resize{
+				width: 130px !important;
+				height: 120px !important;
+			}
+			.paddingTop{
+				margin-top: 10px !important;
+				padding-top: 10px !important;
+				padding-bottom: 5px!important;
+			}
+
+			.imageAllergen{
+				margin-top: 8px !important;
+				align-content: center !important;
+				margin-right: 5px !important;
+				margin-bottom: 2px !important;
+				width: 18px !important;
+				height: 18px !important;
+			}
+
+			.textAllergen{
+				text-align: center !important;
+				margin-right: 5px !important;
+				margin-bottom: 2px !important;
+			}
+
+			.allergens1 {
+				color: red !important;
+				font-size: 4px;
+
+			}
+
+			.allergens2 {
+				color: orange !important;
+				font-size: 4px;
+			}
+
+			img.pageHeaderDefault{
+        width: 27px !important;
+        height:20px !important;
+        margin-bottom: 8px !important;
+      }
+
+      #packTable tr td:nth-child(1), #packTable tr th:nth-child(1){
+				text-align: center !important;
+				line-height: 7px;
+				font-size: 7px;
+			}
+
+			#packTable tr td:nth-child(2), #packTable tr th:nth-child(2){
+				text-align: left !important;
+				line-height: 7px;
+				font-size: 7px;
+			}
+
+			#packTable tr td:nth-child(3), #packTable tr th:nth-child(3){
+				text-align: center !important;
+				line-height: 7px;
+				font-size: 7px;
+			}
+
+			#packTable tr td:nth-child(4), #packTable tr th:nth-child(4){
+				text-align: center !important;
+				line-height: 7px;
+				font-size: 7px;
+			}
+
+			#packTable tr td:nth-child(5), #packTable tr th:nth-child(5){
+				text-align: center !important;
+				line-height: 7px;
+				font-size: 7px;
+				background-color: #BDBDBD !important;
+			}
+
+			#packTable tr td:nth-child(6), #packTable tr th:nth-child(6){
+				text-align: center !important;
+				line-height: 7px;
+				font-size: 7px;
+			}
+
+			.totals{
+				color: #a0a127 !important;
+			}
+		}
+	</style>		
+</head>
+<body>
+	<div class="row">
+		<div class="col-xs-4">
+
+		</div>
+		<div class="col-xs-offset-11">
+			<img src="<%=images.imgLogo%>" style="align-content: right;"/>
+		</div>
+	</div>
+	<div id="pageHeader-first">
+	</div> 
+	<div id="pageHeader">
+		<span class="pull-right"><%= i18n.__('recipe').toUpperCase() %><%=':'%><%= recipe.versions.lang.name.toUpperCase() %></span>
+	</div>
+	<h6 class="title"><%= i18n.__('analytic').toUpperCase() %></h6>
+	<hr class="cd-line" size="3" />
+	<div class="row">
+		<div class="col-xs-12">
+			<div class="form-body">
+				<div class="row">
+					<div class="col-xs-12">
+						<div class="row">
+							<div class="col-xs-7">
+								<div class="row">
+									<div class="col-xs-11">
+										<div class="form-name">
+											<%= recipe.versions.lang.name %>                       
+										</div>
+									</div>
+								</div>
+								<hr class="cd-linee" size="0" />
+								<div class="row">
+									<div class="col-xs-5">
+										<h7 class="title"><%= i18n.__('family').toUpperCase() %></h7>
+										<hr class="cd-line" size="1" />
+										<div class="form-group">
+											<!-- <label for="family" class="control-label"><%= i18n.__('family').toUpperCase() %></label> -->
+											<% if (recipe.family) { %>
+											<%= recipe.family.lang[0].name.toUpperCase() %>
+											<% } else { %>
+											---
+											<% } %>    
+										</div>
+									</div>
+									<div class="col-xs-5">
+										<h7 class="title"><%= i18n.__('subfamily').toUpperCase() %></h7>
+										<hr class="cd-line" size="1" />
+										<div class="form-group">
+											<!-- <label for="subfamily" class="control-label"><%= i18n.__('subfamily').toUpperCase() %></label> -->
+											<% if (recipe.subfamily) { %>
+											<%= recipe.subfamily.lang[0].name.toUpperCase() %>
+											<% } else { %>
+											---
+											<% } %>                        
+										</div>
+									</div>
+								</div>
+								<div class="row">
+									<div class="col-xs-10">
+										<h7 class="title"><%= i18n.__('allergen').toUpperCase() %></h7>
+										<hr class="cd-line" size="1" />
+										<div class="row">
+											<div class="col-xs-12">
+											<% if(allergens.length>=1){%>
+												<%_.each(allergens,function(allergen,key,list) {%>
+														<div class="pull-left">
+															<div class="imageAllergen">
+																<img src="<%= allergen.allergen.gallery.sizes[0].url %>">
+															</div>
+															<div class="textAllergen">
+																<% if (allergen.level==1){%>
+																	<span class="allergens2"><%= allergen.allergen.lang[0].name %></span>
+																<%} else {%>
+																	<span class="allergens1"><%= allergen.allergen.lang[0].name %></span>
+																<%}%>
+															</div>
+														</div>												
+												<%});%>
+											<%} else {%>
+												<span>---</span>
+											<%}%>
+											</div>
+									</div>
+								</div>
+								</div>
+							</div>
+							<div class="col-xs-1">
+								<div class="row">							
+									<div class="col-xs-12 pull-left">
+									<hr class="cd-linee" size="0" />
+									<% if(recipeType == 'dish'){ %>
+											<div class="valuess pull-left" >								
+												<label for="realNetWeight" class="control-label" style="font-size: 7px !important;"><%= i18n.__('realNetWeight').toUpperCase() %><%=':'%></label>
+												<span style="font-size: 7px !important;"><%= recipe.versions.weightPerServing .toFixed(3)%>  <%= recipe.measurementUnit.lang[0].shortName%></span>
+											</div>											
+											<hr class="cd-linee" size="0" />
+											<hr class="cd-linee" size="0" />
+											<hr class="cd-linee" size="0" />
+											<hr class="cd-linee" size="0" />
+											<hr class="cd-linee" size="0" />
+											<div class="valuess">
+												<label for="costPerServing" class="control-label" style="font-size: 7px !important;"><%= i18n.__('costPerServing').toUpperCase() %><%=':'%></label>
+												<span style="font-size: 7px !important;"><%= recipe.versions.costPerServing .toFixed(2)%><%=' €/plato'%></span>
+											</div>
+											<hr class="cd-linee" size="0" />
+											<div class="valuee" style="margin-left: -50px !important;">				
+												<label for="unitCostPerServingWithNetWeight" class="control-label" style="font-size: 7px !important;"><%= i18n.__('unitCostPerServingWithNetWeight').toUpperCase()%><%=':'%></label>
+												<div>
+													<% if(recipe.versions.costPerServing == 0 || recipe.versions.weightPerServing == 0){%>
+														<span>---</span>
+													<%} else {%>
+														<span style="font-size: 7px !important;"><%=(recipe.versions.costPerServing/ recipe.versions.weightPerServing).toFixed(2)%> <%=recipe.measurementUnit.lang[0].shortName%></span>
+													<%}%>
+												</div>
+											</div>
+											<hr class="cd-linee" size="0" />
+											<div class="values1 pull-left" style="margin-top: -10px !important;">				
+												<label for="unitCostPerServing" class="control-label" style="font-size: 7px !important;"><%= i18n.__('unitCostPerServingwithSalesTax').toUpperCase()%><%=':'%></label>
+												<div>
+												<span style="font-size: 7px !important;"><%=(recipe.versions.refPricePerServing*(1+(tax/100))).toFixed(2)%> <%= '€'%></span></div>
+											</div>											
+									<% } %>
+									<% if(recipeType == 'drink'){ %>
+											<div class="valuess pull-left">								
+												<label for="realNetWeight" class="control-label" style="font-size: 7px !important;"><%= i18n.__('realNetWeight').toUpperCase() %><%=':'%></label>
+												<span style="font-size: 7px !important;"><%= recipe.versions.weightPerServing .toFixed(3)%>  <%= recipe.measurementUnit.lang[0].shortName%></span>
+											</div>											
+											<hr class="cd-linee" size="0" />
+											<hr class="cd-linee" size="0" />
+											<hr class="cd-linee" size="0" />
+											<hr class="cd-linee" size="0" />
+											<hr class="cd-linee" size="0" />
+											<div class="valuess">
+												<label for="costPerServing" class="control-label" style="font-size: 7px !important;"><%= i18n.__('costPerServing').toUpperCase() %><%=':'%></label>
+												<span style="font-size: 7px !important;"><%= recipe.versions.costPerServing .toFixed(2)%><%=' €/bebida'%></span>
+											</div>
+											<hr class="cd-linee" size="0" />
+											<div class="valuee" style="margin-left: -50px !important;">				
+												<label for="unitCostPerServingWithNetWeight" class="control-label" style="font-size: 7px !important;"><%= i18n.__('unitCostPerServingWithNetWeight').toUpperCase()%><%=':'%></label>
+												<div>
+													<% if(recipe.versions.costPerServing == 0 || recipe.versions.weightPerServing == 0){%>
+														<span>---</span>
+													<%} else {%>
+														<span style="font-size: 7px !important;"><%=(recipe.versions.costPerServing/ recipe.versions.weightPerServing).toFixed(2)%> <%=recipe.measurementUnit.lang[0].shortName%></span>
+													<%}%>
+												</div>
+											</div>
+											<div class="valuess pull-left">				
+												<label for="unitCostPerServing" class="control-label" style="font-size: 7px !important;"><%= i18n.__('unitCostPerServingwithSalesTax').toUpperCase()%><%=':'%></label>
+												<div>
+												<span style="font-size: 7px !important;"><%=(recipe.versions.refPricePerServing*(1+(tax/100))).toFixed(2)%> <%= '€'%></span></div>
+											</div>											
+									<% } %>
+									<% if (recipeType == 'subproduct'){ %>
+											<div class="values pull-left">					
+												<label for="realNetWeight" class="control-label"><%= i18n.__('realNetWeight').toUpperCase() %><%=':'%></label>
+												<span><%= recipe.versions.netWeight .toFixed(3)%> <%=recipe.measurementUnit.lang[0].shortName%></span>
+											</div>
+											<hr class="cd-linee" size="0" />
+											<hr class="cd-linee" size="0" />
+											<hr class="cd-linee" size="0" />
+											<hr class="cd-linee" size="0" />
+											<hr class="cd-linee" size="0" />
+											<div class="value pull-left">					
+												<label for="unitCostPerKg" class="control-label"><%= i18n.__('unitCostPerKg').toUpperCase() %><%=recipe.measurementUnit.lang[0].shortName%><%=':   '%></label>
+												<div>
+												<span><%= recipe.versions.unitCost .toFixed(2)%> <%= '€ /'%><%=recipe.measurementUnit.lang[0].shortName%></span></div>
+											</div>
+											<hr class="cd-linee" size="0" />
+											<hr class="cd-linee" size="0" />
+											<hr class="cd-linee" size="0" />
+											<hr class="cd-linee" size="0" />
+											<hr class="cd-linee" size="0" />
+											<div class="value" style="margin-left: -50px !important;">				
+												<label for="unitCostPerServingWithNetWeight" class="control-label"><%= i18n.__('unitCostPerServingWithNetWeight').toUpperCase()%><%=':'%></label>
+												<div>
+													<% if(recipe.versions.unitCost == 0 || recipe.versions.netWeight == 0){%>
+														<span>---</span>
+													<%} else {%>
+														<span><%=(recipe.versions.unitCost* recipe.versions.netWeight).toFixed(2)%> <%= '€'%></span>
+													<%}%>
+												</div>
+											</div>
+									<% } %>
+									<% if (recipeType == 'product'){ %>
+											<div class="values pull-left">					
+												<label for="realNetWeight" class="control-label"><%= i18n.__('realNetWeight').toUpperCase() %><%=':'%></label>
+												<span><%= recipe.versions.netWeight .toFixed(3)%> <%=recipe.measurementUnit.lang[0].shortName%></span>
+											</div>
+											<hr class="cd-linee" size="0" />
+											<hr class="cd-linee" size="0" />
+											<hr class="cd-linee" size="0" />				
+											<div class="valuee pull-left" style="margin-left: -50px !important;">					
+												<label for="unitCostPerKg" class="control-label"><%= i18n.__('productionCost').toUpperCase() %><%=':   '%></label>
+												<div>
+													<% if(recipe.versions.totalCost){%>
+														<span ><%= recipe.versions.totalCost.toFixed(2)%> <%= '€'%></span>
+													<%} else {%>
+														<span>---</span>
+													<%}%>
+												</div>
+											</div>
+											<hr class="cd-linee" size="0" />
+											<div class="value" style="margin-left: -50px !important; margin-top: 10px !important;">				
+												<label for="unitCostPerServingWithNetWeight" class="control-label"><%= i18n.__('unitCostPerServingWithNetWeight').toUpperCase()%><%=':'%></label>
+												<div>
+													<% if(recipe.versions.compositionCost == 0 || recipe.versions.packagingCost == 0 || recipe.versions.netWeight == 0){%>
+														<span>---</span>
+													<%} else {%>
+														<span><%=(recipe.versions.unitCost / recipe.versions.netWeight).toFixed(2)%> <%= '€ /'%><%=recipe.measurementUnit.lang[0].shortName%></span>
+													<%}%>
+												</div>
+											</div>
+									<% } %>
+									</div>
+								</div>
+							</div>
+								<div class="row">									
+										<div class="col-xs-4 image">
+											<% if(recipe.versions.gallery) { %>
+											<img class="img-fluid" src="<%=recipe.versions.gallery.sizes[1].url%>" alt="Responsive image">
+											<% } else { %>
+											<img class="image2 img-fluid" src="<%=images.imgPlaceholder%>" alt="Responsive image">
+											<hr class="cd-linee" size="0" />
+											<% } %>
+											<% if(recipeType == 'dish'){ %>
+											<div class="row">
+												<div class="values2 col-xs-6">								
+													<label for="unitCostPerServingwithoutSalesTax" class="control-label" style="font-size: 7px !important;"><%= i18n.__('unitCostPerServingwithoutSalesTax').toUpperCase() %><%=':'%></label>
+													<div>
+													<span style="font-size: 7px !important;"><%= recipe.versions.refPricePerServing .toFixed(2)%><%= '€'%></span>
+													</div>
+												</div>
+												<div class="values3 col-xs-6">								
+													<label for="costOverPricePercentage" class="control-label" style="font-size: 7px !important;"><%= i18n.__('costOverPricePercentage').toUpperCase() %><%=':'%></label>
+													<div>
+													<% if(recipe.versions.refPricePerServing){ %>
+													<span style="font-size: 7px !important;"><%= (((compTotals.cost/recipe.versions.numServings)/recipe.versions.refPricePerServing)*100) .toFixed(2)%><%= '%'%></span>
+													<% } else { %>
+													<span>---</span>
+													<%}%>
+													</div>
+												</div>
+											</div>
+											<% } %>
+											<% if(recipeType == 'drink'){ %>
+											<div class="row">
+												<div class="values2drink col-xs-6">								
+													<label for="unitCostPerServingwithoutSalesTax" class="control-label" style="font-size: 7px !important;"><%= i18n.__('unitCostPerServingwithoutSalesTax').toUpperCase() %><%=':'%></label>
+													<div>
+													<span style="font-size: 7px !important;"><%= recipe.versions.refPricePerServing .toFixed(2)%><%= '€'%></span>
+													</div>
+												</div>
+												<div class="values3drink col-xs-6">								
+													<label for="costOverPricePercentage" class="control-label" style="font-size: 7px !important;"><%= i18n.__('costOverPricePercentage').toUpperCase() %><%=':'%></label>
+													<div>
+													<% if(recipe.versions.refPricePerServing){ %>
+													<span style="font-size: 7px !important;"><%= (((compTotals.cost/recipe.versions.numServings)/recipe.versions.refPricePerServing)*100) .toFixed(2)%><%= '%'%></span>
+													<% } else { %>
+													<span>---</span>
+													<%}%>
+													</div>
+												</div>
+											</div>
+											<% } %>
+										</div>
+									</div>
+							</div>								
+						</div>	
+					</div>					
+				<div class="row">
+					<div class="col-xs-7">
+						<h7 class="title"><%= i18n.__('composition').toUpperCase() %></h7>
+					</div>
+				</div>
+				<hr class="cd-line" size="1" />
+				<% if(recipeType == 'product'){%>
+					<div class="col-xs-12">
+						<span class="title" style="font-size: 8px !important;"><%= i18n.__('compositionCost').toUpperCase() %>: </span><span class="form-group"><%=recipe.versions.compositionCost.toFixed(2) %> € </span>
+					</div>
+				<%}%>
+				<div class="row">
+					<div class="col-xs-12 avoidcom-page-break max">
+						<div class="tablecomp-cd">
+							<% if(recipeType =='subproduct'){ %>
+							<table id="tablecomp" class="tablecomp table-condensed">
+								<thead>
+									<tr>
+										<th><%= i18n.__('article').toUpperCase() %></th>
+										<th><%= i18n.__('grossWeight').toUpperCase() %></th>
+										<th><%= i18n.__('grossWeightPercentage').toUpperCase() %></th>
+										<th><%= i18n.__('wastePercentage').toUpperCase() %></th>
+										<th><%= i18n.__('netWeight').toUpperCase() %></th>
+										<th><%= i18n.__('netWeightPercentage').toUpperCase() %></th>
+										<th><%= i18n.__('unitCost').toUpperCase() %></th>
+										<th><%= i18n.__('totalCost').toUpperCase() %></th>
+										<th><%= i18n.__('costPercentage').toUpperCase() %></th>
+									</tr>
+								</thead>
+								<tbody>
+									<%_.each(composition,function(compositionElement,key,list){%>
+									<tr>
+										<td><div><%=compositionElement.name%></div></td>
+										<td><div><%=compositionElement.grossWeight.toFixed(3) %> <%=compositionElement.measuringUnitShortName %></div></td>
+										<% if (compTotals.grossWeight>0) {%>
+										<td><div><%=((compositionElement.grossWeight/compTotals.grossWeight)*100).toFixed(2) %></div></td>
+										<% } else { %>
+										<td><div>---</div></td>
+										<% } %>
+										<td><div><%= compositionElement.wastePercentage.toFixed(2) %></div></td>
+										<td><div class="avoidcom-page-break"><%= compositionElement.netWeight.toFixed(3) %><%= compositionElement.baseUnitShortName %></div></td>
+										<% if (compositionElement.netWeight>0) {%>
+										<td><div class="avoidcom-page-break"><%=((compositionElement.netWeight/compTotals.netWeight)*100).toFixed(2) %></div></td>
+										<% } else { %>
+										<td><div class="avoidcom-page-break">---</div></td>
+										<% } %>
+										<td><div class="avoidcom-page-break"><%= compositionElement.unitCost.toFixed(2) %> €</div></td>
+										<td><div class="avoidcom-page-break"><%= compositionElement.calculatedCost.toFixed(2) %> €</div></td>
+										<% if (compTotals.cost>0) {%>
+										<td><div class="avoidcom-page-break"><%=((compositionElement.calculatedCost/compTotals.cost)*100).toFixed(2) %> %</div></td>
+										<% } else { %>
+										<td><div class="avoidcom-page-break">---</div></td>
+										<% } %>
+								</tr>
+								<%}); %>
+							</tbody>
+							<tr>
+								<td class="totals"><%= i18n.__('totals').toUpperCase() %></td>
+								<td class="totals"><%= compTotals.grossWeight.toFixed(3) %>/ <%=recipe.measurementUnit.lang[0].shortName%></td>
+								<td class="totals"> 100 %</td>
+								<td class="totals"></td>
+								<td class="totals"><%= compTotals.netWeight.toFixed(3) %>/<%=recipe.measurementUnit.lang[0].shortName%></td>
+								<td class="totals"> 100 %</td>
+								<td class="totals"></td>
+								<td class="totals"><%= compTotals.cost.toFixed(2) %> €</td>
+								<td class="totals">100 %</td>
+							</tr>
+						</table>
+						<% } %>
+						<% if(recipeType =='product'){ %>
+							<table id="tablecomp" class="tablecomp table-condensed">
+								<thead>
+									<tr>
+										<th><%= i18n.__('article').toUpperCase() %></th>
+										<th><%= i18n.__('grossWeight').toUpperCase() %></th>
+										<th><%= i18n.__('grossWeightPercentage').toUpperCase() %></th>
+										<th><%= i18n.__('wastePercentage').toUpperCase() %></th>
+										<th><%= i18n.__('netWeight').toUpperCase() %></th>
+										<th><%= i18n.__('netWeightPercentage').toUpperCase() %></th>
+										<th><%= i18n.__('unitCost').toUpperCase() %></th>
+										<th><%= i18n.__('totalCost').toUpperCase() %></th>
+										<th><%= i18n.__('costPercentage').toUpperCase() %></th>
+									</tr>
+								</thead>
+								<tbody>
+									<%_.each(composition,function(compositionElement,key,list){%>
+									<tr>
+										<td><div><%=compositionElement.name%></div></td>
+										<td><div><%=compositionElement.grossWeight.toFixed(3) %> <%=compositionElement.measuringUnitShortName %></div></td>
+										<% if (compTotals.grossWeight>0) {%>
+										<td><div><%=((compositionElement.grossWeight/compTotals.grossWeight)*100).toFixed(2) %></div></td>
+										<% } else { %>
+										<td><div>---</div></td>
+										<% } %>
+										<td><div><%= compositionElement.wastePercentage.toFixed(2) %></div></td>
+										<td><div class="avoidcom-page-break"><%= compositionElement.netWeight.toFixed(3) %><%= compositionElement.baseUnitShortName %></div></td>
+										<% if (compositionElement.netWeight>0) {%>
+										<td><div class="avoidcom-page-break"><%=((compositionElement.netWeight/compTotals.netWeight)*100).toFixed(2) %></div></td>
+										<% } else { %>
+										<td><div class="avoidcom-page-break">---</div></td>
+										<% } %>
+										<td><div class="avoidcom-page-break"><%= compositionElement.unitCost.toFixed(2) %> €</div></td>
+										<td><div class="avoidcom-page-break"><%= compositionElement.calculatedCost.toFixed(2) %> €</div></td>
+										<% if (compTotals.cost>0) {%>
+										<td><div class="avoidcom-page-break"><%=((compositionElement.calculatedCost/compTotals.cost)*100).toFixed(2) %> %</div></td>
+										<% } else { %>
+										<td><div class="avoidcom-page-break">---</div></td>
+										<% } %>
+								</tr>
+								<%}); %>
+							</tbody>
+							<tr>
+								<td class="totals"><%= i18n.__('totals').toUpperCase() %></td>
+								<td class="totals"><%= compTotals.grossWeight.toFixed(3) %>/ <%=recipe.measurementUnit.lang[0].shortName%></td>
+								<td class="totals"> 100 %</td>
+								<td class="totals"></td>
+								<td class="totals"><%= compTotals.netWeight.toFixed(3) %>/ <%=recipe.measurementUnit.lang[0].shortName%></td>
+								<td class="totals">100 %</td>
+								<td class="totals"></td>
+								<td class="totals"><%= compTotals.cost.toFixed(2) %> €</td>
+								<td class="totals">100 %</td>
+							</tr>
+						</table>
+						<% } %>
+						<% if (recipeType == 'dish') { %>
+						<table id="tablecomp2" class="tablecomp table-condensed">
+							<thead>
+								<tr>
+									<th></th>										
+									<th><%= i18n.__('article').toUpperCase() %></th>
+									<th><%= i18n.__('grossWeight').toUpperCase() %></th>
+									<th><%= i18n.__('grossWeightPercentage').toUpperCase() %></th>
+									<th><%= i18n.__('wastePercentage').toUpperCase() %></th>
+									<th><%= i18n.__('netWeight').toUpperCase() %></th>
+									<th><%= i18n.__('netWeightPercentage').toUpperCase() %></th>
+									<th><%= i18n.__('unitCost').toUpperCase() %></th>
+									<th><%= i18n.__('totalCost').toUpperCase() %></th>
+									<th><%= i18n.__('costPercentage').toUpperCase() %></th>
+								</tr>
+							</thead>
+							<tbody>
+								<% _.each(composition,function(compositionElement,key,list) { %>
+									<% if(compositionElement.init == true){ %>
+												<tr>
+													<td><div>
+													<% if(compositionElement.category =='mainProduct'){ %>									
+													<span class="mainProduct"><%= i18n.__('P').toUpperCase() %></span>			
+													<% } else if(compositionElement.category =='sauce'){ %>
+													<span class="sauce"><%= i18n.__('S').toUpperCase() %></span>	
+													<% } else if(compositionElement.category =='dressing'){ %>
+													<span class="dressing"><%= i18n.__('D').toUpperCase() %></span>
+													<%} else if(compositionElement.category =='addition'){ %>
+													<span class="addition"><%= i18n.__('A').toUpperCase() %></span>
+													<%}%></div></td>
+													<td></td>
+													<td></td>
+													<td></td>
+													<td></td>
+													<td></td>
+													<td></td>
+													<td></td>
+													<td></td>
+													<td></td>
+												</tr>
+												<tr>
+													<td></td>
+													<td><div class="avoidcom-page-break"><%=compositionElement.name%></div></td>
+													<td><div class="avoidcom-page-break"><%=compositionElement.grossWeight.toFixed(3) %> <%=compositionElement.measuringUnitShortName %></div></td>
+													<td>
+														<% if (compTotals.grossWeight>0) {%>
+															<div class="avoidcom-page-break"><%=((compositionElement.grossWeight/compTotals.grossWeight)*100).toFixed(2) %></div>
+														<% } else { %>
+															<div class="avoidcom-page-break">---</div>
+														<% } %>
+													</td>
+													<td><div class="avoidcom-page-break"><%= compositionElement.wastePercentage.toFixed(2) %></div></td>
+													<td><div class="avoidcom-page-break"><%= compositionElement.netWeight.toFixed(3) %><%= compositionElement.baseUnitShortName %></div></td>
+													<td>
+														<% if (compositionElement.netWeight>0) {%>
+														<div class="avoidcom-page-break"><%=((compositionElement.netWeight/compTotals.netWeight)*100).toFixed(2) %></div>
+														<% } else { %>
+														<div class="avoidcom-page-break">---</div>
+														<% } %>
+													</td>
+													<td><div class="avoidcom-page-break"><%= compositionElement.unitCost.toFixed(2) %> €</div></td>
+													<td><div class="avoidcom-page-break"><%= compositionElement.calculatedCost.toFixed(2) %> €</div></td>
+													<td>
+														<% if (compTotals.cost>0) {%>
+														<div class="avoidcom-page-break"><%=((compositionElement.calculatedCost/compTotals.cost)*100).toFixed(2) %> %</div>
+														<% } else { %>
+														<div class="avoidcom-page-break">---</div>
+														<% } %>
+													</td>
+												</tr>
+									<% } %>
+									<% if (compositionElement.init != true){ %>
+											<tr>
+													<td></td>
+													<td><div class="avoidcom-page-break"><%=compositionElement.name%></div></td>
+													<td><div class="avoidcom-page-break"><%=compositionElement.grossWeight.toFixed(3) %> <%=compositionElement.measuringUnitShortName %></div>
+													</td>
+													<td>
+														<% if (compTotals.grossWeight>0) {%>
+															<div class="avoidcom-page-break"><%=((compositionElement.grossWeight/compTotals.grossWeight)*100).toFixed(2) %></div>
+														<% } else { %>
+															<div class="avoidcom-page-break">---</div>
+														<% } %>
+													</td>
+													<td><div class="avoidcom-page-break"><%= compositionElement.wastePercentage.toFixed(2) %></div></td>
+													<td><div class="avoidcom-page-break"><%= compositionElement.netWeight.toFixed(3) %><%= compositionElement.baseUnitShortName %></div></td>
+													<td>
+														<% if (compositionElement.netWeight>0) {%>
+															<div class="avoidcom-page-break"><%=((compositionElement.netWeight/compTotals.netWeight)*100).toFixed(2) %></div>
+														<% } else { %>
+															<div class="avoidcom-page-break">---</div>
+														<% } %>
+													</td>
+													<td><div class="avoidcom-page-break"><%= compositionElement.unitCost.toFixed(2) %> €</div></td>
+													<td><div class="avoidcom-page-break"><%= compositionElement.calculatedCost.toFixed(2) %> €</div></td>
+													<td>
+														<% if (compTotals.cost>0) {%>
+															<div class="avoidcom-page-break"><%=((compositionElement.calculatedCost/compTotals.cost)*100).toFixed(2) %> %</div>
+														<% } else { %>
+															<div class="avoidcom-page-break">---</div>
+														<% } %>
+													</td>
+												</tr>
+									<% }%>
+								<%});%>
+							</tbody>
+							<tr>
+								<td class="totals"><%= i18n.__('totals').toUpperCase() %></td>
+								<td class="totals"></td>
+								<td class="totals"><%= compTotals.grossWeight.toFixed(3) %>/ <%=recipe.measurementUnit.lang[0].shortName%></td>
+								<td class="totals">100 %</td>
+								<td class="totals"></td>
+								<td class="totals"><%= compTotals.netWeight.toFixed(3) %>/ <%=recipe.measurementUnit.lang[0].shortName%></td>
+								<td class="totals">100 %</td>
+								<td class="totals"></td>
+								<td class="totals"><%= compTotals.cost.toFixed(2) %> €</td>
+								<td class="totals">100 %</td>
+							</tr> 
+						</table>
+						<% } %>
+						<% if (recipeType == 'drink') { %>
+						<table id="tablecomp2" class="tablecomp table-condensed">
+							<thead>
+								<tr>
+									<th></th>										
+									<th><%= i18n.__('article').toUpperCase() %></th>
+									<th><%= i18n.__('grossWeight').toUpperCase() %></th>
+									<th><%= i18n.__('grossWeightPercentage').toUpperCase() %></th>
+									<th><%= i18n.__('wastePercentage').toUpperCase() %></th>
+									<th><%= i18n.__('netWeight').toUpperCase() %></th>
+									<th><%= i18n.__('netWeightPercentage').toUpperCase() %></th>
+									<th><%= i18n.__('unitCost').toUpperCase() %></th>
+									<th><%= i18n.__('totalCost').toUpperCase() %></th>
+									<th><%= i18n.__('costPercentage').toUpperCase() %></th>
+								</tr>
+							</thead>
+							<tbody>
+								<% _.each(composition,function(compositionElement,key,list) { %>
+									<% if(compositionElement.init == true){ %>
+												<tr>
+													<td><div>
+													<% if(compositionElement.category =='mainProduct'){ %>									
+													<span class="mainProduct"><%= i18n.__('P').toUpperCase() %></span>	
+													<% } else if(compositionElement.category =='dressing'){ %>
+													<span class="dressing"><%= i18n.__('D').toUpperCase() %></span>
+													<%} else if(compositionElement.category =='addition'){ %>
+													<span class="addition"><%= i18n.__('A').toUpperCase() %></span>
+													<%}%></div></td>
+													<td></td>
+													<td></td>
+													<td></td>
+													<td></td>
+													<td></td>
+													<td></td>
+													<td></td>
+													<td></td>
+													<td></td>
+												</tr>
+												<tr>
+													<td></td>
+													<td><div class="avoidcom-page-break"><%=compositionElement.name%></div></td>
+													<td><div class="avoidcom-page-break"><%=compositionElement.grossWeight.toFixed(3) %> <%=compositionElement.measuringUnitShortName %></div></td>
+													<td>
+														<% if (compTotals.grossWeight>0) {%>
+														<div class="avoidcom-page-break"><%=((compositionElement.grossWeight/compTotals.grossWeight)*100).toFixed(2) %></div>
+														<% } else { %>
+														<td><div class="avoidcom-page-break">---</div>
+														<% } %>
+													</td>
+													<td><div class="avoidcom-page-break"><%= compositionElement.wastePercentage.toFixed(2) %></div></td>
+													<td><div class="avoidcom-page-break"><%= compositionElement.netWeight.toFixed(3) %><%= compositionElement.baseUnitShortName %></div></td>
+													<td>
+														<% if (compositionElement.netWeight>0) {%>
+														<div class="avoidcom-page-break"><%=((compositionElement.netWeight/compTotals.netWeight)*100).toFixed(2) %></div>
+														<% } else { %>
+														<div class="avoidcom-page-break">---</div>
+														<% } %>
+													</td>
+													<td><div class="avoidcom-page-break"><%= compositionElement.unitCost.toFixed(2) %> €</div></td>
+													<td><div class="avoidcom-page-break"><%= compositionElement.calculatedCost.toFixed(2) %> €</div></td>
+													<td>
+														<% if (compTotals.cost>0) {%>
+														<div class="avoidcom-page-break"><%=((compositionElement.calculatedCost/compTotals.cost)*100).toFixed(2) %> %</div>
+														<% } else { %>
+														<div class="avoidcom-page-break">---</div>
+														<% } %>
+													</td>
+												</tr>
+									<% } %>
+									<% if (compositionElement.init != true){ %>
+											<tr>
+													<td></td>
+													<td><div class="avoidcom-page-break"><%=compositionElement.name%></div></td>
+													<td><div class="avoidcom-page-break"><%=compositionElement.grossWeight.toFixed(3) %> <%=compositionElement.measuringUnitShortName %></div></td>
+													<td>
+														<% if (compTotals.grossWeight>0) {%>
+														<div class="avoidcom-page-break"><%=((compositionElement.grossWeight/compTotals.grossWeight)*100).toFixed(2) %></div>
+														<% } else { %>
+														<td><div class="avoidcom-page-break">---</div>
+														<% } %>
+													</td>
+													<td><div class="avoidcom-page-break"><%= compositionElement.wastePercentage.toFixed(2) %></div></td>
+													<td><div class="avoidcom-page-break"><%= compositionElement.netWeight.toFixed(3) %><%= compositionElement.baseUnitShortName %></div></td>
+													<td>
+														<% if (compositionElement.netWeight>0) {%>
+														<div class="avoidcom-page-break"><%=((compositionElement.netWeight/compTotals.netWeight)*100).toFixed(2) %></div>
+														<% } else { %>
+														<div class="avoidcom-page-break">---</div>
+														<% } %>
+													</td>
+													<td><div class="avoidcom-page-break"><%= compositionElement.unitCost.toFixed(2) %> €</div></td>
+													<td><div class="avoidcom-page-break"><%= compositionElement.calculatedCost.toFixed(2) %> €</div></td>
+													<td>
+														<% if (compTotals.cost>0) {%>
+														<div class="avoidcom-page-break"><%=((compositionElement.calculatedCost/compTotals.cost)*100).toFixed(2) %> %</div>
+														<% } else { %>
+														<div class="avoidcom-page-break">---</div>
+														<% } %>
+													</td>
+												</tr>
+									<% }%>
+								<%});%>
+							</tbody>
+							<tr>
+								<td class="totals"><%= i18n.__('totals').toUpperCase() %></td>
+								<td class="totals"></td>
+								<td class="totals"><%= compTotals.grossWeight.toFixed(3) %>/ <%=recipe.measurementUnit.lang[0].shortName%></td>
+								<td class="totals">100 %</td>
+								<td class="totals"></td>
+								<td class="totals"><%= compTotals.netWeight.toFixed(3) %>/ <%=recipe.measurementUnit.lang[0].shortName%></td>
+								<td class="totals">100 %</td>
+								<td class="totals"></td>
+								<td class="totals"><%= compTotals.cost.toFixed(2) %> €</td>
+								<td class="totals">100 %</td>
+							</tr>
+						</table>
+						<% } %>
+					</div>
+				</div>
+			</div>
+			<% if( recipeType == 'product'){%>
+			<div class="row">
+				<div class="col-xs-12 avoidcom-page-break">
+					<div class="avoid-page-break">
+						<div class="row">
+							<div class="col-xs-7 avoidcom-page-break">
+								<h7 class="title"><%= i18n.__('packaging').toUpperCase() %></h7>
+							</div>
+						</div>
+					</div>
+					<hr class="cd-line" size="3" />
+					<div class="col-xs-12">
+						<span class="title" style="font-size: 8px !important;"><%= i18n.__('formatCost').toUpperCase() %>: </span><span class="form-group"><%=(recipe.versions.packagingCost).toFixed(2) %> €</span>
+					</div>
+					<div class="row">
+						<div class="col-xs-12 avoid-page-break">
+							<div class="table-cd">
+								<table id="packTable" class="tablee table-condensed">
+									<thead>
+										<tr>
+											<th width="5%">#</th>
+											<th width="45%"><%= i18n.__('packaging').toUpperCase() %></th>
+											<th width="10%"><%= i18n.__('numUnits').toUpperCase() %></th>
+											<th width="10%"><%= i18n.__('unitCost').toUpperCase() %></th>
+											<th width="15%"><%= i18n.__('totalCost').toUpperCase() %></th>
+											<th width="15%"><%= i18n.__('costPercentage').toUpperCase() %></th>
+										</tr>
+									</thead>
+									<tbody>
+										<%_.each(packaging,function(packaging,key,list){%>
+										<tr>
+											<td width="5%"><div class="avoid-page-break"><%= key+1 %></div></td>
+											<td width="45%"><div class="avoid-page-break"><%=packaging.name%></div></td>
+											<td width="10%"><div class="avoid-page-break"><%=packaging.numItems%></div></td>
+											<td width="10%">
+												<div class="avoid-page-break" >
+													<% if(packaging.unitCost != 0){ %>
+														<span ><%=packaging.unitCost.toFixed(2) %> €/ <%= packaging.measuringUnitShortName %></span>
+													<%} else {%>
+														<span >---</span>
+													<%}%>
+												</div>
+											</td>
+											<td width="15%">
+												<div class="avoid-page-break">
+													<% if(packaging.totalCost != 0){ %>
+														<span ><%=packaging.totalCost.toFixed(2)%> €</span>
+													<%} else {%>
+														<span >---</span>
+													<%}%>
+												</div>
+											</td>
+											<td width="15%">
+												<div class="avoid-page-break" >
+													<% if(packaging.totalCost != 0 || (packaging.totalCost != 0 && recipe.versions.packagingCost!= 0)){ %>
+														<span ><%=(packaging.totalCost / (recipe.versions.packagingCost/100)).toFixed(2)%> %</span>
+													<%} else {%>
+														<span >---</span>
+													<%}%>
+												</div>
+											</td>
+										</tr>
+										<%
+									});
+									%>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+			<%}%>
+			<div class="avoid-page-break">
+			<div class="row">
+				<div class="col-xs-7 avoid-page-break">
+					<h7 class="title"><%= i18n.__('cookingSteps').toUpperCase() %></h7>
+				</div>
+			</div>
+			<hr class="cd-line" size="3" />
+			<div class="row">
+				<div class="col-xs-12 avoid-page-break">
+					<div class="table-cd">
+						<table class="tablee table-condensed">
+							<thead>
+								<tr>
+									<th width="5%">#</th>
+									<th width="15%"><%= i18n.__('cookingStep').toUpperCase() %></th>
+									<th width="40%"><%= i18n.__('description').toUpperCase() %></th>
+									<th width="20%"><%= i18n.__('utensil').toUpperCase() %></th>
+									<th width="10%"><%= i18n.__('time').toUpperCase() %></th>
+									<th width="10%"><%= i18n.__('temperature').toUpperCase() %></th>
+								</tr>
+							</thead>
+							<tbody>
+								<%_.each(cookingSteps,function(cookingStep,key,list){%>
+								<tr>
+									<td width="5%"><div class="avoid-page-break"><%= key+1 %></div></td>
+									<td width="15%"><div class="avoid-page-break"><%=cookingStep.process.lang[0].name%></div></td>
+									<td width="40%"><div class="avoid-page-break"><%=cookingStep.lang.description%></div></td>
+									<td width="20%"><div class="avoid-page-break"><%=cookingStep.utensil.lang[0].name %></div></td>
+									<% if(cookingStep.time == 0 || !cookingStep.time){ %> 
+										<td width="10%"><div>---</div></td>
+									<%} else { %> 
+										<td width="10%"><div style="display: inline-block !important;"><%=cookingStep.time  %></div>
+											<% if(cookingStep.timeUnit == 'minutes'){%>
+												<span style="display: inline-block !important;"><%= i18n.__('min') %></span>
+											<% } else if( cookingStep.timeUnit == 'seconds'){ %>
+											  <span style="display: inline-block !important;"><%= i18n.__('s') %></span> 
+											<%} else if(cookingStep.timeUnit == 'hours'){%>
+											  <span style="display: inline-block !important;"><%= i18n.__('h') %></span>
+											<%}%>
+										</td>
+									<%}%>
+									<% if(cookingStep.temperature == 0 || !cookingStep.temperature){ %> 
+										<td width="10%"><div>---</div></td>
+									<%} else { %> 
+										<td width="10%"><div><%=cookingStep.temperature %> <%='ºC'%></div></td>
+									<%}%>
+								</tr>
+								<%
+							});
+							%>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+		</div>
+		<div class="row">
+			<div class="col-xs-12">
+				<%= subCompiled %>
+			</div>
+		</div>
+		<!-- <div style="page-break-after:always;"></div> -->
+		<div id="pageFooter">
+			<hr class="cd-line-footer">
+			<div class="row">
+				<div class="col-xs-5">		
+					<span class="pull-left"><div><%= i18n.__('user').toLowerCase() %><%=':'%><%= recipe.versions.last_account.name.toLowerCase()%></div><div><%= i18n.__('printTime').toLowerCase() %><%= ':'%> <%= date %></div></span>
+				</div>
+				<div class="col-xs-3">
+					<span><p>{{page}}/{{pages}}</p></span>
+				</div>
+				<div class="col-xs-4">
+					<span class="pull-right">CookDesign</span>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+</div>
+</body>
+</html>

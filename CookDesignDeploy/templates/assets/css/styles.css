@@ -1,0 +1,5 @@
+table > tr > td{
+	color:red;
+	font-family: "Lato", sans-serif !default;
+	font-size: 20px;
+}

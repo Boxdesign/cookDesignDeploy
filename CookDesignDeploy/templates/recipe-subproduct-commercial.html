@@ -1,0 +1,105 @@
+<%if(elementsList.length>0){%>
+<div class="page-break-before">
+	<div class="col-xs-12">
+		<h6 class="title1"><%= i18n.__('subproduct').toUpperCase() %></h6>
+	</div>
+	<% for(var i=0; i<elementsList.length; i++){%>
+	<div class="avoid-page-break">
+		<div class="row">
+			<div class="col-xs-12">
+				<div class="form-body">
+					<div class="row">
+						<div class="col-xs-10">
+							<div class="form-name paddingTop">
+								<%=i+1%>.<%= elementsList[i].versions[0].lang[0].name %>                       
+							</div>
+						</div>
+					</div>
+					<div class="avoid-page-break">
+						<div class="row">
+							<div class="col-xs-12">			
+								<div class="row">
+									<div class="col-xs-12">
+										<h7 class="title"><%= i18n.__('composition').toUpperCase() %></h7>
+									</div>
+								</div>
+								<hr class="cd-line" size="1" />
+								<hr class="cd-linee" size="0" />
+								<div class="row">
+									<div class="col-xs-6">
+										<div class="table-cd">
+											<table id="noDishTable" class="tablee table-condensed" >
+												<tbody>
+													<%_.each(composition[i],function(compositionElement,key,list){%>
+													<tr>
+														<td><div><%=compositionElement.name%></div></td>
+														<td><div><%=compositionElement.grossWeight.toFixed(3) %> <%=compositionElement.baseUnitShortName %></div></td>
+													</tr>							
+													<%});%>
+												</tbody>
+											</table>
+										</div>
+									</div>
+									<div class="col-xs-6">
+										<div class="row">
+											<div class="col-xs-11">
+												<% if(recipe[i].versions[0].lang[0].gastroCommentLabel){ %>
+												<h7 class="title"><%= recipe[i].versions[0].lang[0].gastroCommentLabel %></h7>
+												<% } else { %>
+												<h7 class="title"><%= i18n.__('gastroComment').toUpperCase() %></h7>
+												<%}%>
+												<hr class="cd-line" size="1" />
+												<% if(recipe[i].versions[0].lang[0].gastroComment){ %>
+												<span><%= recipe[i].versions[0].lang[0].gastroComment %></span>
+												<% } else { %>
+												<span>---</span>
+												<%}%>
+											</div>
+										</div>
+										<hr class="cd-linee" size="0" />
+										<div class="row">
+											<div class="col-xs-11">
+												<% if(recipe[i].versions[0].lang[0].dietLabel){ %>
+												<h7 class="title"><%= recipe[i].versions[0].lang[0].dietLabel %></h7>
+												<% } else { %>
+												<h7 class="title"><%= i18n.__('diet').toUpperCase() %></h7>
+												<%}%>
+												<hr class="cd-line" size="1" />
+												<% if(recipe[i].versions[0].lang[0].diet) { %>
+												<span><%= recipe[i].versions[0].lang[0].diet %></span>
+												<% } else { %>
+												<span>---</span>
+												<%}%>
+											</div>												
+										</div>
+										<hr class="cd-linee" size="0" />
+										<div class="row">
+											<div class="col-xs-11">
+												<% if(recipe[i].versions[0].lang[0].tastingLabel){ %>
+												<h7 class="title"><%= recipe[i].versions[0].lang[0].tastingLabel %></h7>
+												<% } else { %>
+												<h7 class="title"><%= i18n.__('tasting').toUpperCase() %></h7>
+												<%}%>
+												<hr class="cd-line" size="1" />
+												<% if(recipe[i].versions[0].lang[0].tasting) { %>
+												<span><%= recipe[i].versions[0].lang[0].tasting %></span>
+												<% } else { %>
+												<span>---</span>
+												<%}%>
+											</div>												
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<hr class="cd-line page-break" size="3" />
+	<%};%>
+</div>
+<%}%>
+
+

@@ -1,0 +1,119 @@
+<%if(elementsList.length>0){%>
+<div class="page-break-before">
+	<div class="col-xs-12">
+		<h6 class="title1"><%= i18n.__('subproduct').toUpperCase() %></h6>
+	</div>
+	<% for(var i=0; i<elementsList.length; i++){%>
+	<div class="avoid-page-break">
+		<div class="row">
+			<div class="col-xs-12">
+				<div class="form-body">
+					<div class="row">
+						<div class="col-xs-10">
+							<div class="form-name paddingTop">
+								<%=i+1%>.<%= elementsList[i].versions[0].lang[0].name %>                       
+							</div>
+						</div>
+					</div>
+					<div class="avoid-page-break">
+						<div class="row">
+							<div class="col-xs-5">
+								<h7 class="title"><%= i18n.__('composition').toUpperCase() %></h7>
+							</div>
+							<div class="col-xs-7" style="margin-left: -20px !important; width: 62% !important;">
+								<h7 class="title"><%= i18n.__('cookingSteps').toUpperCase() %></h7>
+							</div>							
+						</div>
+						<hr class="cd-line" size="1" />
+						<hr class="cd-linee" size="0" />
+						<div class="row">
+							<div class="col-xs-5">
+								<div style="width: 100% !important;margin-top: -5px !important;">
+									<ul class="">
+										<%_.each(composition[i],function(compositionElement,key,list){%>
+										<div class="compostionElementMargin">
+											<div class="pull-left">
+												<span style="margin-right: 3px !important; font-size: 8px !important; font-weight: normal !important;"><%=compositionElement.name%></span>
+											</div>
+											<div class="pull-right" style="margin-right: -20px !important;">
+												<% if(simulationNetWeight) { %>
+													<span style="font-size: 8px !important; font-weight: normal !important;"><%= (compositionElement.batchWeight).toFixed(3) %> <%=compositionElement.measuringUnitShortName%></span>	
+												<% } else { %>
+													<span style="font-size: 8px !important; font-weight: normal !important;">---</span>
+												<%}%>
+											</div>
+										</div>
+										<%});%>
+										<div class="compostionElementMargin">
+											<div class="pull-left">
+												<span class="totalsColor" style="margin-right: 3px !important;"><%= i18n.__('totals')%></span>
+											</div>
+											<div class="pull-right" style="margin-right: -20px !important;">
+												<% if(simulationNetWeight) { %>
+													<span class="totalsColor"><%= subTotals[i].batchWeight.toFixed(3) %> <%=elementsList[i].measurementUnit.referenceCode%></span>	
+												<% } else { %>
+													<span class="totalsColor">---</span>
+												<%}%>
+											</div>
+										</div>
+									</ul>
+								</div>
+							</div>
+							<div class="col-xs-7 avoidcom-page-break" style="margin-left: -20px !important; width: 62% !important;">
+							<!-- <h7 class="title"><%= i18n.__('cookingSteps').toUpperCase() %></h7>
+								<hr class="cd-line" size="3" /> -->
+								<div class="table-cd avoidcom-page-break">
+									<table class="table table-condensed ">
+									<!-- <thead class="border: green;">
+										<tr>
+											<th>#</th>
+											<th>PROCESO&nbsp;CULINARIO</th>
+											<th>DESCRIPCION</th>
+										</tr>
+									</thead> -->
+									<tbody>
+										<%_.each(cookingSteps[i],function(cookingStep,key,list){%>
+										<tr>
+											<td width="5%"><div><%=key+1%></div></td>
+											<td width="17%"><div><%=cookingStep.process.lang[0].name%></div></td>
+											<td width="40%"><div><%=cookingStep.lang.description%></div></td>
+											<td width="17%"><div><%=cookingStep.utensil.lang[0].name %></div></td>
+											<% if(cookingStep.time == 0 || !cookingStep.time){ %> 
+											<td width="11%"><div>---</div></td>
+											<%} else { %> 
+											<td width="11%"><div style="display: inline-block !important;"><%=cookingStep.time  %></div>
+												<% if(cookingStep.timeUnit == 'minutes'){%>
+												<span style="display: inline-block !important;"><%= i18n.__('min') %></span>
+												<% } else if( cookingStep.timeUnit == 'seconds'){ %>
+												<span style="display: inline-block !important;"><%= i18n.__('s') %></span> 
+												<%} else if(cookingStep.timeUnit == 'hours'){%>
+												<span style="display: inline-block !important;"><%= i18n.__('h') %></span>
+												<%} else if(!cookingStep.timeUnit){%>
+													<span style="display: inline-block !important;"><%= i18n.__('min') %></span>
+												<%}%>
+											</td>
+											<%}%>
+											<% if(cookingStep.temperature == 0 || !cookingStep.temperature){ %> 
+											<td width="10%"><div>---</div></td>
+											<%} else { %> 
+											<td width="10%"><div><%=cookingStep.temperature %> <%='ºC'%></div></td>
+											<%}%>
+										</tr>
+										<%
+									});
+									%>
+								</tbody>
+							</table>						
+						</div>
+					</div>
+				</div>
+			</div>
+			<hr class="cd-linee" size="0" />
+		</div>
+	</div>
+</div>
+</div>
+<hr class="cd-line page-break" size="2" />
+<%};%>
+</div>
+<%}%>

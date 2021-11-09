@@ -1,0 +1,612 @@
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>CookDesign</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" media="print">
+	<link rel="stylesheet" href="./assets/css/font-awesome.min.css" media="print" type="text/css">
+	<link href="https://fonts.googleapis.com/css?family=Lato:400,300,600,700&subset=all" rel="stylesheet" type="text/css"/>
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:400,300,600,700&subset=all" rel="stylesheet" type="text/css" />
+	<style>
+
+		table,
+		table tr td,
+		table tr th {
+			page-break-inside: avoid;
+		}
+
+		.table>thead>tr>th {
+			padding: 8px;
+			line-height: 1.42857143;
+			vertical-align: top;  
+			font-size: 7px; 
+			font-family: Montserrat; 
+			border: 1px solid #e2e2d0;
+		}
+
+		.table-cd > .table > tbody > tr > td {
+			font-size: 7px;
+			font-weight: 300 !important;   
+			/*page-break-before:  always; */  
+			margin-top: 4px;  
+			border: 1px solid #e2e2d0;
+		}
+
+		.table-cd > .table > thead > tr > th {
+			text-transform: uppercase;
+			font-weight: 400 !important;
+			border: 1px solid #e2e2d0;
+			font-family: Lato;
+			/*page-break-before: auto;*/
+			/*padding-bottom: 15px !important;*/
+			vertical-align: middle;	
+			text-align: center;
+		}
+
+		.table-cd > table.table > thead > tr > th {
+			text-transform: uppercase;
+			/*background-color: #B3B5B3;*/
+			color: rgba(253, 255, 34, 0.63);
+			font-weight: 400 !important;
+			border: 1px solid #e2e2d0;
+			font-family: Lato;
+			text-align: center;
+			/*page-break-before: auto;*/
+			/*padding-bottom: 15px !important;*/
+			vertical-align: middle;	
+		}
+
+		.form-control {
+			width: 100%;
+			/*border: 1px solid rgba(161, 162, 4, 0.31);*/
+			font-weight: 300;
+			font-size: 8px;
+			font-family: "Lato" !important;
+			color: #606051;
+			background: rgba(255, 255, 255, 0.64);
+			margin-bottom: 10px;
+		}
+
+		.control-label {
+			font-size: 8px;
+			margin-bottom: 4px;
+			color: #31312e;
+			font-weight: 400 !important;
+			text-transform: uppercase;
+		}
+
+		body {
+			color: #606051;
+			font-family: "Lato" !important;
+			padding: 0px !important;
+			margin: 0px !important;
+			direction: "ltr";
+			font-size: 8px;
+			font-weight: 300;
+		}
+		
+		.form{
+			font-size: 8px;
+			text-transform: uppercase;
+		}
+
+		.form-name{
+			font-size: 12px;
+			text-transform: uppercase;
+			font-family: "Lato" !important;
+
+		}
+		.page-break {
+			page-break-after: always !important;
+		}
+
+		.page-break-before{
+			page-break-before: always !important;
+		}
+
+		.avoid-page-break {
+			page-break-inside: avoid !important;
+			margin: 4px 0 4px 0;  /* to keep the page break from cutting too close to the text in the div */
+		}
+
+		@media print {
+
+			table,
+			table tr td,
+			table tr th {
+				page-break-inside: avoid;
+			}
+
+			.image{
+				width: 180px !important;
+				height: 165px !important;
+				padding-right: 15px !important;
+				margin-right: 15px !important;
+			}
+
+			.image2{
+				padding-left: 10px !important;
+				margin-left: 10px !important;
+			}
+
+			.cd-line {
+				border-color: #a0a127 !important;
+				margin-top: 0px;
+				margin-bottom: 8px;
+			
+			}
+			.cd-linee {
+				border-color: #FFFFFF !important;
+				margin-top: 0px;
+				margin-bottom: 8px;
+			}
+
+			.cd-line-footer {
+				border-color: #ddd !important;
+				margin-bottom: 6px;
+				height: 0.5px;
+				
+			}
+
+			.cd-line-header {
+				border-color: #ddd !important;
+				margin-top: 6px;
+				height: 1px;
+				
+			}
+
+			#pageHeader, #pageFooter {
+				font-color: #dddddd !important;
+				font-size: 5px;
+			}
+
+			.title {
+				color: #a0a127 !important;
+				text-align: right;
+				font-size: 10px;
+			}
+
+			.titleGastroOffer {
+				color: #ABAAAA !important;
+				text-align: left;
+				font-size: 9px;
+			}
+
+			.table-cd > .table > thead > tr > th {
+				border: 1px solid #e2e2d0;				
+				/*border-bottom: none !important;*/
+			}
+
+			.table-cd > table.table > thead > tr > th{
+				border: 1px solid #e2e2d0;				
+				/*border-bottom: none !important;*/
+			}
+
+			.form-control {
+				border:none;
+			}
+
+			.table-cd > .table > tbody > tr > td {
+				border: 1px solid #e2e2d0;
+				color: rgba(253, 255, 34, 0.63) !important;
+				font-size: 6px;
+				font-weight: 300 !important;    
+				margin-top: 6px;  
+				border-bottom: 1px solid #e2e2d0;
+				line-height: 7px;
+			}
+
+			.table-cd > .tablee > tbody > tr > td {
+				
+				background-color: #F1ECEC !important;
+				color: rgba(253, 255, 34, 0.63) !important;
+				font-size: 6px;
+				font-weight: 300 !important;     
+				margin-top: 6px;  
+				border-bottom: none;	
+				line-height: 7px;			
+
+			}
+			
+			.paddingTop{
+				margin-top: 10px !important;
+				padding-top: 10px !important;
+				padding-bottom: 5px!important;
+			}
+
+			.imageAllergen{
+				margin-top: 8px !important;
+				align-content: center !important;
+				margin-left: 4px !important;
+				margin-bottom: 2px !important;
+				width: 18px !important;
+				height: 18px !important;
+			}
+
+			.textAllergen{
+				text-align: center !important;
+				margin-bottom: 2px !important;
+			}
+
+			.allergensContains {
+				color: red !important;
+				font-size: 4px;
+			}
+
+			.allergensTraces {
+				color: orange !important;
+				font-size: 4px;
+			}
+
+			.allergensNoContains {
+				color: black !important;
+				font-size: 4px;
+			}
+
+			.allergen{
+				font-size: 4px !important;		
+				text-align: center !important;
+			}
+
+			.table > tbody > tr > td:nth-child(1), .table.table > thead > tr > th:nth-child(1){
+				width:160px !important;
+				text-align: left !important;
+				line-height: 7px;
+				font-size: 7px;
+				vertical-align: middle !important;
+				
+				
+			}
+			.table > tbody > tr > td:nth-child(2), .table > thead > tr > th:nth-child(2){
+				width:40px !important;
+				text-align: center !important;
+				line-height: 7px;
+				font-size: 6px;
+				vertical-align: middle !important;
+				
+				
+			}
+			.table > tbody > tr > td:nth-child(3), .table > thead > tr > th:nth-child(3){
+				width:40px !important;
+				text-align: center !important;
+				line-height: 7px;
+				font-size: 6px;
+				vertical-align: middle !important;
+				
+				
+			}
+			.table > tbody > tr > td:nth-child(4), .table > thead > tr > th:nth-child(4){
+				width:40px !important;
+				text-align: center !important;
+				line-height: 7px;
+				font-size: 6px;
+				vertical-align: middle !important;
+			
+				
+			}
+			.table > tbody > tr > td:nth-child(5), .table > thead > tr > th:nth-child(5){
+				width:40px !important;
+				text-align: center !important;
+				line-height: 7px;
+				font-size: 6px;
+				vertical-align: middle !important;
+				
+				
+			}
+			.table > tbody > tr > td:nth-child(6), .table > thead > tr > th:nth-child(6){
+				width:40px !important;
+				text-align: center !important;
+				line-height: 7px;
+				font-size: 6px;
+				vertical-align: middle !important;
+				
+				
+			}
+			.table > tbody > tr > td:nth-child(7), .table > thead > tr > th:nth-child(7){
+				width:40px !important;
+				text-align: center !important;
+				line-height: 7px;
+				font-size: 6px;
+				vertical-align: middle !important;
+				
+				
+			}
+			.table > tbody > tr > td:nth-child(8), .table > thead > tr > th:nth-child(8){
+				width:40px !important;
+				text-align: center !important;
+				line-height: 7px;
+				font-size: 6px;
+				vertical-align: middle !important;
+				
+			}
+			
+			.table > tbody > tr > td:nth-child(9), .table > thead > tr > th:nth-child(9){
+				width:40px !important;
+				text-align: center !important;
+				line-height: 7px;
+				font-size: 6px;
+				vertical-align: middle !important;
+				
+			}
+			.table > tbody > tr > td:nth-child(10), .table > thead > tr > th:nth-child(10){
+				width:40px !important;
+				text-align: center !important;
+				line-height: 7px;
+				font-size: 6px;
+				vertical-align: middle !important;
+				
+			}
+			.table > tbody > tr > td:nth-child(11), .table > thead > tr > th:nth-child(11){
+				width:40px !important;
+				text-align: center !important;
+				line-height: 7px;
+				font-size: 6px;
+				vertical-align: middle !important;
+				
+			}
+			.table > tbody > tr > td:nth-child(12), .table > thead > tr > th:nth-child(12){
+				width:40px !important;
+				text-align: center !important;
+				line-height: 7px;
+				font-size: 6px;
+				vertical-align: middle !important;
+				
+			}
+			.table > tbody > tr > td:nth-child(13), .table > thead > tr > th:nth-child(13){
+				width:40px !important;
+				text-align: center !important;
+				line-height: 7px;
+				font-size: 6px;
+				vertical-align: middle !important;
+				
+			}
+			.table > tbody > tr > td:nth-child(14), .table > thead > tr > th:nth-child(14){
+				width:40px !important;
+				text-align: center !important;
+				line-height: 7px;
+				font-size: 6px;
+				vertical-align: middle !important;
+				
+			}
+			.table > tbody > tr > td:nth-child(15), .table > thead > tr > th:nth-child(15){
+				width:40px !important;
+				text-align: center !important;
+				line-height: 7px;
+				font-size: 6px;
+				vertical-align: middle !important;
+				
+			}
+			.table > tbody > tr > td:nth-child(16), .table > thead > tr > th:nth-child(16){
+				width:40px !important;
+				text-align: center !important;
+				line-height: 7px;
+				font-size: 6px;
+				vertical-align: middle !important;
+			}
+
+			.subfamily{
+				color: grey !important; 
+				text-align: center !important;
+			}
+
+			.family{
+				font-weight: 400 !important; 
+				text-align: center !important;
+			}
+
+			.allergenMargin{
+				margin-top: 12px !important;
+				vertical-align: bottom !important;
+			}
+			.allergensContainTitle {
+				color: red !important;
+				text-align: center !important;
+				font-size: 7px;
+				margin-right: 25px !important;
+				vertical-align: bottom !important;
+			}
+
+			.allergensTracesTitle {
+				color: grey !important;
+				text-align: center !important;
+				font-size: 7px;
+				margin-right: 25px !important;
+				vertical-align: bottom !important;
+			}
+			.allergensNoContainTitle {
+				color: white !important;
+				text-align: center !important;
+				font-size: 7px;
+				margin-right: 25px !important;
+				vertical-align: bottom !important;
+			}
+			.circleContains{
+				width: 5px !important;
+				height: 5px !important;
+				border-radius: 50% !important;
+				background-color: red !important;
+				vertical-align: middle;
+				margin-left: 9px !important;
+			}
+
+			.circleTraces{
+				width: 5px !important;
+				height: 5px !important;
+				border-radius: 50% !important;
+				background-color: grey !important;
+				vertical-align: middle;
+				margin-left: 9px !important;
+			}
+
+			.circleNoContains{
+				width: 5px !important;
+				height: 5px !important;
+				border-radius: 50% !important;
+				background-color: white !important;
+				vertical-align: middle;
+				margin-left: 9px !important;
+			}
+		}
+	</style>		
+</head>
+<body>
+	<div class="row">
+		<div class="col-xs-4">
+		</div>
+		<div class="col-xs-offset-11">
+			<img src="<%=images.imgLogo%>" style="align-content: right;">
+		</div>
+	</div>
+	<div id="pageHeader-first"></div> 
+	<div id="pageHeader">
+		<span class="pull-right"><%= i18n.__('gastroOffer').toUpperCase() %><%=':'%><%= gastroOffer.versions.lang[0].name.toUpperCase() %></span>
+	</div>
+	<div class="row">
+		<div class="col-xs-4">
+			<h6 class="titleGastroOffer"><%= gastroOffer.versions.lang[0].name.toUpperCase() %></h6>
+		</div>
+		<div class="col-xs-4 allergenMargin">
+			<span class="allergensContainTitle">Contiene</span>
+			<span class="allergensTracesTitle">Contiene Trazas</span>
+			<span class="allergensNoContainTitle"> No Contiene</span>
+		</div>
+		<div class="col-xs-4">
+			<h6 class="title"><%= i18n.__('allergens').toUpperCase() %></h6>
+		</div>
+	</div>
+	<hr class="cd-line" size="3" />
+	<div class="row">
+		<div class="col-xs-12">
+			<div class="form-body">
+				<div class="row">
+					<div class="col-xs-12">
+						<div class="table-cd">
+						<%_.each(gastroOffer.versions.composition,function(tableArray, index) {%>
+							<table class="table">
+							<% if(index == 0) { %>
+								<thead>
+									<tr>
+										<th><%= i18n.__('compositionNames').toUpperCase() %></th>
+										<%_.each(allergens,function(allergen,key,list) {%>
+										<th>
+											<div class="allergen">
+												<div class="imageAllergen">
+												<% if(allergen.gallery){%>
+													<img src="<%= allergen.gallery.sizes[0].url %>">
+												<%} else {%>
+													<img src="<%= images.imgCircle %>">
+												<%}%>
+												</div>
+												<div class="textAllergen">
+												<% if(allergen.lang[0]){%>
+													<span class=""><%= allergen.lang[0].name %></span>													
+												<%} else {%>
+													<span class="">---</span>
+												<%}%>
+												</div>
+											</div>
+										</th>
+										<%});%>
+									</tr>
+								</thead>
+							<%}%>
+								<tbody>
+									<%_.each(tableArray.compElements,function(compositionElement,key,list) {%>
+									<div>
+										<% if(compositionElement.family&&compositionElement.familyInit){%>
+											<% if(index == 0){%>
+												<tr>
+													<td>
+														<div class="family"><%=compositionElement.family.lang.name %></div>
+													</td>
+													<%_.each(allergens,function(allergen,key,list) {%>
+													<td>
+													</td>
+													<%});%>								
+												</tr>
+											<%} else {%>
+												<tr>
+													<td>
+														<div class="family"><%=compositionElement.family.lang.name %></div>
+													</td>
+													<%_.each(allergens,function(allergen,key,list) {%>
+													<td>
+														<div class="allergen">
+															<div class="imageAllergen">
+															<% if(allergen.gallery){%>
+																<img src="<%= allergen.gallery.sizes[0].url %>">
+															<%} else {%>
+																<img src="<%= images.imgCircle %>">
+															<%}%>
+															</div>
+															<div class="textAllergen">
+															<% if(allergen.lang[0]){%>
+																<span class=""><%= allergen.lang[0].name %></span>													
+															<%} else {%>
+																<span class="">---</span>
+															<%}%>
+															</div>
+														</div>
+													</td>
+													<%});%>								
+												</tr>
+											<%}%>        
+										<%}%>
+										<% if(compositionElement.subfamilyInit && compositionElement.subfamily && compositionElement.subfamily.lang.name!='none'){%>
+										<tr>
+											<td>
+											<% if(compositionElement.subfamily.lang.name!='none'){%>
+												<div class="subfamily"><%=compositionElement.subfamily.lang.name %></div>
+											<%}%>
+											</td>	
+											<%_.each(compositionElement.allergenArray,function(allergen){%>
+												<td></td>
+											<%});%>							
+										</tr>
+										<%}%>
+										<tr>
+											<td>
+												<div>
+													<%=compositionElement.name.toUpperCase() %>
+												</div>
+											</td>
+											<%_.each(compositionElement.allergenArray,function(allergen){%>
+											<td>
+													<% if(allergen.level!=null){%>
+																<%if(allergen.level==1){%>
+																	<div class="circleTraces"></div>
+																<%} else {%>
+																	<div class="circleContains"></div>
+																<%}%>
+													<%} else {%>
+															<div class="circleNoContains"></div>
+													<%}%>
+											</td>
+											<%});%>							
+										</tr>	
+										</div>											
+									<%}); %>
+								</tbody>
+							</table>
+							<%}); %>
+						</div>
+					</div>
+				</div>
+				<div id="pageFooter">
+					<hr class="cd-line-footer">
+					<div class="row">
+						<div class="col-xs-5">		
+						<span class="pull-left"><div><%= i18n.__('user').toLowerCase() %><%=':'%><%= gastroOffer.versions.last_account.name.toLowerCase()%></div><div><%= i18n.__('printTime').toLowerCase() %><%= ':'%> <%= date %></div></span>
+						</div>
+						<div class="col-xs-3">
+							<span><p>{{page}}/{{pages}}</p></span>
+						</div>
+						<div class="col-xs-4">
+							<span class="pull-right">CookDesign</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

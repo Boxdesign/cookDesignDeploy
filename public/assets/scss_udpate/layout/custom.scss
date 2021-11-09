@@ -1,0 +1,327 @@
+/* here you can put your own css to customize and override the theme */
+.tab-box-title {
+	color: #a0a127;
+    margin-top: 20px;
+}
+
+.margin-top-20 {
+	margin-top: 20px;
+}
+
+.table-row-button {
+	border: none;
+	//text-transform: lowercase;
+}
+
+//colum-width unidades
+
+#unidades-table tr td:nth-child(1){
+    width:5%;
+}
+
+#unidades-table tr td:nth-child(2){
+    width:22%;
+}
+
+#unidades-table tr td:nth-child(3){
+    width:5%;
+}
+
+#unidades-table tr td:nth-child(4){
+    width:6%;
+}
+
+#unidades-table tr td:nth-child(5){
+    width:11%;
+}
+
+#unidades-table tr td:nth-child(6){
+    width:11%;
+}
+
+#unidades-table tr td:nth-child(7){
+    width:40%;
+}
+
+//colum-width allergen
+
+#allergens-table tr td:nth-child(1){
+    width:15%;
+}
+
+#allergens-table tr td:nth-child(2){
+    width:45%;
+}
+
+#allergens-table tr td:nth-child(3){
+    width:40%;
+}
+
+//colum-width family
+
+#family-table tr td:nth-child(1){
+    width:5%;
+}
+
+#family-table tr td:nth-child(2){
+    width:55%;
+}
+
+#family-table tr td:nth-child(3){
+    width:40%;
+}
+
+//colum-width processes
+
+#processes-table tr td:nth-child(1){
+    width:20%;
+}
+
+#processes-table tr td:nth-child(2){
+    width:40%;
+}
+
+#processes-table tr td:nth-child(3){
+    width:40%;
+}
+
+//colum-width packformat
+
+#packformat-table tr td:nth-child(1){
+    width:15%;
+}
+
+#packformat-table tr td:nth-child(2){
+    width:20%;
+}
+
+#packformat-table tr td:nth-child(3){
+    width:25%;
+}
+
+#packformat-table tr td:nth-child(4){
+    width:40%;
+}
+
+//colum-width utensils
+
+#utensil-table tr td:nth-child(1){
+    width:15%;
+}
+
+#utensil-table tr td:nth-child(2){
+    width:30%;
+}
+
+#utensil-table tr td:nth-child(3){
+    width:15%;
+}
+
+#utensil-table tr td:nth-child(4){
+    width:40%;
+}
+
+//colum-width checkpoint
+
+#checkpoint-table tr td:nth-child(1){
+    width:60%;
+}
+
+#checkpoint-table tr td:nth-child(2){
+    width:40%;
+}
+
+
+.cd-pagination > .pagination > .active > a, .cd-pagination > .pagination > .active > a:hover, .cd-pagination > .pagination > .active > a:focus, .cd-pagination > .pagination > .active > span, .cd-pagination > .pagination > .active > span:hover, .cd-pagination > .pagination > .active > span:focus {
+    z-index: 3;
+    color: #fff;
+    background-color: #a1a204;
+    border-color: #a1a204;
+    cursor: default;
+}
+
+.portlet.box > .cd-portlet-body {
+    padding: 0px;
+}
+
+.cd-tab-content {
+    padding-top: 0;
+    padding-left: 2%;
+    padding-right: 2%;
+    padding-bottom: 2%;
+}
+
+.cd-navs {
+    background-color: #2C2C2C;
+}
+
+.cd-nav-pills > li.active > a, .cd-nav-pills > li.active > a:hover, .cd-nav-pills > li.active > a:focus {
+    background-color: #F9F9F9;
+    color: #a0a127;
+}
+
+.cd-nav-pills > li > a {
+    color: #91918c;
+    display: block;
+    width: 100%;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-weight: 600;
+    font-family: "Lato";
+    font-size: 12px;
+}
+
+.cd-nav-pills > li > a:hover, .cd-nav-pills > li > a:focus {
+    color: #ffffff;
+    background-color: #2C2C2C;
+}
+
+.form-control:focus {
+    border-color: #a0a127;
+    border-bottom-width: 2px !important;
+    border-bottom-color: rgba(162, 163, 25, 0.74) !important;
+}
+
+.control-label {
+    font-size: 11px;
+    margin-bottom: 5px;
+    color: #31312e;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.form-control {
+    width: 100%;
+    //height: 45px;
+    border: 1px solid rgba(161, 162, 4, 0.31);
+    //font-size: 16px !important;
+    //padding: 10px;
+    font-weight: 400;
+    font-family: "Lato" !important;
+    color: #606051;
+    background: rgba(255, 255, 255, 0.64);
+}
+
+.tabbable {
+    background-color: #F9F9F9;
+}
+
+.ingredient-label-image {
+    font-size: 11px;
+    color: #948D7C;
+    margin-bottom: 5px;
+    padding-left: 0px;
+    margin-top: 20px;
+}
+
+.packaging-label-image {
+  font-size: 11px;
+  color: #948D7C;
+  margin-bottom: 5px;
+  padding-left: 0px;
+  margin-top: 20px;
+}
+.panel-image-preview {
+    border: 1px solid #DFDFDF;
+    display: block;
+    margin-bottom: 20px;
+}
+
+.panel-image {
+    margin-bottom: 20px;
+}
+
+.allergen-card-content > span {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 12px;
+    margin-top: 5px;
+    color: grey;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.portlet.light {
+    background-color: #F9F9F9;
+}
+
+.input-group-addon{
+    border: 1px solid rgba(161, 162, 4, 0.31);
+}
+
+.tabbable-line > .nav-tabs > li > a {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 12px;
+}
+
+.tabbable-line > .nav-tabs > li.active > a {
+    color: #a0a127;
+}
+
+.tabbable-line > .nav-tabs > li.active {
+    border-bottom: 4px solid #a0a127;
+    position: relative;
+}
+
+.tabbable-line > .nav-tabs > li.open, .tabbable-line > .nav-tabs > li:hover {
+    background: none;
+    border-bottom: 4px solid #BCBD2B;
+}
+
+.portlet.box > .portlet-body {
+   background-color: #F9F9F9;
+}
+
+.page-container-bg-solid .tabbable-line>.tab-content {
+    border-top: 1px solid #dae2ea;
+}
+
+#new-ingredient {
+    padding-top:0px;
+}
+
+.pointer {
+    cursor: pointer;
+}
+
+.pagination-separator {
+    vertical-align: middle;
+    display: inline-block;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+#ingredient-title{
+    border:none;
+}
+
+.label-cd {
+    background-color: #a1a204;
+}
+
+.cd-gold {
+    color: #a1a204;
+}
+
+.subfamily-row{
+    background-color: #e2e3be;
+}
+
+.toggle-row-visible td {
+  visibility: visible;
+  opacity: 1;
+  transition: visibility 0s linear 0s, opacity 300ms;
+}
+
+.toggle-row-hidden td {
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s linear 300ms, opacity 300ms;
+}
+
+.tabbable-line > .tab-content {
+    padding: 0px;
+}
+
+#addCookingStepModal {
+    padding: 35px;
+}

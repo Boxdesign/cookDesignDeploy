@@ -1,0 +1,718 @@
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>CookDesign</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" media="print">
+  <link href="https://fonts.googleapis.com/css?family=Lato:400,300,600,700&subset=all" rel="stylesheet" type="text/css"/>
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,300,600,700&subset=all" rel="stylesheet" type="text/css" />
+  <style>
+
+    .form-control {
+      width: 100%;
+      /*border: 1px solid rgba(161, 162, 4, 0.31);*/
+      font-weight: 300;
+      font-size: 8px;
+      font-family: "Lato" !important;
+      color: #606051;
+      background: rgba(255, 255, 255, 0.64);
+      margin-bottom: 10px;
+    }
+
+    .control-label {
+      font-size: 10px;
+      margin-bottom: 4px;
+      color: #31312e;
+      font-weight: 400 !important;
+      text-transform: uppercase;
+    }
+
+    .control-label2 {
+      font-size: 7px;
+      margin-bottom: 4px;
+      color: #31312e;
+      font-weight: 400 !important;
+      text-transform: uppercase;
+      margin-left: -10px !important;
+    }
+
+    body {
+      color: #606051;
+      font-family: "Lato" !important;
+      padding: 0px !important;
+      margin: 0px !important;
+      direction: "ltr";
+      font-size: 8px;
+      font-weight: 300;
+    }
+
+    .form{
+      font-size: 9px;
+      text-transform: uppercase;
+      color: #a0a127 !important;
+    }
+
+    .form-name{
+      font-size: 14px;
+      text-transform: uppercase;
+      font-family: "Lato" !important;
+      font-color: grey !important;
+    }
+
+    .table>thead>tr>th {
+      padding: 8px;
+      line-height: 1.42857143;
+      vertical-align: top;
+      border-top: 1px solid #ddd;  
+      font-size: 6px; 
+      font-family: Montserrat;  
+      border-bottom: 1px solid #e2e2d0;   
+            
+    }
+
+    .table > tbody > tr > td {
+      font-size: 6px;
+      font-weight: 300 !important;   
+      page-break-before:  always;   
+      margin-top: 4px;  
+      background-color: #F1ECEC;
+      border-bottom: 1px solid #e2e2d0;
+      line-height: 7px;
+      width: 100% !important;
+    }
+
+    .table-cd > .table > thead > tr > th {
+      text-transform: uppercase;
+      padding-top: 10px;
+      /*background-color: #B3B5B3;*/
+      color: rgba(253, 255, 34, 0.63);
+      font-weight: 400 !important;
+      border-bottom: 1px solid #e2e2d0;
+      background-image: url(<%=images.imgTexture%>);
+      background-color: #F1ECEC;
+      box-shadow: inset 0px -15px 20px -15px rgba(0, 0, 0, 0.47);
+      position: relative;
+      font-family: Lato;
+      page-break-before: auto;
+      /*padding-bottom: 15px !important;*/
+      vertical-align: middle; 
+      line-height: 7px;      
+    }
+
+
+    @media print {
+
+      .avoid-page-break {
+        page-break-inside: avoid !important;
+        margin: 4px 0 4px 0;  /* to keep the page break from cutting too close to the text in the div */
+      }
+
+      .page-break-before {
+        page-break-before: always !important;
+        margin: 4px 0 4px 0;  /* to keep the page break from cutting too close to the text in the div */
+      }
+
+      .page-break {
+        page-break-after:always !important;
+        margin-top: 70px !important;
+      }
+
+      .page-break2 {
+        page-break-after:always !important;
+      }
+
+      .cd-line {
+        border-color: #a0a127 !important;
+        margin-top: 0px;
+        margin-bottom: 8px;
+      }
+      .cd-linee {
+        border-color: #FFFFFF !important;
+        margin-top: 0px;
+        margin-bottom: 4px;
+      }
+
+      .cd-line-footer {
+        border-color: #ddd !important;
+        margin-bottom: 4px;
+        height: 0.5px;
+      }
+
+      .cd-lineee {
+        border-color: #ddd !important;
+        margin-top: 0px;
+        margin-bottom: 8px;
+      }
+
+      .cd-lineeesub {
+        border-color: #ddd !important;
+        margin-top: 0px;
+        margin-bottom: 8px;
+      }
+
+      .cd-line-header {
+        border-color: #ddd !important;
+        margin-top: 6px;
+        height: 1px;
+      }
+
+      #pageHeader, #pageFooter {
+        font-color: #dddddd !important;
+        font-size: 5px;
+      }
+
+      .title {
+        margin-top: 15px !important;
+        color: black !important;
+        text-align: center;
+        font-size: 18px;
+      }
+
+      .title2 {
+        color: #a0a127 !important;
+        margin-left: 25px !important;
+        margin-bottom: 20px !important;
+        font-size: 15px;              
+      }
+
+      .title3 {
+        color: #a0a127 !important;
+        margin-left: 25px !important;
+        font-size: 15px;
+        margin-bottom: 20px !important;             
+      }
+
+      .title4 {
+        color: #ABAAAA !important;
+        margin-left: -5px !important;
+        font-size: 15px;
+        margin-bottom: 20px !important;             
+      }
+
+      .title5 {
+        color: #a0a127 !important;
+        font-size: 18px;
+        font-weight: 400 !important;
+        margin-bottom: 10px !important;             
+      }
+
+      .title5sub {
+        color: #a0a127 !important;
+        font-size: 18px;
+        font-weight: 400 !important;
+        margin-bottom: 10px !important;             
+      }
+
+      .allergens1 {
+        color: red !important;
+        font-size: 5px;
+
+      }
+
+      .allergens2 {
+        color: orange !important;
+        font-size: 5px;
+      }
+      
+      .marginImage{
+        margin-right: 10px !important;
+        margin-bottom: 20px !important;
+      }
+
+      img.pageHeaderDefault{
+        width: 27px !important;
+        height:20px !important;
+        margin-bottom: 8px !important;
+      }
+
+      img.resizeHeader{
+        width: 25% !important;
+        height: 22% !important;
+        margin-bottom: 8px !important;
+        opacity: 0.2 !important;
+      }
+
+      img.resizeDishImage{
+        width: auto !important;
+        height: 175px !important;
+        margin-left: 30px !important;
+        margin-bottom: 15px !important;
+        margin-top: 10px !important;
+      }
+
+      .top{
+        margin-top: 35px !important;
+        margin-left: 70% !important;
+        opacity: 0.2 !important;
+      }
+
+      .header{
+        margin-top: 5px !important;
+      }
+      .imageHeader{
+        margin-top: 5px !important;
+      }
+      .boxed{
+        margin-top: 25px !important;
+        background-color: #a0a127 !important;
+        padding-top: 85px !important;
+        margin-right: 5% !important;
+        margin-left: 60% !important;
+        height: 170px !important;
+        border: 1px solid #a0a127 !important;
+        border-radius: 10px !important;
+         
+      }
+
+      .boxedText{
+        padding-left: 20px !important;
+        font-size: 15px !important;
+        color: white !important;
+      }
+
+      .name{
+        margin-left: 65px !important;
+        font-size: 14px !important;
+        color: black !important;
+        font-weight: bold !important;       
+      }
+
+      .index{
+        padding-top: 15px !important;
+        margin-left: 65px !important;
+        font-size: 12px !important;
+        color: black !important;
+      }
+
+      .spaceIndex{
+				list-style-type: none;
+        margin-bottom: 8px !important;
+        margin-top: 8px !important;
+      }
+
+      .subSpaceIndex{
+        padding-bottom: 0px !important;
+        margin-bottom: 2px !important;
+        color: #ABAAAA !important;
+      }
+
+      .right{
+        margin-left: 40px !important;
+        page-break-after: always !important;
+        
+      }
+
+      .right2{
+        margin-left: 10px !important;       
+      }
+
+      .index2{
+        font-size: 12px !important;
+        color: black !important;      
+      }
+
+      .index3{
+        font-size: 12px !important;
+        color: black !important;  
+        padding-left: 10px !important;  
+        padding-bottom: 10px !important;
+      }
+
+      ol.bullet{
+        font-size: 10px !important;
+        padding-bottom: 0px !important;
+        page-break-inside: avoid !important;
+      }
+
+      .background{
+        background-color: #ddd !important;
+        margin-top: 5px !important;
+        margin-bottom: 5px !important;
+      }
+      ul.distance{
+        font-size: 7px !important;
+        margin-bottom: 2px !important;
+        page-break-inside: avoid !important;  
+        margin-left: -20px !important;    
+      }
+
+      ul.composition{
+        font-size: 7px !important;
+        margin-bottom: 3px !important;
+        page-break-inside: avoid !important;  
+        margin-left: -55px !important;    
+      }
+
+      .space{
+        margin-bottom: 20px !important;
+      }
+
+      .imageAllergen{
+        margin-top: 8px !important;
+        align-content: center !important;
+        margin-right: 2px !important;
+        margin-bottom: 2px !important;
+        width: 30px !important;
+        height: 30px !important;
+      }
+
+      .textAllergen{
+        text-align: center !important;
+        margin-right: 5px !important;
+        margin-bottom: 10px !important;
+      }
+
+      .table-cd > .table > tbody > tr:first-child> td {
+        border-top: none !important;
+        border-bottom: 1px solid #e2e2d0;
+        color: rgba(253, 255, 34, 0.63) !important;
+        font-size: 7px;
+        font-weight: 300 !important;  
+        margin-top: 6px;  
+        line-height:px;
+        
+
+      }
+      .table-cd > .table > tbody > tr > td {
+        border-top: none !important;
+        /*background-color: #F1ECEC !important;*/
+        color: rgba(253, 255, 34, 0.63) !important;
+        font-size: 7px;
+        font-weight: 300 !important;   
+        margin-top: 6px;  
+        border-bottom: 1px solid #e2e2d0;
+        line-height: 7px;
+        
+
+      }
+
+      .table-cd > .tablee > tbody > tr > td {
+        border-top: none !important;
+        background-color: #F1ECEC !important;
+        color: rgba(253, 255, 34, 0.63) !important;
+        font-size: 7px;
+        font-weight: 300 !important;
+        margin-top: 6px;  
+        border-bottom: none;  
+        line-height: 7px; 
+        width: 100% !important;    
+
+      }
+
+      .titleRecipe {
+        color: #a0a127 !important;
+        text-align: right;
+        font-size: 10px;
+        margin-top: 15px !important;
+
+      }
+
+      #dishTable tr td:nth-child(1), #dishTable tr th:nth-child(1){
+        width:200px !important;
+        line-height: 7px;
+        font-size: 8px;
+        vertical-align: middle !important;
+        text-align: left !important;
+      }
+      #dishTable tr td:nth-child(2), #dishTable tr th:nth-child(2){
+        width:50% !important;
+        line-height: 7px;
+        font-size: 8px;
+        vertical-align: middle !important;
+        text-align: left !important;
+      }
+      #dishTable tr td:nth-child(3), #dishTable tr th:nth-child(3){
+        width:25% !important;
+        line-height: 7px;
+        font-size: 8px;
+        vertical-align: middle !important;
+        text-align: center !important;
+      }
+
+      .bold{
+        font-size: 8px !important; 
+        font-weight: bold !important;
+      }
+
+      .cookingStepsName{
+        font-size: 9px !important;
+        color: #ABAAAA !important;
+        margin-bottom: 8px !important;
+        margin-top: 5px !important;
+        
+      }
+
+      #tablesub tr td:nth-child(1), #tablesub tr th:nth-child(1){
+        width:5% !important;
+        line-height: 8px;
+        font-size: 7px;
+        vertical-align: middle !important;
+      }
+      #tablesub tr td:nth-child(2), #tablesub tr th:nth-child(2){
+        width:15% !important;
+        text-align: left:  !important;
+        line-height: 8px;
+        font-size: 7px;
+        vertical-align: middle !important;
+      }
+      #tablesub tr td:nth-child(3), #tablesub tr th:nth-child(3){
+        width:35% !important;
+        text-align: left:  !important;
+        line-height: 8px;
+        font-size: 7px;
+        vertical-align: middle !important;
+      }
+      #tablesub tr td:nth-child(4), #tablesub tr th:nth-child(4){
+        width:20% !important;
+        text-align: left:  !important;
+        line-height: 8px;
+        font-size: 7px;
+        vertical-align: middle !important;
+      }
+      #tablesub tr td:nth-child(5), #tablesub tr th:nth-child(5){
+        width:15% !important;
+        text-align: center !important;
+        line-height: 8px;
+        font-size: 7px;
+      }
+      #tablesub tr td:nth-child(6), #tablesub tr th:nth-child(6){
+        width:10% !important;
+        text-align: center !important;
+        line-height: 8px;
+        font-size: 7px;
+      }
+
+      /*.tablesub-cd > .tableesub > thead > tr > th{
+        text-transform: uppercase;
+        padding-top: 10px;
+        color: rgba(253, 255, 34, 0.63);
+        font-weight: 400 !important;
+        box-shadow: inset 0px -15px 20px -15px rgba(0, 0, 0, 0.47);
+        font-family: Lato;
+        vertical-align: middle;
+        width: 100%;
+        border-bottom: 1px solid #B33434 !important;
+      }*/
+
+      .titlesub {
+        color: #B33434 !important;
+        text-align: right;
+        font-size: 10px;
+        margin-top: 15px !important;
+      }
+
+      .tableesub-cd > .tablesub > tbody > tr > td {
+        font-size: 7px;
+        font-weight: 300 !important;      
+        margin-top: 4px;  
+        line-height: 8px;
+        border-bottom: 1px solid #ddd !important;
+      }
+
+      .tableesub-cd > .tablesub > thead > tr > th {
+        text-transform: uppercase;
+        padding-top: 10px;
+        color: rgba(253, 255, 34, 0.63);
+/*        font-weight: 400 !important;
+*/        border-bottom: 1px solid #B33434 !important;
+        box-shadow: inset 0px -15px 20px -15px rgba(0, 0, 0, 0.47);
+        position: relative;
+        font-family: Lato;
+        vertical-align: middle; 
+        font-size: 7px; 
+        line-height: 8px; 
+      }
+      .titlesubproducts{
+        color: #ABAAAA !important;
+        font-size: 14px;
+        margin-bottom: 15px !important;
+      }
+      .subproductName{
+        color: #B00505 !important;
+        font-size: 11px;
+        margin-bottom: 10px !important;
+        text-transform: uppercase;
+      }
+
+      .fixed{
+        position: fixed;
+        top: 530px;
+        left: 40px;
+      }
+      .absolute {
+        position: relative;
+      }
+    }
+  </style>    
+</head>
+<body>
+  <div id="pageHeader-first">       
+  </div>
+  <div class="absolute">
+  <div id="pageHeader">
+    <div class="col-xs-12">
+      <div class="header">
+        <div class="col-xs-2">
+          <% if(gastroOffer.firstPageImage.length>0){%>
+          <img alt="Responsive image" src="<%=gastroOffer.firstPageImage[0]%>" />
+          <%} else {%>
+          <img alt="Responsive image" src="<%=images.cookDesign%>" />
+          <%}%>       
+        </div>
+        <div class="col-xs-3 col-xs-offset-7">
+          <img class="imageHeader" alt="Responsive image" src="<%=images.cookDesign%>"/>            
+        </div>        
+      </div>
+    </div>
+    <hr class="cd-line" size="1" />
+  </div>
+  <div class="row">
+    <div class="col-xs-3 top">
+      <img class="img-responsive" alt="Responsive image" src="<%=images.cookDesign%>" style="align-content: right;"/>
+    </div>
+  </div>
+  <div class="page-break">
+    <div class="row">
+      <div class="col-xs-8 col-xs-offset-2">
+        <div class="paddingName">
+        <% if(gastroOffer.firstPageImage.length>0){%>
+								<img class="img-responsive center-block" alt="Responsive image" src="<%=gastroOffer.firstPageImage[0] %>">
+        <%} else {%>
+          <img class="img-responsive center-block" alt="Responsive image" src="<%=images.cookDesign%>" >
+        <%}%>
+        </div>
+      </div>
+      <div class="col-xs-12">
+        <h6 class="title">
+          <% if(gastroOffer.type=='carte'){%>
+          <%= i18n.__('carte').toUpperCase() %> : <%= gastroOffer.versions.lang[0].name %>                       
+          <%}%>
+          <% if(gastroOffer.type=='menu'){%>
+          <%= i18n.__('menu').toUpperCase() %> : <%= gastroOffer.versions.lang[0].name %>                       
+          <%}%>
+          <% if(gastroOffer.type=='buffet'){%>
+          <%= i18n.__('buffet').toUpperCase() %> : <%= gastroOffer.versions.lang[0].name %>                       
+          <%}%>
+          <% if(gastroOffer.type=='dailyMenuCarte'){%>
+          <%= i18n.__('dailyMenuCarte').toUpperCase() %> : <%= gastroOffer.versions.lang[0].name %>                       
+          <%}%>
+          <% if(gastroOffer.type=='fixedPriceCarte'){%>
+          <%= i18n.__('fixedPriceCarte').toUpperCase() %> : <%= gastroOffer.versions.lang[0].name %>                       
+          <%}%>
+          <% if(gastroOffer.type=='catalog'){%>
+          <%= i18n.__('catalog').toUpperCase() %> : <%= gastroOffer.versions.lang[0].name %>                       
+          <%}%>
+        </h6>
+      </div>
+      <div class="col-xs-12 fixed">
+        <div class="boxed">
+          <span class="boxedText"><%= i18n.__('recipesBook').toUpperCase() %></span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="page-break2">
+  <div class="row">
+    <div class="col-xs-12">
+      <div class="row">
+        <div class="col-xs-12">
+          <h4 class="title2">
+            <% if(gastroOffer.type=='carte'){%>
+            <%= i18n.__('carteStructure').toUpperCase() %>                       
+            <%}%>
+            <% if(gastroOffer.type=='menu'){%>
+            <%= i18n.__('menuStructure').toUpperCase() %>                     
+            <%}%>
+            <% if(gastroOffer.type=='buffet'){%>
+            <%= i18n.__('buffetStructure').toUpperCase() %>                      
+            <%}%>
+            <% if(gastroOffer.type=='dailyMenuCarte'){%>
+            <%= i18n.__('dailyMenuCarteStructure').toUpperCase() %>
+            <%}%>
+            <% if(gastroOffer.type=='fixedPriceCarte'){%>
+            <%= i18n.__('fixedPriceCarteStructure').toUpperCase() %> 
+            <%}%>
+            <% if(gastroOffer.type=='catalog'){%>
+            <%= i18n.__('catalogStructure').toUpperCase() %>
+            <%}%>
+          </h4>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-12">
+          <span class="name"><%= gastroOffer.versions.lang[0].name %></span>
+        </div>
+      </div>
+				<div class="row">
+					<div class="col-xs-6 index">
+						<%_.each(gastroOffer.versions.composition,function(tableArray, index) {%>
+						<%_.each(tableArray.compElements,function(compositionElement) {%>
+						<ul class="spaceIndex">
+						<% if(compositionElement.family&&compositionElement.familyInit){%>
+								<%=compositionElement.familyId %>.<%=compositionElement.family.lang.name %>
+								<%}%>
+									<% if(compositionElement.subfamilyInit&&compositionElement.subfamily){%>
+											<% if(compositionElement.subfamily.lang.name!='none'){%>
+												<li class="subSpaceIndex">
+													&nbsp; &nbsp; &nbsp;<%=compositionElement.subfamilyId%>.<%=compositionElement.subfamily.lang.name %>
+												</li>
+											<%}%>
+									<%}%>
+							</ul>
+						<%});%>
+						<%});%>
+					</div>
+				</div>
+    </div>
+  </div>
+</div>
+<div class="page-break2">
+<%_.each(gastroOffer.versions.composition,function(tableArray, step,list) {%>
+  <%_.each(tableArray.compElements,function(compositionElement,key,list) {%>
+    <div class="row">
+      <div class="col-xs-12">
+      <% if(compositionElement.family&&compositionElement.familyInit){%>
+      <span class="title3"><%=compositionElement.familyId %>.<%=compositionElement.family.lang.name %></span>
+      <hr class="cd-linee" size="1" />
+      <hr class="cd-linee" size="1" />
+      <%}%>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-xs-10 right">
+        <% if(compositionElement.family&&compositionElement.familyInit&&compositionElement.subfamilyInit){%>
+            <span class="index2"><%= i18n.__('index').toUpperCase() %></span>
+            <hr class="cd-lineee" size="1" />
+        <%} else if(compositionElement.subfamily&&compositionElement.subfamilyInit&&!compositionElement.familyInit){%>
+            <span class="title4"><%= compositionElement.subfamilyId? (compositionElement.subfamilyId-0.1).toFixed(1):'' %>.<%=compositionElement.subfamily.lang.name %></span>
+            <hr class="cd-linee" size="1" />
+            <hr class="cd-linee" size="1" />
+            <span class="index3"><%= i18n.__('index').toUpperCase() %></span>
+            <hr class="cd-lineee right2" size="1" />
+        <%}%>
+          <li class="bullet"><%=compositionElement.name%></li>
+      </div>
+      <hr class="cd-linee" size="1" />
+      <hr class="cd-linee" size="1" />
+    </div>
+  <%});%>
+  <div class="page-break-before"><%= recipeListTemplate({composition: tableArray.compElements, gastroOffer: gastroOffer, tax:tax, images:images, i18n:i18n, menuType: menuType,subproductsListTemplate:subproductsListTemplate}) %></div>
+  <div class="page-break2"></div>
+<%});%>
+</div>
+<div id="pageFooter">
+          <hr class="cd-line-footer">
+          <div class="row">
+            <div class="col-xs-5">    
+              <!-- <span class="pull-left"><div><%= i18n.__('user').toLowerCase() %><%=':'%><%= gastroOffer.versions.last_account.name.toLowerCase()%></div><div><%= i18n.__('printTime').toLowerCase() %><%= ':'%> <%= date %></div></span> -->
+            </div>
+            <div class="col-xs-3">
+              <span><p>{{page}}/{{pages}}</p></span>
+            </div>
+            <div class="col-xs-4">
+              <span class="pull-right">CookDesign</span>
+            </div>
+          </div>
+        </div>
+</body>
+</html>

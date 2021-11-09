@@ -1,0 +1,947 @@
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>CookDesign</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" media="print">
+	<link href="https://fonts.googleapis.com/css?family=Lato:400,300,600,700&subset=all" rel="stylesheet" type="text/css"/>
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:400,300,600,700&subset=all" rel="stylesheet" type="text/css" />
+	<style>
+		.tablecomp > tbody > tr > td {
+			font-weight: 300 !important;      
+			border-bottom: none !important;			
+		}
+
+		.tablecomp-cd > .tablecomp > thead > tr > th{
+			text-transform: uppercase;
+			font-weight: 400 !important;
+			font-family: Lato;
+			vertical-align: middle;	
+		}
+
+		.form-control {
+			width: 100%;
+			/*border: 1px solid rgba(161, 162, 4, 0.31);*/
+			font-weight: 300;
+			font-size: 8px;
+			font-family: "Lato" !important;
+			color: #606051;
+			background: rgba(255, 255, 255, 0.64);
+			margin-bottom: 10px;
+		}
+
+		.control-label {
+			font-size: 10px;
+			margin-bottom: 4px;
+			color: #31312e;
+			font-weight: 400 !important;
+			text-transform: uppercase;
+		}
+
+		body {
+			color: #606051;
+			font-family: "Lato" !important;
+			padding: 0px !important;
+			margin: 0px !important;
+			direction: "ltr";
+			font-size: 8px;
+			font-weight: 300;
+		}
+
+		.form{
+			font-size: 9px;
+			text-transform: uppercase;
+			color: #a0a127 !important;
+		}
+
+		.form-name{
+			font-size: 14px;
+			text-transform: uppercase;
+			font-family: "Lato" !important;
+			font-color: grey !important;
+		}
+
+		@media print {
+
+			.inline-block {
+				display: inline-block !important;
+			}
+
+			.avoid-page-break {
+					page-break-before:always !important;
+					page-break-after:always !important;
+      		page-break-inside:avoid !important;
+					margin: 4px 0 4px 0;  
+			}
+
+			.page-break-before {
+				page-break-before: always !important;
+				margin: 4px 0 4px 0;  /* to keep the page break from cutting too close to the text in the div */
+			}
+
+			.page-break {
+				page-break-after:always !important;
+			}
+
+			.cd-line {
+				border-color: #a0a127 !important;
+				margin-top: 4px;
+				margin-bottom: 10px;
+			}
+			.cd-linee {
+				border-color: #FFFFFF !important;
+			}
+
+			.cd-line-footer {
+				border-color: #ddd !important;
+				margin-bottom: 4px;
+				height: 0.5px;
+			}
+
+			.cd-line-header {
+				border-color: #ddd !important;
+				margin-top: 6px;
+				height: 1px;
+			}
+
+			#pageHeader, #pageFooter {
+				font-color: #dddddd !important;
+				font-size: 5px;
+			}
+
+			.title {
+				color: #a0a127 !important;
+				text-align: left;
+				font-size: 15px;
+			}
+
+			.title1 {
+				color: #a0a127 !important;
+				text-align: left;
+				font-size: 10px;
+				margin-left: -15px !important;
+			}
+
+			.allergens1 {
+				color: red !important;
+				font-size: 4px;
+
+			}
+
+			.allergens2 {
+				color: orange !important;
+				font-size: 4px;
+			}
+
+			.tablecomp-cd > .tablecomp > tbody > tr > td {
+				width: 100% !important;
+				
+			}
+
+		 .tablecomp-cd > .tablecomp > thead > tr > th {
+				width: 100% !important;
+				vertical-align: middle !important;
+				text-align: center !important;
+				font-size: 9px !important;
+			}
+
+			.form-control {
+				border:none;
+			}
+
+			#tablecomp tbody > tr > td:nth-child(1){
+				width:340px !important;
+				text-align: left !important;
+				line-height: 7px;
+				font-size: 8px;
+				vertical-align: middle !important;
+				margin-bottom: 6px !important;
+				
+			}
+			#tablecomp tbody > tr > td:nth-child(2){
+				width:120px !important;
+				text-align: right !important;
+				line-height: 10px !important;
+				font-size: 8px;
+				vertical-align: middle !important;
+				margin-bottom: 6px !important;				
+			}
+						
+			#tablecomp2 tbody > tr > td:nth-child(1){
+				width:80% !important;
+				text-align: left !important;
+				line-height: 10px;
+				font-size: 8px;
+				vertical-align: middle !important;
+				margin-bottom: 0px;
+				padding-bottom: 0px;
+				padding-top: 0px;
+				margin-top: 0px;
+				
+			}
+			#tablecomp2 tbody > tr > td:nth-child(2){
+				width:20% !important;
+				text-align: right !important;
+				line-height: 8px !important;
+				font-size: 8px;
+				vertical-align: middle !important;
+				margin-bottom: 0px;
+				padding-bottom: 0px;
+				padding-top: 0px;
+				margin-top: 0px;
+			}
+
+			.paddingTop{
+				margin-top: 12px !important;
+				padding-top: 12px !important;
+				margin-bottom: 7px !important;
+			}
+			
+			.marginTop{
+				text-align: right !important;
+				margin-top: 50px !important;
+				padding-right: 40px !important;
+				page-break-inside: avoid !important;
+			}
+
+			.subfamily{
+				font-size: 8px !important;
+				color: grey !important;
+				border-spacing: 1px !important;
+			}
+			.allergens1 {
+				color: red !important;
+				font-size: 4px;
+			}
+
+			.allergens2 {
+				color: orange !important;
+				font-size: 4px;
+			}
+			img.top {
+				margin-top: 5px !important;
+				padding-bottom: -5px !important;
+			}
+		}
+	</style>		
+</head>
+<% if(showPrice == 'true'){%>
+	
+	<body>
+	<div id="pageHeader-first">
+		<div class="col-xs-offset-11">
+			<img class="top" src="<%=images.imgLogo%>" style="align-content: right;"/>
+		</div>
+	</div> 
+	<div id="pageHeader">
+		<span class="pull-right"><%= i18n.__('gastroOffer').toUpperCase() %><%=':'%><%= gastroOffer.versions.lang[0].name.toUpperCase() %></span>
+	</div>
+	<h6 class="title"><% if(gastroOffer.type=='carte'){%>
+		<%= i18n.__('carte').toUpperCase() %> : <%= gastroOffer.versions.lang[0].name %>                       
+		<%}%>
+		<% if(gastroOffer.type=='menu'){%>
+		<%= i18n.__('menu').toUpperCase() %> : <%= gastroOffer.versions.lang[0].name %>                       
+		<%}%>
+		<% if(gastroOffer.type=='buffet'){%>
+		<%= i18n.__('buffet').toUpperCase() %> : <%= gastroOffer.versions.lang[0].name %>                       
+		<%}%>
+		<% if(gastroOffer.type=='dailyMenuCarte'){%>
+		<%= i18n.__('dailyMenuCarte').toUpperCase() %> : <%= gastroOffer.versions.lang[0].name %>                       
+		<%}%>
+		<% if(gastroOffer.type=='fixedPriceCarte'){%>
+		<%= i18n.__('fixedPriceCarte').toUpperCase() %> : <%= gastroOffer.versions.lang[0].name %>                       
+		<%}%>
+		<% if(gastroOffer.type=='catalog'){%>
+		<%= i18n.__('catalog').toUpperCase() %> : <%= gastroOffer.versions.lang[0].name %>                       
+		<%}%></h6>
+		<hr class="cd-line" size="3" />
+		<div class="row">
+			<div class="col-xs-12">
+				<div class="form-body">
+					<div class="row">
+						<div class="col-xs-12">
+							<div class="row">
+								<div class="col-xs-12">
+									<% if(gastroOffer.type=='carte'){%>	
+										<div class="tablecomp-cd">
+											<%_.each(gastroOffer.versions.composition,function(tableArray) {%>
+												<table id="tablecomp2" class="tablecomp avoid-page-break">
+													<%_.each(tableArray.compElements,function(compositionElement) {%>
+														<thead>
+															<tr>
+																<% if(compositionElement.family&&compositionElement.familyInit){%>
+																	<tr >
+																		<th >															
+																			<div class="paddingTop"><%=compositionElement.family.lang.name %></div>
+																		</td>
+																		<th></th>
+																	</tr>
+																<%}%>
+																<% if(compositionElement.subfamily&&compositionElement.subfamilyInit){%>
+																	<tr>
+																		<th>
+																			<% if(compositionElement.subfamily.lang.name!='none'){%>
+																			<div class="subfamily"><%=compositionElement.subfamily.lang.name %></div>
+																			<%}%>
+																		</th>
+																		<th></th>
+																	</tr>												
+																<%}%>
+															</tr>
+														</thead>
+														<tbody >															
+															<tr >
+																<td>
+																	<div class="avoid-page-break page-break-before">
+																		<%=compositionElement.name.toUpperCase() %> <br>
+																		<%_.each(compositionElement.allergens,function(allergen){%>
+																		<% if(allergen.level==1){%>
+																				<span class="allergens2"><%= allergen.allergen.lang[0].name %>,</span>
+																		<%} else {%>
+																			 <span class="allergens1"><%= allergen.allergen.lang[0].name %>,</span>
+																		<%}%>
+																		<%}); %>
+																	</div>
+																</td>
+																<td><%=(compositionElement.price * (1+ tax/100) * compositionElement.numServings).toFixed(2)%>€</td>
+															</tr>
+														</tbody>
+													<%}); %>
+												</table>
+											<%}); %>
+										</div>
+									<% } %>
+									<% if(gastroOffer.type=='menu'){%>
+									<div class="tablecomp-cd">
+											<%_.each(gastroOffer.versions.composition,function(tableArray) {%>
+												<table id="tablecomp2" class="tablecomp avoid-page-break">
+													<%_.each(tableArray.compElements,function(compositionElement) {%>
+														<thead>
+															<tr>
+																<% if(compositionElement.family&&compositionElement.familyInit){%>
+																	<tr >
+																		<th >															
+																			<div class="paddingTop"><%=compositionElement.family.lang.name %></div>
+																		</th>
+																		<th></th>
+																	</tr>
+																<%}%>
+																<% if(compositionElement.subfamily&&compositionElement.subfamilyInit){%>
+																	<tr>
+																		<th>
+																			<% if(compositionElement.subfamily.lang.name!='none'){%>
+																			<div class="subfamily"><%=compositionElement.subfamily.lang.name %></div>
+																			<%}%>
+																		</th>
+																		<th></th>
+																	</tr>												
+																<%}%>
+															</tr>
+														</thead>
+														<tbody >															
+															<tr >
+																<td>
+																	<div class="avoid-page-break page-break-before">
+																		<%=compositionElement.name.toUpperCase() %> <br>
+																		<%_.each(compositionElement.allergens,function(allergen){%>
+																		<% if(allergen.level==1){%>
+																				<span class="allergens2"><%= allergen.allergen.lang[0].name %>,</span>
+																		<%} else {%>
+																			 <span class="allergens1"><%= allergen.allergen.lang[0].name %>,</span>
+																		<%}%>
+																		<%}); %>
+																	</div>
+																</td>
+															</tr>
+														</tbody>
+													<%}); %>
+												</table>
+											<%}); %>
+										</div>
+									<% } %>
+									<% if(gastroOffer.type=='dailyMenuCarte'){%>
+									<div class="tablecomp-cd">
+											<%_.each(gastroOffer.versions.composition,function(tableArray) {%>
+												<table id="tablecomp2" class="tablecomp avoid-page-break">
+													<%_.each(tableArray.compElements,function(compositionElement) {%>
+														<thead>
+															<tr>
+																<% if(compositionElement.family&&compositionElement.familyInit){%>
+																	<tr >
+																		<th >															
+																			<div class="paddingTop"><%=compositionElement.family.lang.name %></div>
+																		</th>
+																		<th></th>
+																	</tr>
+																<%}%>
+																<% if(compositionElement.subfamily&&compositionElement.subfamilyInit){%>
+																	<tr>
+																		<th>
+																			<% if(compositionElement.subfamily.lang.name!='none'){%>
+																			<div class="subfamily"><%=compositionElement.subfamily.lang.name %></div>
+																			<%}%>
+																		</th>
+																		<th></th>
+																	</tr>												
+																<%}%>
+															</tr>
+														</thead>
+														<tbody >															
+															<tr >
+																<td>
+																	<div class="avoid-page-break page-break-before">
+																		<%=compositionElement.name.toUpperCase() %> <br>
+																		<%_.each(compositionElement.allergens,function(allergen){%>
+																		<% if(allergen.level==1){%>
+																				<span class="allergens2"><%= allergen.allergen.lang[0].name %>,</span>
+																		<%} else {%>
+																			 <span class="allergens1"><%= allergen.allergen.lang[0].name %>,</span>
+																		<%}%>
+																		<%}); %>
+																	</div>
+																</td>
+															</tr>
+														</tbody>
+													<%}); %>
+												</table>
+											<%}); %>
+										</div>
+									<% } %>
+									<% if(gastroOffer.type=='buffet'){%>
+									<div class="tablecomp-cd">
+											<%_.each(gastroOffer.versions.composition,function(tableArray) {%>
+												<table id="tablecomp2" class="tablecomp avoid-page-break">
+													<%_.each(tableArray.compElements,function(compositionElement) {%>
+														<thead>
+															<tr>
+																<% if(compositionElement.family&&compositionElement.familyInit){%>
+																	<tr >
+																		<th >															
+																			<div class="paddingTop"><%=compositionElement.family.lang.name %></div>
+																		</th>
+																		<th></th>
+																	</tr>
+																<%}%>
+																<% if(compositionElement.subfamily&&compositionElement.subfamilyInit){%>
+																	<tr>
+																		<th>
+																			<% if(compositionElement.subfamily.lang.name!='none'){%>
+																			<div class="subfamily"><%=compositionElement.subfamily.lang.name %></div>
+																			<%}%>
+																		</th>
+																		<th></th>
+																	</tr>												
+																<%}%>
+															</tr>
+														</thead>
+														<tbody >															
+															<tr >
+																<td>
+																	<div class="avoid-page-break page-break-before">
+																		<%=compositionElement.name.toUpperCase() %> <br>
+																		<%_.each(compositionElement.allergens,function(allergen){%>
+																		<% if(allergen.level==1){%>
+																				<span class="allergens2"><%= allergen.allergen.lang[0].name %>,</span>
+																		<%} else {%>
+																			 <span class="allergens1"><%= allergen.allergen.lang[0].name %>,</span>
+																		<%}%>
+																		<%}); %>
+																	</div>
+																</td>
+																<td></td>
+															</tr>
+														</tbody>
+													<%}); %>
+												</table>
+											<%}); %>
+										</div>
+									<% } %>
+									<% if(gastroOffer.type=='fixedPriceCarte'){%>
+									<div class="tablecomp-cd">
+											<%_.each(gastroOffer.versions.composition,function(tableArray) {%>
+												<table id="tablecomp2" class="tablecomp avoid-page-break">
+													<%_.each(tableArray.compElements,function(compositionElement) {%>
+														<thead>
+															<tr>
+																<% if(compositionElement.family&&compositionElement.familyInit){%>
+																	<tr >
+																		<th >															
+																			<div class="paddingTop"><%=compositionElement.family.lang.name %></div>
+																		</th>
+																		<th></th>
+																	</tr>
+																<%}%>
+																<% if(compositionElement.subfamily&&compositionElement.subfamilyInit){%>
+																	<tr>
+																		<th>
+																			<% if(compositionElement.subfamily.lang.name!='none'){%>
+																			<div class="subfamily"><%=compositionElement.subfamily.lang.name %></div>
+																			<%}%>
+																		</th>
+																		<th></th>
+																	</tr>												
+																<%}%>
+															</tr>
+														</thead>
+														<tbody >															
+															<tr >
+																<td>
+																	<div class="avoid-page-break page-break-before">
+																		<%=compositionElement.name.toUpperCase() %> <br>
+																		<%_.each(compositionElement.allergens,function(allergen){%>
+																		<% if(allergen.level==1){%>
+																				<span class="allergens2"><%= allergen.allergen.lang[0].name %>,</span>
+																		<%} else {%>
+																			 <span class="allergens1"><%= allergen.allergen.lang[0].name %>,</span>
+																		<%}%>
+																		<%}); %>
+																	</div>
+																</td>
+																<td></td>
+															</tr>
+														</tbody>
+													<%}); %>
+												</table>
+											<%}); %>
+										</div>
+									<% } %>
+									<% if(gastroOffer.type == 'catalog'){%> 
+										<div class="tablecomp-cd">
+											<%_.each(gastroOffer.versions.composition,function(tableArray) {%>
+												<table id="tablecomp2" class="tablecomp avoid-page-break">
+													<%_.each(tableArray.compElements,function(compositionElement) {%>
+														<thead>
+															<tr>
+																<% if(compositionElement.family&&compositionElement.familyInit){%>
+																	<tr >
+																		<th >															
+																			<div class="paddingTop"><%=compositionElement.family.lang.name %></div>
+																		</th>
+																		<th></th>
+																	</tr>
+																<%}%>
+																<% if(compositionElement.subfamily&&compositionElement.subfamilyInit){%>
+																	<tr>
+																		<th>
+																			<% if(compositionElement.subfamily.lang.name!='none'){%>
+																			<div class="subfamily"><%=compositionElement.subfamily.lang.name %></div>
+																			<%}%>
+																		</th>
+																		<th></th>
+																	</tr>												
+																<%}%>
+															</tr>
+														</thead>
+														<tbody >															
+															<tr >
+																<td>
+																	<div class="avoid-page-break page-break-before">
+																		<%=compositionElement.name.toUpperCase() %> <br>
+																		<%_.each(compositionElement.allergens,function(allergen){%>
+																		<% if(allergen.level==1){%>
+																				<span class="allergens2"><%= allergen.allergen.lang[0].name %>,</span>
+																		<%} else {%>
+																			 <span class="allergens1"><%= allergen.allergen.lang[0].name %>,</span>
+																		<%}%>
+																		<%}); %>
+																	</div>
+																</td>
+																<td><%=(compositionElement.price * (1+ tax/100) * compositionElement.numServings).toFixed(2)%>€</td>
+															</tr>
+														</tbody>
+													<%}); %>
+												</table>
+											<%}); %>
+										</div>
+									<%}%>
+								</div>
+							</div>
+							<% if (gastroOffer.type=='dailyMenuCarte' || gastroOffer.type=='menu'|| gastroOffer.type=='buffet' || gastroOffer.type=='fixedPriceCarte') { %>
+								<div class="row marginTop">
+									<div class="col-xs-12">
+										<h7 class="form"><%= i18n.__('PriceWithTax').toUpperCase() %>:</h7>
+										<span class="form-group">
+											<% if (gastroOffer.versions.price && tax) { %>
+											<%= (gastroOffer.versions.price * (1+(tax/100))).toFixed(2) %>€
+											<% } else { %>
+											<span>---</span>
+											<% } %>    
+										</span>
+									</div>
+								</div>
+							<%}%>
+							<div id="pageFooter">
+								<hr class="cd-line-footer">
+								<div class="row">
+									<div class="col-xs-5">		
+										<span class="pull-left"><div><%= i18n.__('user').toLowerCase() %><%=':'%><%= gastroOffer.versions.last_account.name.toLowerCase()%></div><div><%= i18n.__('printTime').toLowerCase() %><%= ':'%> <%= date %></div></span>
+									</div>
+									<div class="col-xs-3">
+										<span><p>{{page}}/{{pages}}</p></span>
+									</div>
+									<div class="col-xs-4">
+										<span class="pull-right">CookDesign</span>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+
+<%} else {%> 
+	
+	<body>
+	<div id="pageHeader-first">
+		<div class="col-xs-offset-11">
+			<img class="top" src="<%=images.imgLogo%>" style="align-content: right;"/>
+		</div>
+	</div> 
+	<div id="pageHeader">
+		<span class="pull-right"><%= i18n.__('gastroOffer').toUpperCase() %><%=':'%><%= gastroOffer.versions.lang[0].name.toUpperCase() %></span>
+	</div>
+	<h6 class="title"><% if(gastroOffer.type=='carte'){%>
+		<%= i18n.__('carte').toUpperCase() %> : <%= gastroOffer.versions.lang[0].name %>                       
+		<%}%>
+		<% if(gastroOffer.type=='menu'){%>
+		<%= i18n.__('menu').toUpperCase() %> : <%= gastroOffer.versions.lang[0].name %>                       
+		<%}%>
+		<% if(gastroOffer.type=='buffet'){%>
+		<%= i18n.__('buffet').toUpperCase() %> : <%= gastroOffer.versions.lang[0].name %>                       
+		<%}%>
+		<% if(gastroOffer.type=='dailyMenuCarte'){%>
+		<%= i18n.__('dailyMenuCarte').toUpperCase() %> : <%= gastroOffer.versions.lang[0].name %>                       
+		<%}%>
+		<% if(gastroOffer.type=='fixedPriceCarte'){%>
+		<%= i18n.__('fixedPriceCarte').toUpperCase() %> : <%= gastroOffer.versions.lang[0].name %>                       
+		<%}%>
+		<% if(gastroOffer.type=='catalog'){%>
+		<%= i18n.__('catalog').toUpperCase() %> : <%= gastroOffer.versions.lang[0].name %>                       
+		<%}%></h6>
+		<hr class="cd-line" size="3" />
+		<div class="row">
+			<div class="col-xs-12">
+				<div class="form-body">
+					<div class="row">
+						<div class="col-xs-12">
+							<div class="row">
+								<div class="col-xs-12">
+									<% if(gastroOffer.type=='carte'){%>	
+										<div class="tablecomp-cd">
+											<%_.each(gastroOffer.versions.composition,function(tableArray) {%>
+												<table id="tablecomp2" class="tablecomp avoid-page-break">
+													<%_.each(tableArray.compElements,function(compositionElement) {%>
+														<thead>
+															<tr>
+																<% if(compositionElement.family&&compositionElement.familyInit){%>
+																	<tr >
+																		<th >															
+																			<div class="paddingTop"><%=compositionElement.family.lang.name %></div>
+																		</td>
+																		<th></th>
+																	</tr>
+																<%}%>
+																<% if(compositionElement.subfamily&&compositionElement.subfamilyInit){%>
+																	<tr>
+																		<th>
+																			<% if(compositionElement.subfamily.lang.name!='none'){%>
+																			<div class="subfamily"><%=compositionElement.subfamily.lang.name %></div>
+																			<%}%>
+																		</th>
+																		<th></th>
+																	</tr>												
+																<%}%>
+															</tr>
+														</thead>
+														<tbody >															
+															<tr >
+																<td>
+																	<div class="avoid-page-break page-break-before">
+																		<%=compositionElement.name.toUpperCase() %> <br>
+																		<%_.each(compositionElement.allergens,function(allergen){%>
+																		<% if(allergen.level==1){%>
+																				<span class="allergens2"><%= allergen.allergen.lang[0].name %>,</span>
+																		<%} else {%>
+																			 <span class="allergens1"><%= allergen.allergen.lang[0].name %>,</span>
+																		<%}%>
+																		<%}); %>
+																	</div>
+																</td>
+																<td></td>
+															</tr>
+														</tbody>
+													<%}); %>
+												</table>
+											<%}); %>
+										</div>
+									<% } %>
+									<% if(gastroOffer.type=='menu'){%>
+									<div class="tablecomp-cd">
+											<%_.each(gastroOffer.versions.composition,function(tableArray) {%>
+												<table id="tablecomp2" class="tablecomp avoid-page-break">
+													<%_.each(tableArray.compElements,function(compositionElement) {%>
+														<thead>
+															<tr>
+																<% if(compositionElement.family&&compositionElement.familyInit){%>
+																	<tr >
+																		<th >															
+																			<div class="paddingTop"><%=compositionElement.family.lang.name %></div>
+																		</td>
+																		<th></td>
+																	</tr>
+																<%}%>
+																<% if(compositionElement.subfamily&&compositionElement.subfamilyInit){%>
+																	<tr>
+																		<th>
+																			<% if(compositionElement.subfamily.lang.name!='none'){%>
+																			<div class="subfamily"><%=compositionElement.subfamily.lang.name %></div>
+																			<%}%>
+																		</th>
+																		<th></th>
+																	</tr>												
+																<%}%>
+															</tr>
+														</thead>
+														<tbody >															
+															<tr >
+																<td>
+																	<div class="avoid-page-break page-break-before">
+																		<%=compositionElement.name.toUpperCase() %> <br>
+																		<%_.each(compositionElement.allergens,function(allergen){%>
+																		<% if(allergen.level==1){%>
+																				<span class="allergens2"><%= allergen.allergen.lang[0].name %>,</span>
+																		<%} else {%>
+																			 <span class="allergens1"><%= allergen.allergen.lang[0].name %>,</span>
+																		<%}%>
+																		<%}); %>
+																	</div>
+																</td>
+															</tr>
+														</tbody>
+													<%}); %>
+												</table>
+											<%}); %>
+										</div>
+									<% } %>
+									<% if(gastroOffer.type=='dailyMenuCarte'){%>
+									<div class="tablecomp-cd">
+											<%_.each(gastroOffer.versions.composition,function(tableArray) {%>
+												<table id="tablecomp2" class="tablecomp avoid-page-break">
+													<%_.each(tableArray.compElements,function(compositionElement) {%>
+														<thead>
+															<tr>
+																<% if(compositionElement.family&&compositionElement.familyInit){%>
+																	<tr >
+																		<th >															
+																			<div class="paddingTop"><%=compositionElement.family.lang.name %></div>
+																		</td>
+																		<th></td>
+																	</tr>
+																<%}%>
+																<% if(compositionElement.subfamily&&compositionElement.subfamilyInit){%>
+																	<tr>
+																		<th>
+																			<% if(compositionElement.subfamily.lang.name!='none'){%>
+																			<div class="subfamily"><%=compositionElement.subfamily.lang.name %></div>
+																			<%}%>
+																		</th>
+																		<th></th>
+																	</tr>												
+																<%}%>
+															</tr>
+														</thead>
+														<tbody >															
+															<tr >
+																<td>
+																	<div class="avoid-page-break page-break-before">
+																		<%=compositionElement.name.toUpperCase() %> <br>
+																		<%_.each(compositionElement.allergens,function(allergen){%>
+																		<% if(allergen.level==1){%>
+																				<span class="allergens2"><%= allergen.allergen.lang[0].name %>,</span>
+																		<%} else {%>
+																			 <span class="allergens1"><%= allergen.allergen.lang[0].name %>,</span>
+																		<%}%>
+																		<%}); %>
+																	</div>
+																</td>
+																<td></td>
+															</tr>
+														</tbody>
+													<%}); %>
+												</table>
+											<%}); %>
+										</div>
+									<% } %>
+									<% if(gastroOffer.type=='buffet'){%>
+									<div class="tablecomp-cd">
+											<%_.each(gastroOffer.versions.composition,function(tableArray) {%>
+												<table id="tablecomp2" class="tablecomp avoid-page-break">
+													<%_.each(tableArray.compElements,function(compositionElement) {%>
+														<thead>
+															<tr>
+																<% if(compositionElement.family&&compositionElement.familyInit){%>
+																	<tr >
+																		<th >															
+																			<div class="paddingTop"><%=compositionElement.family.lang.name %></div>
+																		</td>
+																		<th></td>
+																	</tr>
+																<%}%>
+																<% if(compositionElement.subfamily&&compositionElement.subfamilyInit){%>
+																	<tr>
+																		<th>
+																			<% if(compositionElement.subfamily.lang.name!='none'){%>
+																			<div class="subfamily"><%=compositionElement.subfamily.lang.name %></div>
+																			<%}%>
+																		</th>
+																		<th></th>
+																	</tr>												
+																<%}%>
+															</tr>
+														</thead>
+														<tbody >															
+															<tr >
+																<td>
+																	<div class="avoid-page-break page-break-before">
+																		<%=compositionElement.name.toUpperCase() %> <br>
+																		<%_.each(compositionElement.allergens,function(allergen){%>
+																		<% if(allergen.level==1){%>
+																				<span class="allergens2"><%= allergen.allergen.lang[0].name %>,</span>
+																		<%} else {%>
+																			 <span class="allergens1"><%= allergen.allergen.lang[0].name %>,</span>
+																		<%}%>
+																		<%}); %>
+																	</div>
+																</td>
+																<td></td>
+															</tr>
+														</tbody>
+													<%}); %>
+												</table>
+											<%}); %>
+										</div>
+									<% } %>
+									<% if(gastroOffer.type=='fixedPriceCarte'){%>
+									<div class="tablecomp-cd">
+											<%_.each(gastroOffer.versions.composition,function(tableArray) {%>
+												<table id="tablecomp2" class="tablecomp avoid-page-break">
+													<%_.each(tableArray.compElements,function(compositionElement) {%>
+														<thead>
+															<tr>
+																<% if(compositionElement.family&&compositionElement.familyInit){%>
+																	<tr >
+																		<th >															
+																			<div class="paddingTop"><%=compositionElement.family.lang.name %></div>
+																		</td>
+																		<th></td>
+																	</tr>
+																<%}%>
+																<% if(compositionElement.subfamily&&compositionElement.subfamilyInit){%>
+																	<tr>
+																		<th>
+																			<% if(compositionElement.subfamily.lang.name!='none'){%>
+																			<div class="subfamily"><%=compositionElement.subfamily.lang.name %></div>
+																			<%}%>
+																		</th>
+																		<th></th>
+																	</tr>												
+																<%}%>
+															</tr>
+														</thead>
+														<tbody >															
+															<tr >
+																<td>
+																	<div class="avoid-page-break page-break-before">
+																		<%=compositionElement.name.toUpperCase() %> <br>
+																		<%_.each(compositionElement.allergens,function(allergen){%>
+																		<% if(allergen.level==1){%>
+																				<span class="allergens2"><%= allergen.allergen.lang[0].name %>,</span>
+																		<%} else {%>
+																			 <span class="allergens1"><%= allergen.allergen.lang[0].name %>,</span>
+																		<%}%>
+																		<%}); %>
+																	</div>
+																</td>
+																<td></td>
+															</tr>
+														</tbody>
+													<%}); %>
+												</table>
+											<%}); %>
+										</div>
+									<% } %>
+									<% if(gastroOffer.type == 'catalog'){%> 
+										<div class="tablecomp-cd">
+											<%_.each(gastroOffer.versions.composition,function(tableArray) {%>
+												<table id="tablecomp2" class="tablecomp avoid-page-break">
+													<%_.each(tableArray.compElements,function(compositionElement) {%>
+														<thead>
+															<tr>
+																<% if(compositionElement.family&&compositionElement.familyInit){%>
+																	<tr >
+																		<th >															
+																			<div class="paddingTop"><%=compositionElement.family.lang.name %></div>
+																		</td>
+																		<th></th>
+																	</tr>
+																<%}%>
+																<% if(compositionElement.subfamily&&compositionElement.subfamilyInit){%>
+																	<tr>
+																		<th>
+																			<% if(compositionElement.subfamily.lang.name!='none'){%>
+																			<div class="subfamily"><%=compositionElement.subfamily.lang.name %></div>
+																			<%}%>
+																		</th>
+																		<th></th>
+																	</tr>												
+																<%}%>
+															</tr>
+														</thead>
+														<tbody >															
+															<tr >
+																<td>
+																	<div class="avoid-page-break page-break-before">
+																		<%=compositionElement.name.toUpperCase() %> <br>
+																		<%_.each(compositionElement.allergens,function(allergen){%>
+																		<% if(allergen.level==1){%>
+																				<span class="allergens2"><%= allergen.allergen.lang[0].name %>,</span>
+																		<%} else {%>
+																			 <span class="allergens1"><%= allergen.allergen.lang[0].name %>,</span>
+																		<%}%>
+																		<%}); %>
+																	</div>
+																</td>
+																<td></td>
+															</tr>
+														</tbody>
+													<%}); %>
+												</table>
+											<%}); %>
+										</div>
+									<%}%>
+								</div>
+							</div>
+							<div id="pageFooter">
+								<hr class="cd-line-footer">
+								<div class="row">
+									<div class="col-xs-5">		
+										<span class="pull-left"><div><%= i18n.__('user').toLowerCase() %><%=':'%><%= gastroOffer.versions.last_account.name.toLowerCase()%></div><div><%= i18n.__('printTime').toLowerCase() %><%= ':'%> <%= date %></div></span>
+									</div>
+									<div class="col-xs-3">
+										<span><p>{{page}}/{{pages}}</p></span>
+									</div>
+									<div class="col-xs-4">
+										<span class="pull-right">CookDesign</span>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+
+<%}%>
+</html>

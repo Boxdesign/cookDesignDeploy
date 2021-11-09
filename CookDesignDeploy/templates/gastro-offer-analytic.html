@@ -1,0 +1,1376 @@
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>CookDesign</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" media="print">
+	<link href="https://fonts.googleapis.com/css?family=Lato:400,300,600,700&subset=all" rel="stylesheet" type="text/css"/>
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:400,300,600,700&subset=all" rel="stylesheet" type="text/css" />
+	<style>
+
+		.form-control {
+			width: 100%;
+			/*border: 1px solid rgba(161, 162, 4, 0.31);*/
+			font-weight: 300;
+			font-size: 8px;
+			font-family: "Lato" !important;
+			color: #606051;
+			background: rgba(255, 255, 255, 0.64);
+			margin-bottom: 10px;
+		}
+
+		.control-label {
+			font-size: 10px;
+			margin-bottom: 4px;
+			color: #31312e;
+			font-weight: 400 !important;
+			text-transform: uppercase;
+		}
+
+		body {
+			color: #606051;
+			font-family: "Lato" !important;
+			padding: 0px !important;
+			margin: 0px !important;
+			direction: "ltr";
+			font-size: 8px;
+			font-weight: 300;
+		}
+
+		.form{
+			font-size: 9px;
+			text-transform: uppercase;
+			color: #a0a127 !important;
+		}
+
+		.form-name{
+			font-size: 14px;
+			text-transform: uppercase;
+			font-family: "Lato" !important;
+			font-color: grey !important;
+		}
+
+
+		@media print {
+
+			.avoid-page-break {
+				page-break-inside: avoid !important;
+				margin: 4px 0 4px 0;  /* to keep the page break from cutting too close to the text in the div */
+			}
+
+			.page-break-before {
+				page-break-before: always !important;
+				margin: 4px 0 4px 0;  /* to keep the page break from cutting too close to the text in the div */
+			}
+
+			.page-break {
+				page-break-after:always !important;
+			}
+
+			.cd-line {
+				border-color: #a0a127 !important;
+				margin-top: 0px;
+				margin-bottom: 8px;
+			}
+			.cd-linee {
+				border-color: #FFFFFF !important;
+				margin-top: 0px;
+				margin-bottom: 4px;
+			}
+
+			.cd-lineee {
+				border-color: #FFFFFF !important;
+				margin-top: 0px;
+				margin-bottom: 4px !important;
+				height: 0.5px;
+			}
+
+			.cd-line-footer {
+				border-color: #ddd !important;
+				margin-bottom: 4px;
+				height: 0.5px;
+			}
+
+			.cd-line-header {
+				border-color: #ddd !important;
+				margin-top: 6px;
+				height: 1px;
+			}
+
+			.align{
+				text-align: center !important;
+			}
+
+			#pageHeader, #pageFooter {
+				font-color: #dddddd !important;
+				font-size: 5px;
+			}
+
+			.title {
+				color: #a0a127 !important;
+				text-align: left;
+				font-size: 15px;
+			}
+
+			.title2 {
+				color: #ddd !important;
+				vertical-align: text-bottom;
+				font-size: 8.5px;
+				margin-left: -10px !important;				
+			}
+
+			.allergens1 {
+				color: red !important;
+				font-size: 4px;
+
+			}
+
+			.allergens2 {
+				color: orange !important;
+				font-size: 4px;
+			}
+
+			.tablecomp-cd > .tablecomp > tbody > tr > td {
+				font-size: 7px;
+				font-weight: 300 !important;        
+				border-bottom: none !important;
+				width: 100% !important;
+			}
+
+			.tablecomp2-cd > .tablecomp2 > tbody > tr > td {
+				font-size: 7px;
+				font-weight: 300 !important;        
+				border-bottom: none !important;
+				width: 100% !important;
+			}
+
+			.tablecomp3-cd > .tablecomp3 > tbody > tr > td {
+				font-size: 7px;
+				font-weight: 300 !important;        
+				border-bottom: none !important;
+				width: 100% !important;
+			}
+
+			.tablecomp4-cd > .tablecomp4 > tbody > tr > td {
+				font-size: 7px;
+				font-weight: 300 !important;        
+				border-bottom: none !important;
+				width: 100% !important;
+			}
+
+			.tablecomp-cd > .tablecomp5 > tbody > tr > td {
+				font-size: 7px;
+				font-weight: 300 !important;        
+				border-bottom: none !important;
+				width: 100% !important;
+			}
+
+			.tablecomp-cd > table.tablecomp > thead > tr > th{
+				font-size: 6px !important;
+				text-transform: uppercase;
+				padding-top: 4px !important;
+				margin-top: 4px !important;
+				margin-bottom: 6px !important;
+				color: rgba(253, 255, 34, 0.63);
+				font-weight: 400 !important;
+				box-shadow: inset 0px -15px 20px -15px rgba(0, 0, 0, 0.47);
+				font-family: Lato;
+				vertical-align: middle;
+				border-bottom: 1px solid #a0a127 !important;
+				border-spacing: 0px !important;
+			}
+
+			.tablecomp2-cd > table.tablecomp2 > thead > tr > th{
+				font-size: 6px !important;
+				text-transform: uppercase;
+				padding-top: 4px !important;
+				margin-top: 4px !important;
+				margin-bottom: 6px !important;
+				color: rgba(253, 255, 34, 0.63);
+				font-weight: 400 !important;
+				box-shadow: inset 0px -15px 20px -15px rgba(0, 0, 0, 0.47);
+				font-family: Lato;
+				vertical-align: middle;
+				border-bottom: 1px solid #a0a127 !important;
+				border-spacing: 0px !important;
+			}
+
+			.tablecomp3-cd > table.tablecomp3 > thead > tr > th{
+				font-size: 6px !important;
+				text-transform: uppercase;
+				padding-top: 4px !important;
+				margin-top: 4px !important;
+				margin-bottom: 6px !important;
+				color: rgba(253, 255, 34, 0.63);
+				font-weight: 400 !important;
+				box-shadow: inset 0px -15px 20px -15px rgba(0, 0, 0, 0.47);
+				font-family: Lato;
+				vertical-align: middle;
+				border-bottom: 1px solid #a0a127 !important;
+				border-spacing: 0px !important;
+			}
+
+			.tablecomp4-cd > table.tablecomp4 > thead > tr > th{
+				font-size: 6px !important;
+				text-transform: uppercase;
+				padding-top: 4px !important;
+				margin-top: 4px !important;
+				margin-bottom: 6px !important;
+				color: rgba(253, 255, 34, 0.63);
+				font-weight: 400 !important;
+				box-shadow: inset 0px -15px 20px -15px rgba(0, 0, 0, 0.47);
+				font-family: Lato;
+				vertical-align: middle;
+				border-bottom: 1px solid #a0a127 !important;
+				border-spacing: 0px !important;
+			}
+
+			.tablecomp-cd > table.tablecomp5 > thead > tr > th{
+				font-size: 6px !important;
+				text-transform: uppercase;
+				padding-top: 4px !important;
+				margin-top: 4px !important;
+				margin-bottom: 6px !important;
+				color: rgba(253, 255, 34, 0.63);
+				font-weight: 400 !important;
+				box-shadow: inset 0px -15px 20px -15px rgba(0, 0, 0, 0.47);
+				font-family: Lato;
+				vertical-align: middle;
+				border-bottom: 1px solid #a0a127 !important;
+				border-spacing: 0px !important;
+			}
+
+			.form-control {
+				border:none;
+			}
+
+			.tablecomp > tbody > tr > td:nth-child(1), .tablecomp.table > thead > tr > th:nth-child(1){
+				width:100px !important;
+				text-align: left !important;
+				line-height: 7px;
+				font-size: 7px;
+				vertical-align: middle !important;
+				margin-bottom: 1px;
+				margin-top: 2px;
+				padding-top: 2px;
+				padding-bottom: 2px;
+				
+			}
+			.tablecomp > tbody > tr > td:nth-child(2), .tablecomp > thead > tr > th:nth-child(2){
+				width:40% !important;
+				text-align: left !important;
+				line-height: 7px;
+				font-size: 7px;
+				vertical-align: middle !important;
+				margin-bottom: 1px;
+				margin-top: 2px;
+				padding-top:2px;
+				padding-bottom: 2px;
+				
+			}
+			.tablecomp > tbody > tr > td:nth-child(3), .tablecomp > thead > tr > th:nth-child(3){
+				width:8% !important;
+				text-align: center !important;
+				line-height: 7px;
+				font-size: 7px;
+				vertical-align: middle !important;
+				margin-bottom: 1px;
+				margin-top: 2px;
+				padding-top: 2px;
+				padding-bottom: 2px;
+				
+			}
+			.tablecomp > tbody > tr > td:nth-child(4), .tablecomp > thead > tr > th:nth-child(4){
+				width:8% !important;
+				/*background-color: #BDBDBD !important;*/
+				text-align: center !important;
+				line-height: 7px;
+				font-size: 7px;
+				vertical-align: middle !important;
+				margin-bottom: 1px;
+				margin-top: 2px;
+				padding-top: 2px;
+				padding-bottom: 2px;
+				
+			}
+			.tablecomp > tbody > tr > td:nth-child(5), .tablecomp > thead > tr > th:nth-child(5){
+				width:8% !important;
+				text-align: center !important;
+				line-height: 7px;
+				font-size: 7px;
+				vertical-align: middle !important;
+				margin-bottom: 1px;
+				margin-top: 2px;
+				padding-top: 2px;
+				padding-bottom: 2px;
+				
+			}
+			.tablecomp > tbody > tr > td:nth-child(6), .tablecomp > thead > tr > th:nth-child(6){
+				width:8% !important;
+				text-align: center !important;
+				line-height: 7px;
+				font-size: 7px;
+				vertical-align: middle !important;
+				margin-bottom: 1px;
+				margin-top: 2px;
+				padding-top: 2px;
+				padding-bottom: 2px;
+				
+			}
+			.tablecomp > tbody > tr > td:nth-child(7), .tablecomp > thead > tr > th:nth-child(7){
+				width:8% !important;
+				/*background-color: #BDBDBD !important;*/
+				text-align: center !important;
+				line-height: 7px;
+				font-size: 7px;
+				vertical-align: middle !important;
+				margin-bottom: 1px;
+				margin-top: 2px;
+				padding-top: 2px;
+				padding-bottom: 2px;
+				
+			}
+			.tablecomp > tbody > tr > td:nth-child(8), .tablecomp > thead > tr > th:nth-child(8){
+				width:8% !important;
+				text-align: center !important;
+				line-height: 7px;
+				font-size: 7px;
+				vertical-align: middle !important;
+				margin-bottom: 1px;				
+				margin-top: 2px ;
+				padding-top: 2px;
+				padding-bottom: 2px;
+			}
+			
+			.tablecomp2 > tbody > tr > td:nth-child(1), .tablecomp.table > thead > tr > th:nth-child(1){
+				width:100px !important;
+				text-align: left !important;
+				line-height: 7px;
+				font-size: 7px;
+				vertical-align: middle !important;
+				margin-bottom: 1px;				
+				margin-top: 2px ;
+				padding-top: 2px;
+				padding-bottom: 2px;
+			}
+			.tablecomp2 > tbody > tr > td:nth-child(2), .tablecomp2 > thead > tr > th:nth-child(2){
+				width:45% !important;
+				text-align: left !important;
+				line-height: 7px;
+				font-size: 7px;
+				vertical-align: middle !important;
+				margin-bottom: 1px;				
+				margin-top: 2px ;
+				padding-top: 2px;
+				padding-bottom: 2px;
+				text-transform: none !important;
+			}
+			.tablecomp2 > tbody > tr > td:nth-child(3), .tablecomp2 > thead > tr > th:nth-child(3){
+				width:10% !important;
+				text-align: center !important;
+				line-height: 7px;
+				font-size: 7px;
+				vertical-align: middle !important;
+				margin-bottom: 1px;				
+				margin-top: 2px ;
+				padding-top: 2px;
+				padding-bottom: 2px;
+				text-transform: none !important;
+			}
+			.tablecomp2 > tbody > tr > td:nth-child(4), .tablecomp2 > thead > tr > th:nth-child(4){
+				width:10% !important;
+				/*background-color: #BDBDBD !important;*/
+				text-align: center !important;
+				line-height: 7px;
+				font-size: 7px;
+				vertical-align: middle !important;
+				margin-bottom: 1px;				
+				margin-top: 2px ;
+				padding-top: 2px;
+				padding-bottom: 2px;
+				text-transform: none !important;
+			}
+			.tablecomp2 > tbody > tr > td:nth-child(5), .tablecomp2 > thead > tr > th:nth-child(5){
+				width:10% !important;
+				text-align: center !important;
+				line-height: 7px;
+				font-size: 7px;
+				vertical-align: middle !important;
+				margin-bottom: 1px;				
+				margin-top: 2px ;
+				padding-top: 2px;
+				padding-bottom: 2px;
+				text-transform: none !important;
+			}
+			.tablecomp2 > tbody > tr > td:nth-child(6), .tablecomp2 > thead > tr > th:nth-child(6){
+				width:10% !important;
+				text-align: center !important;
+				line-height: 7px;
+				font-size: 7px;
+				vertical-align: middle !important;
+				margin-bottom: 1px;				
+				margin-top: 2px ;
+				padding-top: 2px;
+				padding-bottom: 2px;
+				text-transform: none !important;
+
+			}
+
+			.tablecomp3 > tbody > tr > td:nth-child(1), .tablecomp.table > thead > tr > th:nth-child(1){
+				width:120px !important;
+				text-align: left !important;
+				line-height: 7px;
+				font-size: 7px;
+				vertical-align: middle !important;
+				margin-bottom: 1px;
+				margin-top: 2px;
+				padding-top: 2px;
+				padding-bottom: 2px;
+				
+			}
+			.tablecomp3 > tbody > tr > td:nth-child(2), .tablecomp3 > thead > tr > th:nth-child(2){
+				width:40% !important;
+				text-align: left !important;
+				line-height: 7px;
+				font-size: 7px;
+				vertical-align: middle !important;
+				margin-bottom: 1px;
+				margin-top: 2px;
+				padding-top:2px;
+				padding-bottom: 2px;
+				
+			}
+			.tablecomp3 > tbody > tr > td:nth-child(3), .tablecomp3 > thead > tr > th:nth-child(3){
+				width:9% !important;
+				text-align: center !important;
+				line-height: 7px;
+				font-size: 7px;
+				vertical-align: middle !important;
+				margin-bottom: 1px;
+				margin-top: 2px;
+				padding-top: 2px;
+				padding-bottom: 2px;
+				
+			}
+			.tablecomp3 > tbody > tr > td:nth-child(4), .tablecomp3 > thead > tr > th:nth-child(4){
+				width:9% !important;
+				/*background-color: #BDBDBD !important;*/
+				text-align: center !important;
+				line-height: 7px;
+				font-size: 7px;
+				vertical-align: middle !important;
+				margin-bottom: 1px;
+				margin-top: 2px;
+				padding-top: 2px;
+				padding-bottom: 2px;
+				
+			}
+			.tablecomp3 > tbody > tr > td:nth-child(5), .tablecomp3 > thead > tr > th:nth-child(5){
+				width:9% !important;
+				text-align: center !important;
+				line-height: 7px;
+				font-size: 7px;
+				vertical-align: middle !important;
+				margin-bottom: 1px;
+				margin-top: 2px;
+				padding-top: 2px;
+				padding-bottom: 2px;
+				
+			}
+			.tablecomp3 > tbody > tr > td:nth-child(6), .tablecomp3 > thead > tr > th:nth-child(6){
+				width:9% !important;
+				text-align: center !important;
+				line-height: 7px;
+				font-size: 7px;
+				vertical-align: middle !important;
+				margin-bottom: 1px;
+				margin-top: 2px;
+				padding-top: 2px;
+				padding-bottom: 2px;			
+			}
+
+			.tablecomp3 > tbody > tr > td:nth-child(7), .tablecomp3 > thead > tr > th:nth-child(7){
+				width:9% !important;
+				/*background-color: #BDBDBD !important;*/
+				text-align: center !important;
+				line-height: 7px;
+				font-size: 7px;
+				vertical-align: middle !important;
+				margin-bottom: 1px;
+				margin-top: 2px;
+				padding-top: 2px;
+				padding-bottom: 2px;
+				
+			}
+			
+			.tablecomp4 > tbody > tr > td:nth-child(1), .tablecomp.table > thead > tr > th:nth-child(1){
+				width:100px !important;
+				text-align: left !important;
+				line-height: 7px;
+				font-size: 7px;
+				vertical-align: middle !important;
+				margin-bottom: 1px;
+				margin-top: 2px;
+				padding-top: 2px;
+				padding-bottom: 2px;
+				
+			}
+			.tablecomp4 > tbody > tr > td:nth-child(2), .tablecomp4 > thead > tr > th:nth-child(2){
+				width:40% !important;
+				text-align: left !important;
+				line-height: 7px;
+				font-size: 7px;
+				vertical-align: middle !important;
+				margin-bottom: 1px;
+				margin-top: 2px;
+				padding-top:2px;
+				padding-bottom: 2px;
+				
+			}
+			.tablecomp4 > tbody > tr > td:nth-child(3), .tablecomp4 > thead > tr > th:nth-child(3){
+				width:7% !important;
+				text-align: center !important;
+				line-height: 7px;
+				font-size: 7px;
+				vertical-align: middle !important;
+				margin-bottom: 1px;
+				margin-top: 2px;
+				padding-top: 2px;
+				padding-bottom: 2px;
+				
+			}
+			.tablecomp4 > tbody > tr > td:nth-child(4), .tablecomp4 > thead > tr > th:nth-child(4){
+				width:7% !important;
+				/*background-color: #BDBDBD !important;*/
+				text-align: center !important;
+				line-height: 7px;
+				font-size: 7px;
+				vertical-align: middle !important;
+				margin-bottom: 1px;
+				margin-top: 2px;
+				padding-top: 2px;
+				padding-bottom: 2px;
+				
+			}
+			.tablecomp4 > tbody > tr > td:nth-child(5), .tablecomp4 > thead > tr > th:nth-child(5){
+				width:7% !important;
+				text-align: center !important;
+				line-height: 7px;
+				font-size: 7px;
+				vertical-align: middle !important;
+				margin-bottom: 1px;
+				margin-top: 2px;
+				padding-top: 2px;
+				padding-bottom: 2px;
+				
+			}
+			.tablecomp4 > tbody > tr > td:nth-child(6), .tablecomp4 > thead > tr > th:nth-child(6){
+				width:7% !important;
+				text-align: center !important;
+				line-height: 7px;
+				font-size: 7px;
+				vertical-align: middle !important;
+				margin-bottom: 1px;
+				margin-top: 2px;
+				padding-top: 2px;
+				padding-bottom: 2px;
+				
+			}
+			.tablecomp4 > tbody > tr > td:nth-child(7), .tablecomp4 > thead > tr > th:nth-child(7){
+				width:7% !important;
+				/*background-color: #BDBDBD !important;*/
+				text-align: center !important;
+				line-height: 7px;
+				font-size: 7px;
+				vertical-align: middle !important;
+				margin-bottom: 1px;
+				margin-top: 2px;
+				padding-top: 2px;
+				padding-bottom: 2px;
+				
+			}
+			.tablecomp4 > tbody > tr > td:nth-child(8), .tablecomp4 > thead > tr > th:nth-child(8){
+				width:7% !important;
+				text-align: center !important;
+				line-height: 7px;
+				font-size: 7px;
+				vertical-align: middle !important;
+				margin-bottom: 1px;				
+				margin-top: 2px ;
+				padding-top: 2px;
+				padding-bottom: 2px;
+			}
+
+			.tablecomp4 > tbody > tr > td:nth-child(9), .tablecomp4 > thead > tr > th:nth-child(9){
+				width:7% !important;
+				text-align: center !important;
+				line-height: 7px;
+				font-size: 7px;
+				vertical-align: middle !important;
+				margin-bottom: 1px;				
+				margin-top: 2px ;
+				padding-top: 2px;
+				padding-bottom: 2px;
+			}
+
+			.paddingTop{
+				margin-top: 7px !important;
+				padding-top: 7px !important;
+				margin-bottom: 3px !important;
+			}
+			
+			table { 
+				page-break-after:auto !important;
+			}
+			tr    { 
+				page-break-inside:avoid !important;
+				page-break-after:auto !important;
+				border-spacing: 0px !important;
+				/*margin-top: 10px!important;*/
+			}
+			td    {
+				page-break-inside:avoid !important; 
+				page-break-after:auto !important; 
+			}
+			.subfamily{
+				color: grey !important; 
+				text-align: center !important;
+			}
+			img.top {
+				margin-top: 5px !important;
+				padding-bottom: -5px !important;
+			}
+
+			.tablecomp5 > tbody > tr > td:nth-child(1), .tablecomp5.table > thead > tr > th:nth-child(1){
+				width:150px !important;
+				text-align: left !important;
+				line-height: 7px;
+				font-size: 7px;
+				vertical-align: middle !important;
+				margin-bottom: 1px;
+				margin-top: 2px;
+				padding-top: 2px;
+				padding-bottom: 2px;
+				
+			}
+			.tablecomp5 > tbody > tr > td:nth-child(2), .tablecomp5 > thead > tr > th:nth-child(2){
+				width:45% !important;
+				text-align: left !important;
+				line-height: 7px;
+				font-size: 7px;
+				vertical-align: middle !important;
+				margin-bottom: 1px;
+				margin-top: 2px;
+				padding-top:2px;
+				padding-bottom: 2px;
+				
+			}
+			.tablecomp5 > tbody > tr > td:nth-child(3), .tablecomp5 > thead > tr > th:nth-child(3){
+				width:10% !important;
+				text-align: center !important;
+				line-height: 7px;
+				font-size: 7px;
+				vertical-align: middle !important;
+				margin-bottom: 1px;
+				margin-top: 2px;
+				padding-top: 2px;
+				padding-bottom: 2px;
+				
+			}
+			.tablecomp5 > tbody > tr > td:nth-child(4), .tablecomp5 > thead > tr > th:nth-child(4){
+				width:10% !important;
+				/*background-color: #BDBDBD !important;*/
+				text-align: center !important;
+				line-height: 7px;
+				font-size: 7px;
+				vertical-align: middle !important;
+				margin-bottom: 1px;
+				margin-top: 2px;
+				padding-top: 2px;
+				padding-bottom: 2px;
+				
+			}
+			.tablecomp5 > tbody > tr > td:nth-child(5), .tablecomp5 > thead > tr > th:nth-child(5){
+				width:10% !important;
+				text-align: center !important;
+				line-height: 7px;
+				font-size: 7px;
+				vertical-align: middle !important;
+				margin-bottom: 1px;
+				margin-top: 2px;
+				padding-top: 2px;
+				padding-bottom: 2px;
+				
+			}
+			.tablecomp5 > tbody > tr > td:nth-child(6), .tablecomp5 > thead > tr > th:nth-child(6){
+				width:10% !important;
+				text-align: center !important;
+				line-height: 7px;
+				font-size: 7px;
+				vertical-align: middle !important;
+				margin-bottom: 1px;
+				margin-top: 2px;
+				padding-top: 2px;
+				padding-bottom: 2px;
+				
+			}
+		}
+	</style>		
+</head>	
+	<body>
+	<div id="pageHeader-first">
+		<div class="col-xs-offset-11">
+			<img class="top" src="<%=images.imgLogo%>" style="align-content: right;"/>
+		</div>
+	</div> 
+	<div id="pageHeader">
+		<span class="pull-right"><%= i18n.__('gastroOffer').toUpperCase() %><%=':'%><%= gastroOffer.versions.lang[0].name.toUpperCase() %></span>
+	</div>
+	<div class="row">
+		<div class="col-xs-8">
+			<h6 class="title">
+				<% if(gastroOffer.type=='carte'){%>
+				<%= i18n.__('carte').toUpperCase() %> : <%= gastroOffer.versions.lang[0].name %>                       
+				<%}%>
+				<% if(gastroOffer.type=='menu'){%>
+				<%= i18n.__('menu').toUpperCase() %> : <%= gastroOffer.versions.lang[0].name %>                       
+				<%}%>
+				<% if(gastroOffer.type=='buffet'){%>
+				<%= i18n.__('buffet').toUpperCase() %> : <%= gastroOffer.versions.lang[0].name %>                       
+				<%}%>
+				<% if(gastroOffer.type=='dailyMenuCarte'){%>
+				<%= i18n.__('dailyMenuCarte').toUpperCase() %> : <%= gastroOffer.versions.lang[0].name %>                       
+				<%}%>
+				<% if(gastroOffer.type=='fixedPriceCarte'){%>
+				<%= i18n.__('fixedPriceCarte').toUpperCase() %> : <%= gastroOffer.versions.lang[0].name %>                       
+				<%}%>
+				<% if(gastroOffer.type=='catalog'){%>
+				<%= i18n.__('catalog').toUpperCase() %> : <%= gastroOffer.versions.lang[0].name %>                  
+				<%}%>
+			</h6>
+		</div>
+		<div class="col-xs-4">
+			<h4 class="title2"><hr class="cd-linee" size="0"><%= i18n.__('gastroOfferAnalytic').toUpperCase() %></h4>
+		</div>
+	</div>
+	<hr class="cd-line" size="3" />
+	<div class="row">
+		<div class="col-xs-12">
+			<div class="form-body">
+				<div class="row">
+					<div class="col-xs-12">
+						<hr class="cd-linee" size="0" />
+						<div class="row">
+							<div class="col-xs-6">
+								<h7 class="form"><%= i18n.__('type').toUpperCase() %>:</h7>
+								<span class="form-group">
+									<% if (gastroOffer.versions.type) { %>
+									<%= gastroOffer.versions.type.lang[0].name %>
+									<% } else { %>
+									---
+									<% } %>    
+								</span>
+							</div>
+							<div class="col-xs-6">
+								<h7 class="form"><%= i18n.__('season').toUpperCase() %>:</h7>
+								<span class="form-group">
+									<% if (gastroOffer.versions.season) { %>
+									<%= gastroOffer.versions.season.lang[0].name %>
+									<% } else { %>
+									<span>---</span>
+									<% } %>    
+								</span>
+							</div>
+						</div>
+						<hr class="cd-linee" size="0">
+						<div class="row">
+							<div class="col-xs-12">
+								<h7 class="form"><%= i18n.__('description').toUpperCase() %>:</h7>
+								<span class="form-group">
+									<% if (gastroOffer.versions.lang[0].description) { %>
+									<%= gastroOffer.versions.lang[0].description %>
+									<% } else { %>
+									<span>---</span>
+									<% } %>    
+								</span>
+							</div>
+						</div>
+						<hr class="cd-line paddingTop" size="1" />
+						<div class="row">
+							<% if(gastroOffer.type == 'menu' || gastroOffer.type == 'dailyMenuCarte' || gastroOffer.type == 'buffet' || gastroOffer.type == 'fixedPriceCarte'){ %>
+								<div class="col-xs-3 pull-left">
+									<h7 class="form"><%= i18n.__('salesPrice').toUpperCase() %>:</h7>
+									<span class="form-group">
+										<% if (gastroOffer.versions.price) { %>
+											€<%= (gastroOffer.versions.price * (1+ tax/100)).toFixed(2) %>
+										<% } else { %>
+										<span>---</span>
+										<% } %>    
+									</span>
+								</div>
+								<div class="col-xs-3 pull-left">
+									<h7 class="form"><%= i18n.__('salesPriceBeforeTax').toUpperCase() %>:</h7>
+									<span class="form-group">
+										<% if (gastroOffer.versions.price) { %>
+											€<%= gastroOffer.versions.price.toFixed(2) %>
+										<% } else { %>
+										<span>---</span>
+										<% } %>    
+									</span>
+								</div>
+								<div class="col-xs-3 pull-left">
+									<h7 class="form"><%= i18n.__('totalCost').toUpperCase() %>:</h7>
+									<span class="form-group">
+										<% if (gastroOffer.type == 'menu' || gastroOffer.type == 'buffet') { %>
+											<% if(gastroOffer.versions.totalCost!=0){%>
+												€<%= gastroOffer.versions.totalCost.toFixed(2) %>
+											<%} else {%>
+												<span>---</span>
+											<%}%>
+										<% } else { %>
+											<% if(gastroOffer.versions.meanCost!=0){%>
+												€<%= gastroOffer.versions.meanCost.toFixed(2) %>
+											<%} else {%>
+												<span>---</span>
+											<%}%>
+										<% } %>    
+									</span>
+								</div>
+								<div class="col-xs-3 pull-left">
+										<h7 class="form"><%= i18n.__('costOverPricePercentage').toUpperCase() %>:</h7>
+										<span class="form-group">
+											<% if (gastroOffer.type == 'menu' || gastroOffer.type == 'buffet') { %>
+												<% if(gastroOffer.versions.totalCost!=0 && gastroOffer.versions.price!=0){%>
+													<%= ((gastroOffer.versions.totalCost / gastroOffer.versions.price)*100).toFixed(2)%>%
+												<%} else {%>
+													<span>---</span>
+												<%}%>
+											<% } else { %>
+												<% if(gastroOffer.versions.meanCost!=0 && gastroOffer.versions.price!=0){%>
+													<%= ((gastroOffer.versions.meanCost/gastroOffer.versions.price)*100).toFixed(2)%>%
+												<%} else {%>
+													<span>---</span>
+												<%}%>
+											<% } %>    
+										</span>
+								</div>
+							<%}%>
+							<div class="col-xs-12">
+								<% if(gastroOffer.type=='carte'){%> 
+
+								<% if(compositionLength == 0){ %>
+
+										<div class="form" style="margin-top: 20px !important;">
+											<span><%= i18n.__('compositionEmpty').toUpperCase() %></span>
+										</div>
+
+								<%} else {%>
+
+									<div class="tablecomp-cd">
+										
+										<!-- Create a table for each substructure -->
+										<%_.each(gastroOffer.versions.composition,function(tableArray, index) {%>
+											<table class="tablecomp avoid-page-break">
+	   										<!-- Table heading -->
+												<% if(index == 0) { %>
+													<thead>
+														<tr>
+															<th><%= i18n.__('structure').toUpperCase() %></th>
+															<th><%= i18n.__('dish').toUpperCase() %></th>
+															<th><%= i18n.__('numServings').toUpperCase() %></th>
+															<th><%= i18n.__('salesPrice').toUpperCase() %></th>
+															<th><%= i18n.__('salesPriceBeforeTax').toUpperCase() %></th>
+															<th><%= i18n.__('costPerServing').toUpperCase() %></th>
+															<th><%= i18n.__('dishCost').toUpperCase() %></th>
+															<th><%= i18n.__('costOverPrice').toUpperCase() %></th>
+														</tr>
+													</thead>
+												<% } %>
+	        							<tbody>
+													<%_.each(tableArray.compElements,function(compositionElement) {%>
+														<% if(compositionElement.family&&compositionElement.familyInit){%>
+															<tr>
+																<td>
+																	<div><%=compositionElement.family.lang.name %></div>
+																</td>
+																<td></td>
+																<td></td>
+																<td></td>
+																<td></td>
+																<td></td>
+																<td></td>
+																<td></td>
+															</tr>
+														<%}%>
+														<% if(compositionElement.subfamilyInit && compositionElement.subfamily){%>
+														<tr>
+															<td>
+															<% if(compositionElement.subfamily.lang.name!='none'){%>
+																<div class="subfamily"><%=compositionElement.subfamily.lang.name %></div>
+															<%}%>
+															</td>
+															<td></td>
+															<td></td>
+															<td></td>
+															<td></td>
+															<td></td>
+															<td></td>
+															<td></td>									
+														</tr>
+														<%}%>
+														<tr>
+															<td></td>
+															<td>
+																<div>
+																	<%=compositionElement.name.toUpperCase() %>  <br>
+																	<%_.each(compositionElement.allergens,function(allergen,key,list){%>
+																	<% if(allergen.level==1){%>
+																			<span class="allergens2"><%= allergen.allergen.lang[0].name %>,</span>
+																	<%} else {%>
+																		 <span class="allergens1"><%= allergen.allergen.lang[0].name %>,</span>
+																	<%}%>
+																<%}); %>
+																</div>
+															</td>
+															<td><%=compositionElement.numServings %></td>
+															<td><%=(compositionElement.price * (1+ tax/100) * compositionElement.numServings).toFixed(2)%>€</td>
+															<td><%=(compositionElement.price*compositionElement.numServings).toFixed(2) %>€</td>
+															<td><%=compositionElement.cost .toFixed(2) %>€</td>
+															<td><%=(compositionElement.cost*compositionElement.numServings) .toFixed(2)%>€</td>
+															<td>
+																<% if(compositionElement.numServings!=0&&compositionElement.price!=0){%>
+																<%=((compositionElement.cost/compositionElement.price)*100) .toFixed(2) %>%
+																<%} else { %>
+																 ---
+																<%}%>
+															</td>
+														</tr>												
+													<%}); %>
+												</tbody>
+											</table>
+										<%}); %>
+									</div>
+								<% } %>
+								<hr class="cd-line-footer" size="1">
+								<% } %>
+								<% if(gastroOffer.type=='menu' || gastroOffer.type=='buffet'){%>
+
+								<% if(compositionLength == 0){ %>
+
+										<div class="form" style="margin-top: 20px !important;">
+											<span><%= i18n.__('compositionEmpty').toUpperCase() %></span>
+										</div>
+
+								<%} else {%>
+
+									<div class="tablecomp2-cd">
+										
+										<!-- Create a table for each substructure -->
+										<%_.each(gastroOffer.versions.composition,function(tableArray, index) {%>
+											<table class="tablecomp2 avoid-page-break">
+	   										<!-- Table heading -->
+												<% if(index == 0) { %>
+													<thead>
+														<tr>
+															<th><%= i18n.__('structure').toUpperCase() %></th>
+															<th><%= i18n.__('dish').toUpperCase() %></th>
+															<th><%= i18n.__('numServings').toUpperCase() %></th>
+															<th><%= i18n.__('costPerServing').toUpperCase() %></th>
+															<th><%= i18n.__('dishCost').toUpperCase() %></th>
+															<th><%= i18n.__('costPercentage').toUpperCase() %></th>
+														</tr>
+													</thead>
+												<% } %>
+	        							<tbody>
+													<%_.each(tableArray.compElements,function(compositionElement) {%>
+														<% if(compositionElement.family&&compositionElement.familyInit){%>
+															<tr>
+																<td>
+																	<div><%=compositionElement.family.lang.name %></div>
+																</td>
+																<td></td>
+																<td></td>
+																<td></td>
+																<td></td>
+																<td></td>
+															</tr>
+														<%}%>
+														<% if(compositionElement.subfamilyInit && compositionElement.subfamily){%>
+														<tr>
+															<td>
+															<% if(compositionElement.subfamily.lang.name!='none'){%>
+																<div class="subfamily"><%=compositionElement.subfamily.lang.name %></div>
+															<%}%>
+															</td>
+															<td></td>
+															<td></td>
+															<td></td>
+															<td></td>
+															<td></td>								
+														</tr>
+														<%}%>
+														<tr>
+															<td></td>
+															<td>
+																<div>
+																	<%=compositionElement.name.toUpperCase() %>  <br>
+																	<%_.each(compositionElement.allergens,function(allergen,key,list){%>
+																	<% if(allergen.level==1){%>
+																			<span class="allergens2"><%= allergen.allergen.lang[0].name %>,</span>
+																	<%} else {%>
+																		 <span class="allergens1"><%= allergen.allergen.lang[0].name %>,</span>
+																	<%}%>
+																<%}); %>
+																</div>
+															</td>
+															<td class="avoid-page-break"><%=compositionElement.numServings %></td>
+															<td class="avoid-page-break"><%=compositionElement.cost.toFixed(2) %>€</td>
+															<td class="avoid-page-break"><%=(compositionElement.cost*compositionElement.numServings).toFixed(2)%>€</td>
+															<td class="avoid-page-break">
+																<% if(totalCost){%>
+																<%=(((compositionElement.cost*compositionElement.numServings)/(totalCost))*100).toFixed(2) %>%
+																<%} else { %>
+																<span>---</span>
+																<%}%>
+															</td>
+														</tr>												
+													<%}); %>
+												</tbody>
+											</table>
+										<%}); %>
+									</div>
+								<% } %>
+								<hr class="cd-line-footer" size="1">
+								<% } %>
+								<% if(gastroOffer.type=='dailyMenuCarte'){%>
+
+								<% if(compositionLength == 0){ %>
+
+										<div class="form" style="margin-top: 20px !important;">
+											<span><%= i18n.__('compositionEmpty').toUpperCase() %></span>
+										</div>
+
+								<%} else {%>
+
+								
+									<div class="tablecomp3-cd">
+										
+										<!-- Create a table for each substructure -->
+										<%_.each(gastroOffer.versions.composition,function(tableArray, index) {%>
+											<table class="tablecomp3 avoid-page-break">
+	   										<!-- Table heading -->
+												<% if(index == 0) { %>
+													<thead>
+														<tr>
+															<th><%= i18n.__('structure').toUpperCase() %></th>
+															<th><%= i18n.__('dish').toUpperCase() %></th>
+															<th><%= i18n.__('numServings').toUpperCase() %></th>
+															<th><%= i18n.__('costPerServing').toUpperCase() %></th>
+															<th><%= i18n.__('dishCost').toUpperCase() %></th>
+															<th><%= i18n.__('meanCost').toUpperCase() %></th>
+															<th><%= i18n.__('costPercentage').toUpperCase() %></th>
+														</tr>
+													</thead>
+												<% } %>
+	        							<tbody>
+													<%_.each(tableArray.compElements,function(compositionElement) {%>
+														<% if(compositionElement.family&&compositionElement.familyInit){%>
+															<tr>
+																<td>
+																	<div><%=compositionElement.family.lang.name %></div>
+																</td>
+																<td></td>
+																<td></td>
+																<td></td>
+																<td></td>
+																<td><div><%=compositionElement.familyMeanCost.toFixed(2) %>€</div></td>
+																<td><div><%=((compositionElement.familyMeanCost / gastroOffer.versions.meanCost)*100).toFixed(2) %>%</div></td>
+															</tr>
+														<%}%>
+														<% if(compositionElement.subfamilyInit && compositionElement.subfamily){%>
+														<tr>
+															<td>
+															<% if(compositionElement.subfamily.lang.name!='none'){%>
+																<div class="subfamily"><%=compositionElement.subfamily.lang.name %></div>
+															<%}%>
+															</td>
+															<td></td>
+															<td></td>
+															<td></td>
+															<td></td>
+															<td>
+															<% if(compositionElement.subfamily.lang.name!='none'){%>
+																<div><%=compositionElement.subfamilyMeanCost.toFixed(2) %>€</div>
+															<%}%>
+															</td>
+															<td>
+															<% if(compositionElement.subfamily.lang.name!='none'){%>
+															<div><%=((compositionElement.subfamilyMeanCost / gastroOffer.versions.meanCost)*100).toFixed(2) %>%</div>
+															<%}%>
+															</td>										
+														</tr>
+														<%}%>
+														<tr>
+															<td></td>
+															<td>
+																<div>
+																	<%=compositionElement.name.toUpperCase() %>  <br>
+																	<%_.each(compositionElement.allergens,function(allergen,key,list){%>
+																	<% if(allergen.level==1){%>
+																			<span class="allergens2"><%= allergen.allergen.lang[0].name %>,</span>
+																	<%} else {%>
+																		 <span class="allergens1"><%= allergen.allergen.lang[0].name %>,</span>
+																	<%}%>
+																<%}); %>
+																</div>
+															</td>
+															<td><%=compositionElement.numServings %></td>
+															<td><%=compositionElement.cost .toFixed(2) %>€</td>
+															<td><%=(compositionElement.cost*compositionElement.numServings).toFixed(2)%>€</td>
+															<td></td>
+															<td>
+																<% if(compositionElement.numServings!=0&&compositionElement.totalCost!=0){%>
+																<%=((compositionElement.cost*compositionElement.numServings/ gastroOffer.versions.meanCost)*100) .toFixed(2) %>%
+																<%} else { %>
+																 ---
+																<%}%>
+															</td>
+														</tr>												
+													<%}); %>
+												</tbody>
+											</table>
+										<%}); %>
+									</div>
+								<% } %>
+								<hr class="cd-line-footer" size="1">
+								<% } %>
+								<% if(gastroOffer.type=='fixedPriceCarte'){%>
+
+								<% if(compositionLength == 0){ %>
+
+										<div class="form" style="margin-top: 20px !important;">
+											<span><%= i18n.__('compositionEmpty').toUpperCase() %></span>
+										</div>
+
+								<%} else {%>
+
+									<div class="tablecomp4-cd">
+										
+										<!-- Create a table for each substructure -->
+										<%_.each(gastroOffer.versions.composition,function(tableArray, index) {%>
+											<table class="tablecomp4 avoid-page-break">
+	   										<!-- Table heading -->
+												<% if(index == 0) { %>
+													<thead>
+														<tr>
+															<th><%= i18n.__('structure').toUpperCase() %></th>
+															<th><%= i18n.__('dish').toUpperCase() %></th>
+															<th><%= i18n.__('numServings').toUpperCase() %></th>
+															<th><%= i18n.__('salesPrice').toUpperCase() %></th>
+															<th><%= i18n.__('salesPriceBeforeTax').toUpperCase() %></th>
+															<th><%= i18n.__('costPerServing').toUpperCase() %></th>
+															<th><%= i18n.__('dishCost').toUpperCase() %></th>
+															<th><%= i18n.__('familyCost').toUpperCase() %></th>
+															<th><%= i18n.__('costPercentage').toUpperCase() %></th>
+														</tr>
+													</thead>
+												<% } %>
+	        							<tbody>
+													<%_.each(tableArray.compElements,function(compositionElement) {%>
+														<% if(compositionElement.family&&compositionElement.familyInit){%>
+															<tr>
+																<td>
+																	<div><%=compositionElement.family.lang.name %></div>
+																</td>
+																<td></td>
+																<td></td>
+																<td></td>
+																<td></td>
+																<td></td>
+																<td></td>
+																<td><div><%=compositionElement.familyMeanCost.toFixed(2) %>€</div></td>
+																<td>
+																	<div>
+																	<% if(!isNaN(compositionElement.familyMeanCost / gastroOffer.versions.meanCost)){%>
+																		<%=((compositionElement.familyMeanCost / gastroOffer.versions.meanCost)*100) .toFixed(2) %>%
+																	<%} else { %>
+																	 ---
+																	<%}%>
+																	</div>
+																</td>
+															</tr>
+														<%}%>
+														<% if(compositionElement.subfamilyInit && compositionElement.subfamily){%>
+														<tr>
+															<td>
+															<% if(compositionElement.subfamily.lang.name!='none'){%>
+																<div class="subfamily"><%=compositionElement.subfamily.lang.name %></div>
+															<%}%>
+															</td>
+															<td></td>
+															<td></td>
+															<td></td>
+															<td></td>
+															<td></td>
+															<td></td>
+															<td>
+															<% if(compositionElement.subfamily.lang.name!='none'){%>
+																<div><%=compositionElement.subfamilyMeanCost.toFixed(2) %>€</div>
+															<%}%>
+															</td>
+															<td>
+															<% if(compositionElement.subfamily.lang.name!='none'){%>
+															<div><%=((compositionElement.subfamilyMeanCost / gastroOffer.versions.meanCost)*100) .toFixed(2) %>%</div>
+															<%}%>
+															</td>									
+														</tr>
+														<%}%>
+														<tr>
+															<td></td>
+															<td>
+																<div>
+																	<%=compositionElement.name.toUpperCase() %>  <br>
+																	<%_.each(compositionElement.allergens,function(allergen,key,list){%>
+																	<% if(allergen.level==1){%>
+																			<span class="allergens2"><%= allergen.allergen.lang[0].name %>,</span>
+																	<%} else {%>
+																		 <span class="allergens1"><%= allergen.allergen.lang[0].name %>,</span>
+																	<%}%>
+																<%}); %>
+																</div>
+															</td>
+															<td><%=compositionElement.numServings %></td>
+															<td><%=(compositionElement.price * (1+ tax/100) * compositionElement.numServings).toFixed(2)%>€</td>
+															<td><%=(compositionElement.price*compositionElement.numServings).toFixed(2) %>€</td>
+															<td><%=compositionElement.cost .toFixed(2) %>€</td>
+															<td><%=(compositionElement.cost*compositionElement.numServings) .toFixed(2)%>€</td>
+															<td></td>
+															<td>
+																<% if(compositionElement.numServings!=0&&compositionElement.totalCost!=0){%>
+																<%=(((compositionElement.cost*compositionElement.numServings)/ gastroOffer.versions.meanCost)*100) .toFixed(2) %>%
+																<%} else { %>
+																 ---
+																<%}%>
+															</td>
+														</tr>												
+													<%}); %>
+												</tbody>
+											</table>
+										<%}); %>
+									</div>
+
+								<%}%>
+								<hr class="cd-line-footer" size="1">
+								<% } %>
+								<% if(gastroOffer.type=='catalog'){%>
+
+								<% if(compositionLength == 0){ %>
+
+										<div class="form" style="margin-top: 20px !important;">
+											<span><%= i18n.__('compositionEmpty').toUpperCase() %></span>
+										</div>
+
+								<%} else {%>
+
+								<div class="tablecomp-cd">
+										<!-- Create a table for each substructure -->
+										<%_.each(gastroOffer.versions.composition,function(tableArray, index) {%>
+											<table class="tablecomp5 avoid-page-break">
+	   										<!-- Table heading -->
+												<% if(index == 0) { %>
+													<thead>
+														<tr>
+															<th><%= i18n.__('structure').toUpperCase() %></th>
+															<th><%= i18n.__('dish').toUpperCase() %></th>
+															<th><%= i18n.__('salesPrice').toUpperCase() %></th>
+															<th><%= i18n.__('salesPriceBeforeTax').toUpperCase() %></th>
+															<th><%= i18n.__('costProduct').toUpperCase() %></th>
+															<th><%= i18n.__('costOverPrice').toUpperCase() %></th>
+														</tr>
+													</thead>
+												<% } %>
+	        							<tbody>
+													<%_.each(tableArray.compElements,function(compositionElement) {%>
+														<% if(compositionElement.family&&compositionElement.familyInit){%>
+															<tr>
+																<td>
+																	<div><%=compositionElement.family.lang.name %></div>
+																</td>
+																<td></td>
+																<td></td>
+																<td></td>
+																<td></td>
+																<td></td>
+															</tr>
+														<%}%>
+														<% if(compositionElement.subfamilyInit && compositionElement.subfamily){%>
+														<tr>
+															<td>
+															<% if(compositionElement.subfamily.lang.name!='none'){%>
+																<div class="subfamily"><%=compositionElement.subfamily.lang.name %></div>
+															<%}%>
+															</td>
+															<td></td>
+															<td></td>
+															<td></td>
+															<td></td>
+															<td></td>									
+														</tr>
+														<%}%>
+														<tr>
+															<td></td>
+															<td>
+																<div>
+																	<%=compositionElement.name.toUpperCase() %>  <br>
+																	<%_.each(compositionElement.allergens,function(allergen,key,list){%>
+																	<% if(allergen.level==1){%>
+																			<span class="allergens2"><%= allergen.allergen.lang[0].name %>,</span>
+																	<%} else {%>
+																		 <span class="allergens1"><%= allergen.allergen.lang[0].name %>,</span>
+																	<%}%>
+																<%}); %>
+																</div>
+															</td>
+															<td><%=(compositionElement.price * (1+ tax/100) * compositionElement.numServings).toFixed(2)%>€</td>
+															<td><%=(compositionElement.price*compositionElement.numServings).toFixed(2) %>€</td>
+															<td><%=(compositionElement.cost).toFixed(2) %>€</td>
+															<td>
+																<% if(compositionElement.numServings!=0&&compositionElement.price!=0){%>
+																<%=(((compositionElement.cost * compositionElement.numServings)/(compositionElement.price*compositionElement.numServings))*100).toFixed(2) %>%
+																<%} else { %>
+																 ---
+																<%}%>
+															</td>
+														</tr>												
+													<%}); %>
+												</tbody>
+											</table>
+										<%}); %>
+									</div>
+								<%}%>
+								<hr class="cd-linee" size="0">
+								<hr class="cd-linee" size="0">
+								<hr class="cd-linee" size="0">
+								<% } %>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div id="pageFooter">
+					<hr class="cd-line-footer">
+					<div class="row">
+						<div class="col-xs-5">		
+							<span class="pull-left"><div><%= i18n.__('user').toLowerCase() %><%=':'%><%= gastroOffer.versions.last_account.name.toLowerCase()%></div><div><%= i18n.__('printTime').toLowerCase() %><%= ':'%> <%= date %></div></span>
+						</div>
+						<div class="col-xs-3">
+							<span><p>{{page}}/{{pages}}</p></span>
+						</div>
+						<div class="col-xs-4">
+							<span class="pull-right">CookDesign</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

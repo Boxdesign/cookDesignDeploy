@@ -1,0 +1,239 @@
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>CookDesign</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" media="print">
+	<link href="https://fonts.googleapis.com/css?family=Lato:400,300,600,700&subset=all" rel="stylesheet" type="text/css"/>
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:400,300,600,700&subset=all" rel="stylesheet" type="text/css" />
+	<style>
+
+		.form-control {
+			width: 100%;
+			/*border: 1px solid rgba(161, 162, 4, 0.31);*/
+			font-weight: 300;
+			font-size: 8px;
+			font-family: "Lato" !important;
+			color: #606051;
+			background: rgba(255, 255, 255, 0.64);
+			margin-bottom: 10px;
+		}
+
+		.control-label {
+			font-size: 10px;
+			margin-bottom: 4px;
+			color: #31312e;
+			font-weight: 400 !important;
+			text-transform: uppercase;
+		}
+
+		body {
+			color: #606051;
+			font-family: "Lato" !important;
+			padding: 0px !important;
+			margin: 0px !important;
+			direction: "ltr";
+			font-size: 8px;
+			font-weight: 300;
+		}
+
+		.form{
+			font-size: 9px;
+			text-transform: uppercase;
+			color: #a0a127 !important;
+		}
+
+		.form-name{
+			font-size: 14px;
+			text-transform: uppercase;
+			font-family: "Lato" !important;
+			font-color: grey !important;
+		}
+
+		@media print {
+
+			.inline-block {
+				display: inline-block !important;
+			}
+
+			.avoid-page-break {
+      		page-break-inside:avoid !important;
+					margin: 4px 0 4px 0;  
+			}
+
+			.page-break-before {
+				page-break-before: always !important;
+				margin: 4px 0 4px 0;  /* to keep the page break from cutting too close to the text in the div */
+			}
+
+			.page-break {
+				page-break-after:always !important;
+			}
+
+			.cd-line {
+				border-color: #a0a127 !important;
+				margin-top: 2px;
+				margin-bottom: 10px;
+			}
+			.cd-linee {
+				border-color: #ddd !important;
+				margin-top: 15px !important;
+			}
+
+			.cd-line-footer {
+				border-color: #ddd !important;
+				margin-bottom: 4px;
+				height: 0.5px;
+			}
+
+			.cd-line-header {
+				border-color: #ddd !important;
+				margin-top: 6px;
+				height: 1px;
+			}
+
+			#pageHeader, #pageFooter {
+				font-color: #dddddd !important;
+				font-size: 5px;
+			}
+
+			.title {
+				color: #a0a127 !important;
+				text-align: left;
+				font-size: 15px;
+			}
+
+			.title1 {
+				color: #a0a127 !important;
+				text-align: left;
+				font-size: 12px;
+				margin-left: -15px !important;
+			}
+
+			.form-control {
+				border:none;
+			}
+
+			.paddingTop{
+				margin-top: 12px !important;
+				padding-top: 12px !important;
+				margin-bottom: 7px !important;
+			}
+			
+			.marginTop{
+				text-align: right !important;
+				margin-top: 50px !important;
+				padding-right: 40px !important;
+				page-break-inside: avoid !important;
+			}
+
+			.subfamily{
+				font-size: 8px !important;
+				color: grey !important;
+				border-spacing: 1px !important;
+			}
+			.allergens1 {
+				color: red !important;
+				font-size: 4px;
+			}
+
+			.allergens2 {
+				color: orange !important;
+				font-size: 4px;
+			}
+			img.top {
+				margin-top: 7px !important;
+			}
+
+			.spaceBeetwenFamilies {
+				margin-top: 15px !important;
+				margin-bottom: 10px !important;
+			}
+
+			.spaceAfterSubfamily{
+				margin-bottom: 5px !important;
+			}
+
+			.spaceAfterName {
+				font-weight: bold !important;
+				font-size: 10px !important;
+				margin-bottom: 2px !important;
+			}
+
+			.labelColor {
+				color: #a0a127 !important;
+				font-weight: 400 !important;
+			}
+
+			.allergenMargin {
+				margin-bottom: 15px !important;
+			}
+		}
+	</style>		
+</head>
+	
+	<body>
+	<div id="pageHeader-first">
+		<div class="col-xs-offset-11">
+			<img class="top" src="<%=images.imgLogo%>" style="align-content: right;"/>
+		</div>
+	</div> 
+	<div id="pageHeader">
+
+	</div>
+	<h6 class="title"><%= i18n.__('packFormatList').toUpperCase() %></h6>
+		<hr class="cd-line" size="3" />
+		<div class="row">
+			<div class="col-xs-12">
+				<div class="form-body">
+					<div class="row">
+						<div class="col-xs-12">
+							<div class="row">
+								<div class="col-xs-12">
+									 <div class="col-xs-12">
+											<h4 class="title1">
+													<%= i18n.__('familyPackaging').toUpperCase() %>                       
+											</h4>
+									 </div>
+								 		<div class="col-xs-12 avoid-page-break">
+										 	<%_.each(library,function(libraryElement,key,list){%>
+											 	<div class="row avoid-page-break allergenMargin">
+											 		<div class="col-xs-12 spaceAfterName">
+											 			<span class="pull-left "><%= key+1 %>.</span><span class="pull-left" style="margin-left: 15px !important;"><%= libraryElement.lang[0].name %></span>
+											 			<hr class="cd-linee" size="1" />
+											 		</div>
+											 		<div class="col-xs-6">
+														<% if(libraryElement.gallery) { %>
+															<img class="img-fluid pull-left" src="<%=libraryElement.gallery.sizes[1].url%>" alt="Responsive image">
+														<% } else { %>
+															<img class="img-fluid pull-left" src="<%=images.imgPlaceholder%>" alt="Responsive image" />
+														<% } %>
+											 		</div>
+											 		<div class="col-xs-6">
+											 			<span class="pull-left labelColor"><%= i18n.__('description').toUpperCase() %>: </span><span class="pull-left" style="margin-left: 15px !important;"><%= libraryElement.lang[0].description %></span>
+											 		</div>
+											 	</div>
+										 	<%});%>
+									 </div>
+								</div>
+							</div>
+							<div id="pageFooter">
+								<hr class="cd-line-footer">
+								<div class="row">
+									<div class="col-xs-5">		
+										<span class="pull-left"><div><%= i18n.__('user').toLowerCase() %><%=':'%><%= user.name %></div><div><%= i18n.__('printTime').toLowerCase() %><%= ':'%> <%= date %></div></span>
+									</div>
+									<div class="col-xs-3">
+										<span><p>{{page}}/{{pages}}</p></span>
+									</div>
+									<div class="col-xs-4">
+										<span class="pull-right">CookDesign</span>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

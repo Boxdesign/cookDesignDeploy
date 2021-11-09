@@ -1,0 +1,141 @@
+<%if(elementsList.length){%>
+<div class="page-break-before">
+	<div class="col-xs-12">
+				<h6 class="titlesubproducts"><%= i18n.__('subproduct').toUpperCase() %></h6>
+	</div>
+<% for(var i=0; i<elementsList.length; i++){%>
+	<div class="avoid-page-break">
+		<div class="row">
+			<div class="col-xs-12">
+				<div class="form-body">
+					<div class="row">
+						<div class="col-xs-10">
+							<div class="subproductName paddingTop">
+									<%=i+1%>.<%= elementsList[i].versions.lang.name %>                       
+							</div>
+						</div>
+					</div>
+					<div class="avoid-page-break">
+						<div class="row">
+							<div class="col-xs-7">
+								<h7 class="titlesub"><%= i18n.__('composition').toUpperCase() %></h7>
+							</div>
+						</div>
+						<hr class="cd-linesubproduct" size="1" />
+						<hr class="cd-linee" size="0" />
+						<div class="row">
+							<div class="col-xs-12 max">
+								<div class="tablesub-cd">
+									<table id="tablesub" class="tablesub table-condensed">
+										<thead>
+											<tr>
+												<th><%= i18n.__('article').toUpperCase() %></th>
+												<th><%= i18n.__('grossWeight').toUpperCase() %></th>
+												<th><%= i18n.__('grossWeightPercentage').toUpperCase() %></th>
+												<th><%= i18n.__('wastePercentage').toUpperCase() %></th>
+												<th><%= i18n.__('netWeight').toUpperCase() %></th>
+												<th><%= i18n.__('netWeightPercentage').toUpperCase() %></th>
+												<th><%= i18n.__('unitCost').toUpperCase() %></th>
+												<th><%= i18n.__('totalCost').toUpperCase() %></th>
+												<th><%= i18n.__('costPercentage').toUpperCase() %></th>
+											</tr>
+										</thead>
+										<tbody>
+											<%_.each(elementsList[i].versions.composition,function(compositionElement,key,list){%>
+											<tr>
+												<td><div><%=compositionElement.name%></div></td>
+												<td><div><%=compositionElement.grossWeight.toFixed(3) %><%='/'%> <%=compositionElement.measuringUnitShortName %></div></td>
+												<% if (parentRecipe.compTotals.grossWeight>0) {%>
+												<td><div><%=((compositionElement.grossWeight/parentRecipe.compTotals.grossWeight)*100).toFixed(2) %></div></td>
+												<% } else { %>
+												<td><div>---</div></td>
+												<% } %>
+												<td><div><%= compositionElement.wastePercentage.toFixed(2) %></div></td>
+												<td><div><%= (compositionElement.grossWeight*(1-(compositionElement.wastePercentage/100))).toFixed(3) %><%='/'%><%= compositionElement.baseUnitShortName %></div></td>
+												<% if ((compositionElement.grossWeight*(1-(compositionElement.wastePercentage/100)))>0) {%>
+												<td><div><%=(((compositionElement.grossWeight*(1-(compositionElement.wastePercentage/100)))/parentRecipe.compTotals.netWeight)*100).toFixed(2) %></div></td>
+												<% } else { %>
+												<td><div>---</div></td>
+												<% } %>
+												<td><div><%= compositionElement.unitCost.toFixed(2) %> €</div></td>
+												<td><div><%= compositionElement.calculatedCost.toFixed(2) %> €</div></td>
+												<% if (parentRecipe.compTotals.cost>0) {%>
+												<td><div><%=((compositionElement.calculatedCost/parentRecipe.compTotals.cost)*100).toFixed(2) %> %</div></td>
+												<% } else { %>
+												<td><div>---</div></td>
+												<% } %>
+										</tr>
+										<%}); %>
+									</tbody>
+								</table>						
+							</div>
+						</div>
+					 </div>
+					</div>
+					<hr class="cd-linee" size="0" />
+					<div class="avoid-page-break">
+							<div class="row">
+								<div class="col-xs-7">
+									<h7 class="titlesub"><%= i18n.__('cookingSteps').toUpperCase() %></h7>
+								</div>
+							</div>
+							<hr class="cd-linesubproduct" size="1" />
+							<hr class="cd-linee" size="0" />
+							<div class="row">
+								<div class="col-xs-12">
+									<div class="tablesub-cd">
+										<table class="tableesub table-condensed">
+											<thead>
+												<tr>
+													<th width="5%">#</th>
+													<th width="15%"><%= i18n.__('cookingStep').toUpperCase() %></th>
+													<th width="40%"><%= i18n.__('description').toUpperCase() %></th>
+													<th width="20%"><%= i18n.__('utensil').toUpperCase() %></th>
+													<th width="10%"><%= i18n.__('time').toUpperCase() %></th>
+													<th width="10%"><%= i18n.__('temperature').toUpperCase() %></th>
+												</tr>
+											</thead>
+											<tbody>
+												<%_.each(elementsList[i].versions.cookingSteps,function(cookingStep,key,list){%>
+												<tr>
+													<td width="5%"><div><%= key+1 %></div></td>
+													<td width="15%"><div><%=cookingStep.process.lang[0].name%></div></td>
+													<td width="40%"><div><%=cookingStep.lang[0].description%></div></td>
+													<td width="20%"><div><%=cookingStep.utensil.lang[0].name %></div></td>
+													<% if(cookingStep.time == 0 || !cookingStep.time){ %> 
+														<td width="10%"><div>---</div></td>
+													<%} else { %> 
+														<td width="10%"><div style="display: inline-block !important;"><%=cookingStep.time  %></div>
+															<% if(cookingStep.timeUnit == 'minutes'){%>
+																<span style="display: inline-block !important;"><%= i18n.__('min') %></span>
+															<% } else if( cookingStep.timeUnit == 'seconds'){ %>
+															  <span style="display: inline-block !important;"><%= i18n.__('s') %></span> 
+															<%} else if(cookingStep.timeUnit == 'hours'){%>
+															  <span style="display: inline-block !important;"><%= i18n.__('h') %></span>
+															<%}%>
+														</td>
+													<%}%>
+													<% if(cookingStep.temperature == 0 || !cookingStep.temperature){ %> 
+														<td width="10%"><div>---</div></td>
+													<%} else { %> 
+														<td width="10%"><div><%=cookingStep.temperature %> <%='ºC'%></div></td>
+													<%}%>
+												</tr>
+												<%});	%>
+										</tbody>
+									</table>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<hr class="cd-linesubproduct" size="2" />
+			</div>
+		</div>
+	</div>
+	<div class="page-break">
+		
+	</div>
+<%};%>
+</div>
+<%}%>

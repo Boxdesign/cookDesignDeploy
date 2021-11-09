@@ -1,0 +1,149 @@
+<%if(elementsList.length){%>
+<div class="page-break-before">
+	<div class="col-xs-12">
+				<h6 class="titlesubproducts"><%= i18n.__('subproduct').toUpperCase() %></h6>
+	</div>
+<% for(var i=0; i<elementsList.length; i++){%>
+	<div class="avoid-page-break page-break2">
+			<div class="row">
+				<div class="col-xs-12">
+					<div class="row">
+						<div class="col-xs-12">
+							<span class="subproductName"><%= elementsList[i].versions.lang.name %></span>
+						</div>
+						<hr class="cd-lineeesub" size="1" />
+						<div class="col-xs-12">
+								<% if(elementsList[i].versions.allergens){%>
+									<%_.each(elementsList[i].versions.allergens,function(allergen,key,list) {%>
+											<div class="pull-left">
+												<div class="imageAllergen">
+													<img src="<%= allergen.allergen.gallery.sizes[0].url %>">
+												</div>
+												<div class="textAllergen">
+													<% if (allergen.level==1){%>
+														<span class="allergens2"><%= allergen.allergen.lang[0].name %></span>
+													<%} else {%>
+														<span class="allergens1"><%= allergen.allergen.lang[0].name %></span>
+													<%}%>
+												</div>
+											</div>												
+									<%});%>
+								<%} else {%>
+									<span>---</span>
+								<%}%>
+						</div>
+					</div>
+				</div>
+				<div class="col-xs-7">
+					<% if(elementsList[i].versions.gallery) { %>
+							<img class="img-fluid pull-left" src="<%=elementsList[i].versions.gallery%>" alt="Responsive image">
+					<% } else { %>
+							<img class="resizeDishImage img-fluid pull-left" src="<%=images.imgPlaceholder%>" alt="Responsive image" />
+					<% } %>
+				</div>
+					<div class="col-xs-5">
+						<h7 class="titlesub"><%= i18n.__('composition').toUpperCase() %></h7>
+						<hr class="cd-lineeesub" size="1" />
+						<% if(elementsList[i].versions.composition.length > 0){ %>
+
+							<ul class="composition">
+								<%_.each(elementsList[i].versions.composition,function(compositionElement,key,list){%>									
+											<div class="col-xs-12" style="margin-top: 2px !important; margin-bottom: 1px !important;">
+												<span class="pull-left avoidcom-page-break"><%=compositionElement.name%></span><span class="pull-right avoidcom-page-break"><%= compositionElement.grossWeight? compositionElement.grossWeight.toFixed(3):'' %><%='/'%> <%=compositionElement.measuringUnitShortName %></span>
+											</div>
+								<%});%>
+							</ul>
+
+						<%} else {%>
+
+							<div class="col-xs-12">
+								<span><%= i18n.__('compositionEmpty').toUpperCase() %></span>
+							</div>
+
+						<% } %>
+																
+					</div>
+			</div>
+			<p> </p>
+			<p> </p>
+			<div class="avoid-page-break">
+				
+			</div>
+			<p> </p>
+			<p> </p>
+			<p> </p>
+			<p> </p>
+			<p> </p>
+			<p> </p>
+			<div class="avoid-page-break" >
+				<div class="row">
+					<div class="col-xs-12">
+						<h7 class="titlesub"><%= i18n.__('cookingSteps').toUpperCase() %></h7>
+						<hr class="cd-lineeesub" size="1" />
+					</div>
+					<div class="col-xs-12">
+						<% if(elementsList[i].versions.cookingSteps.length > 0){%>
+
+							<div class="tableesub-cd">
+								<table id="tablesub" class="tablesub table-condensed">
+									<thead>
+												<tr>
+													<th>#</th>
+													<th ><%= i18n.__('cookingStep').toUpperCase() %></th>
+													<th ><%= i18n.__('description').toUpperCase() %></th>
+													<th ><%= i18n.__('utensil').toUpperCase() %></th>
+													<th ><%= i18n.__('time').toUpperCase() %></th>
+													<th ><%= i18n.__('temperature').toUpperCase() %></th>
+												</tr>
+											</thead>
+									<tbody>
+										<%_.each(elementsList[i].versions.cookingSteps,function(cookingStep,key,list){%>
+										<tr>
+											<td style="font-size: 8px !important;"><div><%=key+1%></div></td>
+											<td style="font-size: 8px !important; vertical-align: center !important; text-align: left !important; line-height: 8px !important;"><div><%=cookingStep.process.lang[0].name%></div></td>
+											<td style="font-size: 8px !important; vertical-align: center !important; text-align: left !important; line-height: 8px !important;""><div><%=cookingStep.lang[0].description%></div></td>
+											<td style="font-size: 8px !important; vertical-align: center !important; text-align: left !important; line-height: 8px !important;""><div><%=cookingStep.utensil.lang[0].name%></div></td>
+											<% if(cookingStep.time == 0 || !cookingStep.time){ %> 
+												<td style="vertical-align: center !important; text-align: center !important; line-height: 8px !important;"><div>---</div></td>
+											<%} else { %> 
+												<td style="font-size: 8px !important; vertical-align: center !important; text-align: center !important; line-height: 8px !important; display: inline-block !important;"><div style="display: inline-block !important;"><%=cookingStep.time  %></div>
+													<% if(cookingStep.timeUnit == 'minutes'){%>
+														<span style="display: inline-block !important;"><%= i18n.__('min') %></span>
+													<% } else if( cookingStep.timeUnit == 'seconds'){ %>
+													  <span style="display: inline-block !important;"><%= i18n.__('s') %></span> 
+													<%} else if(cookingStep.timeUnit == 'hours'){%>
+													  <span style="display: inline-block !important;"><%= i18n.__('h') %></span>
+													<%}%>
+												</td>
+											<%}%>
+											<% if(cookingStep.temperature == 0 || !cookingStep.temperature){ %> 
+												<td style="vertical-align: center !important; text-align: center !important; line-height: 8px !important;"><div>---</div></td>
+											<%} else { %> 
+												<td style="font-size: 8px !important; vertical-align: center !important; text-align: center !important; line-height: 8px !important;"><div><%=cookingStep.temperature%>ºC</div></td>
+											<%}%>
+										</tr>
+										<%});%>
+									</tbody>
+								</table>						
+							</div>
+
+						<%} else {%>
+
+							<div class="col-xs-12">
+								<span><%= i18n.__('noCookingSteps').toUpperCase() %></span>
+							</div>
+
+						<%}%>
+						
+					</div>
+				</div>
+			</div>
+			<hr class="cd-linee" size="1" />
+			<hr class="cd-linee space" size="1" />
+		</div>
+	<div class="page-break">
+		
+	</div>
+<%};%>
+</div>
+<%}%>

@@ -1,0 +1,123 @@
+<%if(elementsList.length>0){%>
+<div class="page-break-before">
+	<div class="col-xs-12">
+		<h6 class="title1"><%= i18n.__('subproduct').toUpperCase() %></h6>
+		<hr class="cd-linee" size="0" />
+	</div>
+	<% for(var i=0; i<elementsList.length; i++){%>
+	<div class="avoid-page-break">
+		<div class="row">
+			<div class="col-xs-12">
+				<div class="form-body">
+					<div class="row">
+						<div class="col-xs-10">
+							<div class="form-name paddingTop">
+								<%=i+1%>.<%= elementsList[i].versions[0].lang[0].name %>                       
+							</div>
+						</div>
+					</div>
+					<div class="avoid-page-break">
+					<hr class="cd-linee" size="0" />
+						<div class="row">
+							<div class="col-xs-12">			
+								<div class="row">
+									<div class="col-xs-5">
+										<h7 class="title"><%= i18n.__('composition').toUpperCase() %></h7>
+									</div>
+									<div class="col-xs-7">
+										<h7 class="title"><%= i18n.__('cookingSteps').toUpperCase() %></h7>
+									</div>
+								</div>
+								<hr class="cd-line" size="1" />
+								<hr class="cd-linee" size="0" />
+								<div class="row">
+									<div class="col-xs-5">
+										<div class="table-cd">
+											<ul class="">
+												<%_.each(composition[i],function(compositionElement,key,list){%>
+												<div class="compostionElementMargin">
+													<div class="pull-left">
+														<span style="margin-right: 3px !important; font-size: 8px !important; font-weight: normal !important;"><%=compositionElement.name%></span>
+													</div>
+													<div class="pull-right" style="margin-right: -10px !important;">
+														<% if(compositionElement.grossWeight) { %>
+															<span style="font-size: 8px !important; font-weight: normal !important;"><%= (compositionElement.grossWeight).toFixed(3) %> <%=compositionElement.baseUnitShortName%></span>	
+														<% } else { %>
+															<span style="font-size: 8px !important; font-weight: normal !important;">---</span>
+														<%}%>
+													</div>
+												</div>
+												<%});%>
+												<div class="compostionElementMargin">
+													<div class="pull-left">
+														<span class="totalsColor" style="margin-right: 3px !important;"><%= i18n.__('totals')%></span>
+													</div>
+													<div class="pull-right" style="margin-right: -10px !important;">
+														<% if(subTotals) { %>
+															<span class="totalsColor"><%= subTotals[i].grossWeight.toFixed(3) %> <%=elementsList[i].measurementUnit.referenceCode%></span>	
+														<% } else { %>
+															<span class="totalsColor">---</span>
+														<%}%>
+													</div>
+												</div>
+											</ul>
+									</div>							
+								</div>
+								<div class="col-xs-7">
+							<!-- <h7 class="title"><%= i18n.__('cookingSteps').toUpperCase() %></h7>
+							<hr class="cd-line" size="3" /> -->
+							<div class="table-cd">
+								<table class="table table-condensed">
+									<!-- <thead class="border: green;">
+										<tr>
+											<th>#</th>
+											<th>PROCESO&nbsp;CULINARIO</th>
+											<th>DESCRIPCION</th>
+										</tr>
+									</thead> -->
+									<tbody>
+										<%_.each(cookingSteps[i],function(cookingStep,key,list){%>
+										<tr>
+											<td width="5%"><div><%= key+1 %></div></td>
+											<td width="15%"><div><%=cookingStep.process.lang[0].name%></div></td>
+											<td width="35%"><div><%=cookingStep.lang.description%></div></td>
+											<td width="25%"><div><%=cookingStep.utensil.lang[0].name %></div></td>
+											<% if(cookingStep.time == 0 || !cookingStep.time){ %> 
+												<td width="10%"><div>---</div></td>
+											<%} else { %> 
+												<% if(cookingStep.timeUnit){ %>
+													<td width="10%"><div><%=cookingStep.time  %> <span><% if(cookingStep.timeUnit == 'seconds'){ %> s. <%} else if(cookingStep.timeUnit == 'minutes'){ %> m. <%} else if(cookingStep.timeUnit == 'hours'){%> h.<%}%></span></div></td>
+												<% } else { %>
+													<td width="10%"><div><%=cookingStep.time  %> <%='m.'%></div></td>
+												<%}%>
+											<%}%>
+											<% if(cookingStep.temperature == 0 || !cookingStep.temperature){ %> 
+												<td width="10%"><div>---</div></td>
+											<%} else { %> 
+												<td width="10%"><div><%=cookingStep.temperature %><%='ºC'%></div></td>
+											<%}%>
+										</tr>
+										<%
+									});
+									%>
+								</tbody>
+							</table>						
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>					
+</div>
+</div>
+</div>
+</div>
+<hr class="cd-line page-break" size="3" />
+<%};%>
+</div>
+<%}%>
+
+
+
+
+

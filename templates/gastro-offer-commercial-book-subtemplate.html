@@ -1,0 +1,116 @@
+<% if (gastroOffer.versions.composition){ %>
+		<%_.each(composition,function(compElement,key,list) {%>
+			<div class="avoid-page-break">
+				<div class="row">
+					<div class="col-xs-6">
+					<% if(compElement.gallery) { %>
+							<img class="img-fluid" src="<%=compElement.gallery%>" alt="Responsive image">
+					<% } else { %>
+							<img class="resizeDishImage img-fluid" alt="Responsive image" src="<%=images.imgPlaceholder%>" />
+					<% } %>
+					</div>
+					<div class="col-xs-6">
+						<div class="row">
+							<div class="col-xs-12">
+								<span class="title5"><%= compElement.name %></span>
+							</div>
+							<hr class="cd-lineee" size="1" />
+						</div>
+						<div class="row">
+							<div class="col-xs-offset-1">
+								<div class="row">
+									<% if(compElement.allergens){%>
+										<%_.each(compElement.allergens,function(allergen,key,list) {%>
+												<div class="pull-left">
+													<div class="imageAllergen">
+														<img src="<%= allergen.allergen.gallery.sizes[0].url %>">
+													</div>
+													<div class="textAllergen">
+														<% if (allergen.level==1){%>
+															<span class="allergens2"><%= allergen.allergen.lang[0].name %></span>
+														<%} else {%>
+															<span class="allergens1"><%= allergen.allergen.lang[0].name %></span>
+														<%}%>
+													</div>
+												</div>												
+										<%});%>
+									<%} else {%>
+										<span>---</span>
+									<%}%>
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-xs-12 ">
+									<label for="description" class="control-label2"><%= i18n.__('description').toUpperCase() %><%=':'%></label>
+									<% if(compElement.element.item.versions[0].lang[0].description){%>
+											<span style="font-size: 6px !important;"><%=compElement.element.item.versions[0].lang[0].description %></span>
+									<%} else {%>
+											<span>---</span>
+									<%}%>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-xs-12 background">
+									<% if(compElement.element.item.versions[0].lang[0].gastroCommentLabel){ %>
+									<label for="gastroComment" class="control-label2"><%= compElement.element.item.versions[0].lang[0].gastroCommentLabel %></label>
+									<% } else { %>
+									<label for="gastroComment" class="control-label2"><%= i18n.__('gastroComment').toUpperCase() %><%=':'%></label>
+									<%}%>
+									<% if(compElement.element.item.versions[0].lang[0].gastroComment){%>
+											<span style="font-size: 6px !important;"><%=compElement.element.item.versions[0].lang[0].gastroComment %></span>
+									<%} else {%>
+											<span>---</span>
+									<%}%>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-xs-12 ">
+									<% if(compElement.element.item.versions[0].lang[0].dietLabel){ %>
+									<label for="gastroComment" class="control-label2"><%= compElement.element.item.versions[0].lang[0].dietLabel %></label>
+									<% } else { %>
+									<label for="gastroComment" class="control-label2"><%= i18n.__('diet').toUpperCase() %><%=':'%></label>
+									<%}%>
+										<% if(compElement.element.item.versions[0].lang[0].diet){%>
+													<span style="font-size: 6px !important;"><%=compElement.element.item.versions[0].lang[0].diet %></span>
+										<%} else {%>
+													<span>---</span>
+										<%}%>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-xs-12 background">
+									<% if(compElement.element.item.versions[0].lang[0].tastingLabel){ %>
+									<label for="gastroComment" class="control-label2"><%= compElement.element.item.versions[0].lang[0].tastingLabel %></label>
+									<% } else { %>
+									<label for="gastroComment" class="control-label2"><%= i18n.__('tasting').toUpperCase() %><%=':'%></label>
+									<%}%>
+										<% if(compElement.element.item.versions[0].lang[0].tasting){%>
+												<span style="font-size: 6px !important;"><%=compElement.element.item.versions[0].lang[0].tasting %></span>
+										<%} else {%>
+												<span>---</span>
+										<%}%>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-xs-12">
+							<label for="tasting" class="control-label2"><%= i18n.__('compElements').toUpperCase() %><%=':'%></label>
+								<div class="distance">
+									<% if(compElement.element.item.versions[0].composition){%>
+										<%_.each(compElement.element.item.versions[0].composition,function(comp,key,list) {%>
+													<ul class="distance">- <%= comp.name %></ul>											
+										<%});%>
+									<%} else {%>
+											<span>---</span>
+									<%}%>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<hr class="cd-linee" size="1" />
+				<hr class="cd-linee" size="1" />
+				<hr class="cd-lineee space" size="1" />
+			</div>
+		<%});%>
+<%}%>

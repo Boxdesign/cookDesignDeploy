@@ -1,0 +1,217 @@
+<% if (gastroOffer.versions.composition){ %>
+		<%_.each(composition,function(compElement,key,list) {%>
+			<div class="avoid-page-break">
+				<div class="row">
+					<div class="col-xs-12">
+						<div class="row">
+							<div class="col-xs-12">
+								<span class="title5"><%= compElement.name %></span>
+							<hr class="cd-linee" size="1" />
+							<hr class="cd-lineee" size="1" />
+							<hr class="cd-linee" size="1" />
+							</div>
+						</div>
+						<% if(compElement.element.item.versions[0].composition){%>
+						<div class="col-xs-7">
+								<h7 class="compositionName"><%= i18n.__('composition').toUpperCase() %></h7>
+						</div>
+						<div class="tablecomp2-cd">
+						<table class="tablecomp2 table-condensed">
+							<thead>
+								<tr>
+									<th></th>										
+									<th><%= i18n.__('article').toUpperCase() %></th>
+									<th><%= i18n.__('grossWeight').toUpperCase() %></th>
+									<th><%= i18n.__('grossWeightPercentage').toUpperCase() %></th>
+									<th><%= i18n.__('wastePercentage').toUpperCase() %></th>
+									<th><%= i18n.__('netWeight').toUpperCase() %></th>
+									<th><%= i18n.__('netWeightPercentage').toUpperCase() %></th>
+									<th><%= i18n.__('unitCost').toUpperCase() %></th>
+									<th><%= i18n.__('totalCost').toUpperCase() %></th>
+									<th><%= i18n.__('costPercentage').toUpperCase() %></th>
+								</tr>
+							</thead>
+							<tbody>
+										<%_.each(compElement.element.item.versions[0].composition,function(compositionElement,key,list) {%>								
+											<% if(compositionElement.init == true){ %>
+												<tr>
+													<td><div>
+													<% if(compositionElement.category =='mainProduct'){ %>									
+													<span class="mainProduct"><%= i18n.__('P').toUpperCase() %></span>			
+													<% } else if(compositionElement.category =='sauce'){ %>
+													<span class="sauce"><%= i18n.__('S').toUpperCase() %></span>	
+													<% } else if(compositionElement.category =='dressing'){ %>
+													<span class="dressing"><%= i18n.__('D').toUpperCase() %></span>
+													<%} else if(compositionElement.category =='addition'){ %>
+													<span class="addition"><%= i18n.__('A').toUpperCase() %></span>
+													<%}%></div></td>
+													<td></td>
+													<td></td>
+													<td></td>
+													<td></td>
+													<td></td>
+													<td></td>
+													<td></td>
+													<td></td>
+													<td></td>
+												</tr>
+												<tr>
+													<td></td>
+													<td><div class="avoidcom-page-break"><%=compositionElement.name%></div></td>
+													<td>
+														<div class="avoidcom-page-break">
+															<% if (compositionElement.grossWeight){%>
+																<%=compositionElement.grossWeight.toFixed(3) %><%='/'%> <%=compositionElement.measuringUnitShortName %>
+															<%}else{%>
+																---
+															<%}%>	
+														</div>
+													</td>
+													<td>
+														<% if (compElement.grossWeight && compElement.compTotals.grossWeight>0) {%>
+														<div class="avoidcom-page-break"><%=((compositionElement.grossWeight/compElement.compTotals.grossWeight)*100).toFixed(2) %></div>
+														<% } else { %>
+														<div class="avoidcom-page-break">---</div>
+														<% } %>
+													</td>
+													<td>
+														<div class="avoidcom-page-break">
+															<% if (compositionElement.wastePercentage){%>
+																<%= compositionElement.wastePercentage.toFixed(2) %>
+															<%}else{%>
+																---
+															<%}%>		
+														</div>
+												  </td>
+													<td>
+														<div class="avoidcom-page-break">
+														<% if (compositionElement.grossWeight && compositionElement.wastePercentage){%>
+															<%= (compositionElement.grossWeight*(1-(compositionElement.wastePercentage/100))).toFixed(3) %><%='/'%><%= compositionElement.baseUnitShortName %>
+														<%} else {%>
+															---
+														<%}%>	
+														</div>
+													</td>
+													<td>
+														<% if (compositionElement.grossWeight && compositionElement.wastePercentage && (compositionElement.grossWeight*(1-(compositionElement.wastePercentage/100)))>0) {%>
+														<div class="avoidcom-page-break"><%=(((compositionElement.grossWeight*(1-(compositionElement.wastePercentage/100)))/compElement.compTotals.netWeight)*100).toFixed(2) %></div>
+														<% } else { %>
+														<div class="avoidcom-page-break">---</div>
+														<% } %>
+													</td>
+													<td><div class="avoidcom-page-break"><%= compositionElement.unitCost.toFixed(2) %> €</div></td>
+													<td><div class="avoidcom-page-break"><%= compositionElement.calculatedCost.toFixed(2) %> €</div></td>
+													<td>
+														<% if (compElement.compTotals.cost>0 && compositionElement.calculatedCost) {%>
+														<div class="avoidcom-page-break"><%=((compositionElement.calculatedCost/compElement.compTotals.cost)*100).toFixed(2) %> </div>
+														<% } else { %>
+														<div class="avoidcom-page-break">---</div>
+														<% } %>
+													</td>
+												</tr>
+									<% } %>
+									<% if (compositionElement.init != true){ %>
+											<tr>
+													<td></td>
+													<td><div class="avoidcom-page-break"><%=compositionElement.name%></div></td>
+													<td><div class="avoidcom-page-break"><%=compositionElement.grossWeight.toFixed(3) %><%='/'%> <%=compositionElement.measuringUnitShortName %></div></td>
+													<td>
+													<% if (compElement.compTotals.grossWeight>0) {%>
+													<div class="avoidcom-page-break"><%=((compositionElement.grossWeight/compElement.compTotals.grossWeight)*100).toFixed(2) %></div>
+													<% } else { %>
+													<td><div class="avoidcom-page-break">---</div></td>
+													<% } %>
+													<td><div class="avoidcom-page-break"><%= compositionElement.wastePercentage.toFixed(2) %></div></td>
+													<td><div class="avoidcom-page-break"><%= (compositionElement.grossWeight*(1-(compositionElement.wastePercentage/100))).toFixed(3) %><%='/'%><%= compositionElement.baseUnitShortName %></div></td>
+													<td>
+													<% if ((compositionElement.grossWeight*(1-(compositionElement.wastePercentage/100)))>0) {%>
+													<div class="avoidcom-page-break"><%=(((compositionElement.grossWeight*(1-(compositionElement.wastePercentage/100)))/compElement.compTotals.netWeight)*100).toFixed(2) %></div>
+													<% } else { %>
+													<div class="avoidcom-page-break">---</div>
+													<% } %>
+													</td>
+													<td><div class="avoidcom-page-break"><%= compositionElement.unitCost.toFixed(2) %> €</div></td>
+													<td><div class="avoidcom-page-break"><%= compositionElement.calculatedCost.toFixed(2) %> €</div></td>
+													<td>
+													<% if (compElement.compTotals.cost>0) {%>
+													<div class="avoidcom-page-break"><%=((compositionElement.calculatedCost/compElement.compTotals.cost)*100).toFixed(2) %></div>
+													<% } else { %>
+													<div class="avoidcom-page-break">---</div>
+													<% } %>
+													</td>
+												</tr>
+									<% }%>
+								<%});%>
+							</tbody>
+						</table>
+						</div>	
+						<%}%>
+						<% if(compElement.cookingSteps){%>
+						<div class="row">
+							<div class="col-xs-7">
+							<hr class="cd-linee" size="1" />
+							<hr class="cd-linee" size="1" />
+								<h7 class="cookingStepsName"><%= i18n.__('cookingSteps').toUpperCase() %></h7>
+							</div>
+							<div class="col-xs-12 avoid-page-break">
+								<div class="table-cd">
+									<table class="tablee table-condensed">
+										<thead>
+											<tr>
+												<th width="5%">#</th>
+												<th width="15%"><%= i18n.__('cookingStep').toUpperCase() %></th>
+												<th width="40%"><%= i18n.__('description').toUpperCase() %></th>
+												<th width="20%"><%= i18n.__('utensil').toUpperCase() %></th>
+												<th width="10%"><%= i18n.__('time').toUpperCase() %></th>
+												<th width="10%"><%= i18n.__('temperature').toUpperCase() %></th>
+											</tr>
+										</thead>
+										<tbody>
+											<%_.each(compElement.cookingSteps,function(cookingStep,key,list) {%>	
+											<tr>
+												<td width="5%"><div class="avoid-page-break"><%= key+1 %></div></td>
+												<td width="15%"><div class="avoid-page-break"><%=cookingStep.process.lang[0].name%></div></td>
+												<td width="40%"><div class="avoid-page-break"><%=cookingStep.lang.description%></div></td>
+												<td width="20%"><div class="avoid-page-break"><%=cookingStep.utensil.lang[0].name %></div></td>
+												<% if(cookingStep.time == 0 || !cookingStep.time){ %> 
+													<td width="10%"><div>---</div></td>
+												<%} else { %> 
+													<td width="10%"><div style="display: inline-block !important;"><%=cookingStep.time  %></div>
+														<% if(cookingStep.timeUnit == 'minutes'){%>
+															<span style="display: inline-block !important;"><%= i18n.__('min') %></span>
+														<% } else if( cookingStep.timeUnit == 'seconds'){ %>
+														  <span style="display: inline-block !important;"><%= i18n.__('s') %></span> 
+														<%} else if(cookingStep.timeUnit == 'hours'){%>
+														  <span style="display: inline-block !important;"><%= i18n.__('h') %></span>
+														<%}%>
+													</td>
+												<%}%>
+												<% if(cookingStep.temperature == 0 || !cookingStep.temperature){ %> 
+													<td width="10%"><div>---</div></td>
+												<%} else { %> 
+													<td width="10%"><div><%=cookingStep.temperature %> <%='ºC'%></div></td>
+												<%}%>
+											</tr>
+											<%
+										});
+										%>
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+					<%}%>	
+					</div>
+				</div>
+				<hr class="cd-linee" size="1" />
+				<hr class="cd-linee" size="1" />
+				<hr class="cd-lineee space" size="1" />
+					<div class="page-break-before">
+					<% if(compElement.subproducts && compElement.subproducts.length){%>
+					<%= subproductsListTemplate({composition: compElement.element.item.versions[0].composition, gastroOffer: gastroOffer, tax:tax, images:images, i18n:i18n, parentRecipe: compElement, elementsList: compElement.subproducts}) %>
+					<%}%>
+					</div>
+					<div class="page-break2"></div>	
+			</div>
+		<%});%>
+<%}%>

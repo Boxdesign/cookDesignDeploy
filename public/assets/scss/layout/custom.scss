@@ -1,0 +1,2005 @@
+/* here you can put your own css to customize and override the theme */
+body {
+    background-color: #323232;
+}
+
+input[type=text]:focus {
+		outline: none !important; 
+    border: 2px solid #a1a204;
+}
+
+.modal-backdrop {
+	z-index: 900;
+}
+
+.spinner {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 40px;
+  height: 40px;
+  background-color: #a0a127;
+  margin-top: -43px;
+  margin-left: -110px;
+
+  -webkit-animation: sk-rotateplane 1.2s infinite ease-in-out;
+  animation: sk-rotateplane 1.2s infinite ease-in-out;
+}
+
+@-webkit-keyframes sk-rotateplane {
+  0% { -webkit-transform: perspective(120px) }
+  50% { -webkit-transform: perspective(120px) rotateY(180deg) }
+  100% { -webkit-transform: perspective(120px) rotateY(180deg)  rotateX(180deg) }
+}
+
+@keyframes sk-rotateplane {
+  0% {
+    transform: perspective(120px) rotateX(0deg) rotateY(0deg);
+    -webkit-transform: perspective(120px) rotateX(0deg) rotateY(0deg)
+  } 50% {
+    transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg);
+    -webkit-transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg)
+  } 100% {
+    transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg);
+    -webkit-transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg);
+  }
+}
+
+.tab-box-title {
+	color: #a0a127;
+    margin-top: 20px;
+}
+
+.margin-top-20 {
+	margin-top: 20px;
+}
+
+.table-row-button {
+	border: none;
+	//text-transform: lowercase;
+}
+
+//colum-width unidades
+
+#unidades-table tr td:nth-child(1){
+    width:5%;
+}
+
+#unidades-table tr td:nth-child(2){
+    width:22%;
+}
+
+#unidades-table tr td:nth-child(3){
+    width:5%;
+}
+
+#unidades-table tr td:nth-child(4){
+    width:6%;
+}
+
+#unidades-table tr td:nth-child(5){
+    width:11%;
+}
+
+#unidades-table tr td:nth-child(6){
+    width:11%;
+}
+
+#unidades-table tr td:nth-child(7){
+    width:40%;
+}
+
+//colum-width allergen
+
+#allergens-table tr td:nth-child(1){
+    width:15%;
+}
+
+#allergens-table tr td:nth-child(2){
+    width:45%;
+}
+
+#allergens-table tr td:nth-child(3){
+    width:40%;
+}
+
+
+//colum-width ingredient and packaging
+
+#quartering-table tr td:nth-child(1), #quartering-table tr th:nth-child(1){
+    width:5%;
+}
+
+#quartering-table tr td:nth-child(2), #quartering-table tr th:nth-child(2){
+    width:20%;
+}
+
+#quartering-table tr td:nth-child(3), #quartering-table tr th:nth-child(3){
+    width:15%;
+    text-align: center;    
+}
+#quartering-table tr td:nth-child(4), #quartering-table tr th:nth-child(4){
+    width:15%;
+    text-align: center;    
+}
+
+#quartering-table tr td:nth-child(5), #quartering-table tr th:nth-child(5){
+    width:15%;
+    text-align: center;    
+}
+
+#quartering-table tr td:nth-child(6), #quartering-table tr th:nth-child(6){
+    width:15%;
+    text-align: center; 
+}
+#quartering-table tr td:nth-child(7), #quartering-table tr th:nth-child(7){
+    width:15%;
+}
+
+//colum-width ingredients
+
+#ingredients-table tr td:nth-child(1), #ingredients-table tr th:nth-child(1){
+    width:5%;
+    text-align: center;    
+}
+
+#ingredients-table tr td:nth-child(2), #ingredients-table tr th:nth-child(2){
+    width:5%;
+    text-align: center;    
+}
+
+#ingredients-table tr td:nth-child(3), #ingredients-table tr th:nth-child(3){
+    width:15%;
+    text-align: left;    
+}
+#ingredients-table tr td:nth-child(4), #ingredients-table tr th:nth-child(4){
+    text-align: center;    
+}
+
+#ingredients-table tr td:nth-child(5), #ingredients-table tr th:nth-child(5){
+    text-align: center;    
+}
+
+#ingredients-table tr td:nth-child(6), #ingredients-table tr th:nth-child(6){
+    text-align: center; 
+}
+#ingredients-table tr td:nth-child(7), #ingredients-table tr th:nth-child(7){
+    width:20%;
+    text-align: center; 
+}
+
+//colum-width packagings
+
+#packagings-table tr td:nth-child(1), #packagings-table tr th:nth-child(1){
+    width:5%;
+    text-align: center;    
+}
+
+#packagings-table tr td:nth-child(2), #packagings-table tr th:nth-child(2){
+    width:5%;
+    text-align: center;    
+}
+
+#packagings-table tr td:nth-child(3), #packagings-table tr th:nth-child(3){
+    width:15%;
+    text-align: left;    
+}
+#packagings-table tr td:nth-child(4), #packagings-table tr th:nth-child(4){
+    text-align: center;    
+}
+
+#packagings-table tr td:nth-child(5), #packagings-table tr th:nth-child(5){
+    text-align: center;    
+}
+
+#packagings-table tr td:nth-child(6), #packagings-table tr th:nth-child(6){
+    text-align: center; 
+}
+#packagings-table tr td:nth-child(7), #packagings-table tr th:nth-child(7){
+    width:20%;
+    text-align: center; 
+}
+
+
+
+
+//colum-width family
+
+#family-table tr td:nth-child(1){
+    width:5%;
+}
+
+#family-table tr td:nth-child(2){
+    width:55%;
+}
+
+#family-table tr td:nth-child(3){
+    width:40%;
+}
+
+//colum-width processes
+
+#processes-table tr td:nth-child(1){
+    width:20%;
+}
+
+#processes-table tr td:nth-child(2){
+    width:40%;
+}
+
+#processes-table tr td:nth-child(3){
+    width:40%;
+}
+
+//colum-width packformat
+
+#packformat-table tr td:nth-child(1){
+    width:15%;
+}
+
+#packformat-table tr td:nth-child(2){
+    width:20%;
+}
+
+#packformat-table tr td:nth-child(3){
+    width:25%;
+}
+
+#packformat-table tr td:nth-child(4){
+    width:40%;
+}
+
+//colum-width utensils
+
+#utensil-table tr td:nth-child(1){
+    width:15%;
+}
+
+#utensil-table tr td:nth-child(2){
+    width:20%;
+}
+
+#utensil-table tr td:nth-child(3){
+    width:25%;
+}
+
+#utensil-table tr td:nth-child(4){
+    width:40%;
+}
+
+//colum-width checkpoint
+
+#checkpoint-table tr td:nth-child(1){
+    width:60%;
+}
+
+#checkpoint-table tr td:nth-child(2){
+    width:40%;
+}
+
+//colum-width subproducts list
+
+#subproducts-list tr td:nth-child(1), #subproducts-list tr th:nth-child(1){
+    width:5%;
+    text-align: center;
+}
+
+#subproducts-list tr td:nth-child(2), #subproducts-list tr th:nth-child(2){
+    width:5%;
+    text-align: center;
+}
+
+#subproducts-list tr td:nth-child(3), #subproducts-list tr th:nth-child(3){
+    width:15%;
+    text-align: left;
+}
+
+#subproducts-list tr td:nth-child(4), #subproducts-list tr th:nth-child(4){
+    text-align: center;
+}
+
+#subproducts-list tr td:nth-child(5), #subproducts-list tr th:nth-child(5){
+    text-align: center;
+}
+
+#subproducts-list tr td:nth-child(6), #subproducts-list tr th:nth-child(6){
+    text-align: center;
+}
+
+#subproducts-list tr td:nth-child(7), #subproducts-list tr th:nth-child(7){
+    text-align: center;
+}
+
+#subproducts-list tr td:nth-child(8), #subproducts-list tr th:nth-child(8){
+    text-align: center;
+}
+
+#subproducts-list tr td:nth-child(9), #subproducts-list tr th:nth-child(9){
+    width:25%;
+    text-align: center;
+}
+
+//colum-width products list
+
+#products-list tr td:nth-child(1), #products-list tr th:nth-child(1){
+    width:5%;
+    text-align: center;
+}
+
+#products-list tr td:nth-child(2), #products-list tr th:nth-child(2){
+    width:5%;
+    text-align: center;
+}
+
+#products-list tr td:nth-child(3), #products-list tr th:nth-child(3){
+    width:15%;
+    text-align: left;
+}
+
+#products-list tr td:nth-child(4), #products-list tr th:nth-child(4){
+    text-align: center;
+}
+
+#products-list tr td:nth-child(5), #products-list tr th:nth-child(5){
+    text-align: center;
+}
+
+#products-list tr td:nth-child(6), #products-list tr th:nth-child(6){
+    text-align: center;
+}
+
+#products-list tr td:nth-child(7), #products-list tr th:nth-child(7){
+    text-align: center;
+}
+
+#products-list tr td:nth-child(8), #products-list tr th:nth-child(8){
+    text-align: center;
+}
+#products-list tr td:nth-child(9), #products-list tr th:nth-child(9){
+    text-align: center;
+}
+#products-list tr td:nth-child(10), #products-list tr th:nth-child(10){
+    text-align: center;
+}
+#products-list tr td:nth-child(11), #products-list tr th:nth-child(11){
+    text-align: center;
+}
+
+#products-list tr td:nth-child(12), #products-list tr th:nth-child(12){
+    width:25%;
+    text-align: center;
+}
+
+//colum-width dishes list
+
+#dishes-list tr td:nth-child(1), #dishes-list tr th:nth-child(1){
+    text-align: center;
+    width:5%;
+}
+
+#dishes-list tr td:nth-child(2), #dishes-list tr th:nth-child(2){
+    text-align: center;
+    width:5%;
+}
+
+#dishes-list tr td:nth-child(3), #dishes-list tr th:nth-child(3){
+    text-align: left;
+    width:20%;
+}
+
+#dishes-list tr td:nth-child(4), #dishes-list tr th:nth-child(4){
+    text-align: center;
+}
+
+#dishes-list tr td:nth-child(5), #dishes-list tr th:nth-child(5){
+    text-align: center;
+}
+
+#dishes-list tr td:nth-child(6), #dishes-list tr th:nth-child(6){
+    text-align: center;
+}
+
+#dishes-list tr td:nth-child(7), #dishes-list tr th:nth-child(7){
+    text-align: center;
+}
+
+#dishes-list tr td:nth-child(8), #dishes-list tr th:nth-child(8){
+    text-align: center;
+}
+
+#dishes-list tr td:nth-child(9), #dishes-list tr th:nth-child(9){
+    text-align: center;
+}
+
+#dishes-list tr td:nth-child(10), #dishes-list tr th:nth-child(10){
+    text-align: center;
+}
+
+#dishes-list tr td:nth-child(11), #dishes-list tr th:nth-child(11){
+    text-align: center;
+    width:25%;
+}
+//file-uploader-table -width dishes list
+
+#file-uploader-table tr td:nth-child(1), #file-uploader-table tr th:nth-child(1){
+    width:5%;
+}
+#file-uploader-table tr td:nth-child(2), #file-uploader-table tr th:nth-child(2){
+    width:20%;
+}
+
+#file-uploader-table tr td:nth-child(3), #file-uploader-table tr th:nth-child(3){
+    width:10%;
+    text-align: center;
+}
+
+#file-uploader-table tr td:nth-child(4), #file-uploader-table tr th:nth-child(4){
+    width:15%;
+    text-align: center;
+}
+
+#file-uploader-table tr td:nth-child(5), #file-uploader-table tr th:nth-child(5){
+    width:20%;
+    text-align: center;
+}
+
+#file-uploader-table tr td:nth-child(6), #file-uploader-table tr th:nth-child(6){
+    width:30%;
+    text-align: center;
+}
+
+//colum-width drinks list
+
+#drink-list tr td:nth-child(1), #drink-list tr th:nth-child(1){
+    width:5%;
+    text-align: center;
+}
+
+#drink-list tr td:nth-child(2), #drink-list tr th:nth-child(2){
+    width:5%;
+    text-align: center;
+}
+
+#drink-list tr td:nth-child(3), #drink-list tr th:nth-child(3){
+    width:20%;
+    text-align: left;
+}
+
+#drink-list tr td:nth-child(4), #drink-list tr th:nth-child(4){
+    text-align: center;
+}
+
+#drink-list tr td:nth-child(5), #drink-list tr th:nth-child(5){
+    text-align: center;
+}
+
+#drink-list tr td:nth-child(6), #drink-list tr th:nth-child(6){
+    text-align: center;
+}
+
+#drink-list tr td:nth-child(7), #drink-list tr th:nth-child(7){
+    text-align: center;
+}
+
+#drink-list tr td:nth-child(8), #drink-list tr th:nth-child(8){
+    text-align: center;
+}
+
+#drink-list tr td:nth-child(9), #drink-list tr th:nth-child(9){
+    text-align: center;
+}
+
+#drink-list tr td:nth-child(10), #drink-list tr th:nth-child(10){
+    text-align: center;
+}
+
+#drink-list tr td:nth-child(11), #drink-list tr th:nth-child(11){
+    width:25%;
+    text-align: center;
+}
+
+//colum-width menus list
+.menu-list tr td:nth-child(1), .menu-list tr th:nth-child(1){
+    width:5%;
+    text-align: center;
+}
+
+.menu-list tr td:nth-child(2), .menu-list tr th:nth-child(2){
+    width:20%;
+    text-align: left;
+}
+
+.menu-list tr td:nth-child(3), .menu-list tr th:nth-child(3){
+    text-align: center;
+}
+
+.menu-list tr td:nth-child(4), .menu-list tr th:nth-child(4){
+    text-align: center;
+}
+
+.menu-list tr td:nth-child(5), .menu-list tr th:nth-child(5){
+    text-align: center;
+}
+
+.menu-list tr td:nth-child(6), .menu-list tr th:nth-child(6){
+    text-align: center;
+}
+
+.menu-list tr td:nth-child(7), .menu-list tr th:nth-child(7){
+    text-align: center;
+}
+
+.menu-list tr td:nth-child(8), .menu-list tr th:nth-child(8){
+    text-align: center;
+}
+
+.menu-list tr td:nth-child(9), .menu-list tr th:nth-child(9){
+    text-align: center;
+}
+
+.menu-list tr td:nth-child(10), .menu-list tr th:nth-child(10){
+    width:25%;
+    text-align: center;
+}
+
+//colum-width dailyMenuCarte list
+.dailyMenuCarte-list tr td:nth-child(1), .dailyMenuCarte-list tr th:nth-child(1){
+    width:5%;
+    text-align: center;
+}
+
+.dailyMenuCarte-list tr td:nth-child(2), .dailyMenuCarte-list tr th:nth-child(2){
+    width:20%;
+    text-align: left;
+}
+
+.dailyMenuCarte-list tr td:nth-child(3), .dailyMenuCarte-list tr th:nth-child(3){
+    text-align: center;
+}
+
+.dailyMenuCarte-list tr td:nth-child(4), .dailyMenuCarte-list tr th:nth-child(4){
+    text-align: center;
+}
+
+.dailyMenuCarte-list tr td:nth-child(5), .dailyMenuCarte-list tr th:nth-child(5){
+    text-align: center;
+}
+
+.dailyMenuCarte-list tr td:nth-child(6), .dailyMenuCarte-list tr th:nth-child(6){
+    text-align: center;
+}
+
+.dailyMenuCarte-list tr td:nth-child(7), .dailyMenuCarte-list tr th:nth-child(7){
+    text-align: center;
+}
+
+.dailyMenuCarte-list tr td:nth-child(8), .dailyMenuCarte-list tr th:nth-child(8){
+    text-align: center;
+}
+
+.dailyMenuCarte-list tr td:nth-child(9), .dailyMenuCarte-list tr th:nth-child(9){
+    text-align: center;
+}
+
+.dailyMenuCarte-list tr td:nth-child(10), .dailyMenuCarte-list tr th:nth-child(10){
+    width:25%;
+    text-align: center;
+}
+
+//colum-width buffet list
+.buffet-list tr td:nth-child(1), .buffet-list tr th:nth-child(1){
+    width:5%;
+    text-align: center;
+}
+
+.buffet-list tr td:nth-child(2), .buffet-list tr th:nth-child(2){
+    width:20%;
+    text-align: left;
+}
+
+.buffet-list tr td:nth-child(3), .buffet-list tr th:nth-child(3){
+    text-align: center;
+}
+
+.buffet-list tr td:nth-child(4), .buffet-list tr th:nth-child(4){
+    text-align: center;
+}
+
+.buffet-list tr td:nth-child(5), .buffet-list tr th:nth-child(5){
+    text-align: center;
+}
+
+.buffet-list tr td:nth-child(6), .buffet-list tr th:nth-child(6){
+    text-align: center;
+}
+
+.buffet-list tr td:nth-child(7), .buffet-list tr th:nth-child(7){
+    text-align: center;
+}
+
+.buffet-list tr td:nth-child(8), .buffet-list tr th:nth-child(8){
+    text-align: center;
+}
+
+.buffet-list tr td:nth-child(9), .buffet-list tr th:nth-child(9){
+    text-align: center;
+}
+
+.buffet-list tr td:nth-child(10), .buffet-list tr th:nth-child(10){
+    width:25%;
+    text-align: center;
+}
+
+
+//colum-width carte list
+.carte-list tr td:nth-child(1), .carte-list tr th:nth-child(1){
+    width:5%;
+    text-align: center;
+}
+
+.carte-list tr td:nth-child(2), .carte-list tr th:nth-child(2){
+    width:20%;
+    text-align: left;
+}
+
+.carte-list tr td:nth-child(3), .carte-list tr th:nth-child(3){
+    text-align: center;
+}
+
+.carte-list tr td:nth-child(4), .carte-list tr th:nth-child(4){
+    text-align: center;
+}
+
+.carte-list tr td:nth-child(5), .carte-list tr th:nth-child(5){
+    text-align: center;
+}
+
+.carte-list tr td:nth-child(6), .carte-list tr th:nth-child(6){
+    text-align: center;
+}
+
+.carte-list tr td:nth-child(7), .carte-list tr th:nth-child(7){
+    width:25%;
+    text-align: center;
+}
+
+//colum-width fixedPriceCarte list
+.fixedPriceCarte-list tr td:nth-child(1), .fixedPriceCarte-list tr th:nth-child(1){
+    width:5%;
+    text-align: center;
+}
+
+.fixedPriceCarte-list tr td:nth-child(2), .fixedPriceCarte-list tr th:nth-child(2){
+    width:20%;
+    text-align: left;
+}
+
+.fixedPriceCarte-list tr td:nth-child(3), .fixedPriceCarte-list tr th:nth-child(3){
+    text-align: center;
+}
+
+.fixedPriceCarte-list tr td:nth-child(4), .fixedPriceCarte-list tr th:nth-child(4){
+    text-align: center;
+}
+
+.fixedPriceCarte-list tr td:nth-child(5), .fixedPriceCarte-list tr th:nth-child(5){
+    text-align: center;
+}
+
+.fixedPriceCarte-list tr td:nth-child(6), .fixedPriceCarte-list tr th:nth-child(6){
+    text-align: center;
+}
+
+.fixedPriceCarte-list tr td:nth-child(7), .fixedPriceCarte-list tr th:nth-child(7){
+    text-align: center;
+}
+
+.fixedPriceCarte-list tr td:nth-child(8), .fixedPriceCarte-list tr th:nth-child(8){
+    text-align: center;
+}
+
+.fixedPriceCarte-list tr td:nth-child(9), .fixedPriceCarte-list tr th:nth-child(9){
+    text-align: center;
+}
+
+.fixedPriceCarte-list tr td:nth-child(10), .fixedPriceCarte-list tr th:nth-child(10){
+    text-align: center;
+    width:25%;
+}
+
+//colum-width catalog list
+.catalog-list tr td:nth-child(1), .catalog-list tr th:nth-child(1){
+    width:5%;
+    text-align: center;
+}
+
+.catalog-list tr td:nth-child(2), .catalog-list tr th:nth-child(2){
+    width:20%;
+    text-align: left;
+}
+
+.catalog-list tr td:nth-child(3), .catalog-list tr th:nth-child(3){
+    text-align: center;
+}
+
+.catalog-list tr td:nth-child(4), .catalog-list tr th:nth-child(4){
+    text-align: center;
+}
+
+.catalog-list tr td:nth-child(5), .catalog-list tr th:nth-child(5){
+    text-align: center;
+}
+
+.catalog-list tr td:nth-child(6), .catalog-list tr th:nth-child(6){
+    text-align: center;
+}
+
+.catalog-list tr td:nth-child(7), .catalog-list tr th:nth-child(7){
+    width:25%;
+    text-align: center;
+}
+
+
+//colum-width dish list
+#dish-list tr td:nth-child(1), #dish-list tr th:nth-child(1){
+    width:5%;
+}
+
+#dish-list tr td:nth-child(2), #dish-list tr th:nth-child(2){
+    width:5%;
+}
+
+#dish-list tr td:nth-child(3), #dish-list tr th:nth-child(3){
+    width:20%;
+}
+
+#dish-list tr td:nth-child(4), #dish-list tr th:nth-child(4){
+    width:10%;
+}
+
+#dish-list tr td:nth-child(5), #dish-list tr th:nth-child(5){
+    width:15%;
+}
+
+#dish-list tr td:nth-child(6), #dish-list tr th:nth-child(6){
+    width:10%;
+}
+
+#dish-list tr td:nth-child(7), #dish-list tr th:nth-child(7){
+    width:10%;
+}
+
+#dish-list tr td:nth-child(8), #dish-list tr th:nth-child(8){
+    width:25%;
+}
+
+//colum-width dish pricing table
+
+#dish-pricing-table tr td:nth-child(1), #dish-pricing-table tr th:nth-child(1){
+    width:20%;
+}
+
+#dish-pricing-table tr td:nth-child(2), #dish-pricing-table tr th:nth-child(2){
+    width:20%;
+}
+
+#dish-pricing-table tr td:nth-child(3), #dish-pricing-table tr th:nth-child(3){
+    width:20%;
+}
+
+#dish-pricing-table tr td:nth-child(4), #dish-pricing-table tr th:nth-child(4){
+    width:25%;
+}
+
+//colum-width dish composition
+
+#dish-composition tr td:nth-child(1){
+    width:5%;
+    text-align: center;
+}
+
+#dish-composition tr td:nth-child(2){
+    width:18%;
+    text-align: left;
+}
+
+#dish-composition tr td:nth-child(3){
+    width:5%;
+    text-align: center;
+}
+
+#dish-composition tr td:nth-child(4){
+    width:5%;
+    text-align: center;
+}
+
+#dish-composition tr td:nth-child(5){
+    width:6%;
+    text-align: center;
+}
+
+#dish-composition tr td:nth-child(6){
+    width:5%;
+    text-align: center;
+}
+
+#dish-composition tr td:nth-child(7){
+    width:8%;
+    text-align: center;
+}
+
+#dish-composition tr td:nth-child(8){
+    width:8%;
+    text-align: center;
+}
+
+#dish-composition tr td:nth-child(9){
+    width:8%;
+    text-align: center;
+}
+
+#dish-composition tr td:nth-child(10){
+    width:8%;
+    text-align: center;
+}
+
+#dish-composition tr td:nth-child(11){
+    width:4%;
+    text-align: center;
+}
+
+#dish-composition tr td:nth-child(12){
+    width:20%;
+    text-align: center;
+}
+
+//column width menu-carte
+.menu-carte-table.table>tbody>tr>td:nth-child(1), 
+.menu-carte-table.table>thead>tr>th:nth-child(1) {
+   width: 5%; 
+}
+
+.menu-carte-table.table>tbody>tr>td:nth-child(2),
+.menu-carte-table.table>thead>tr>th:nth-child(2) {
+   width: 15%; 
+}
+
+.menu-carte-table.table>tbody>tr>td:nth-child(3),
+.menu-carte-table.table>thead>tr>th:nth-child(3) {
+   width: 2%; 
+}
+
+.menu-carte-table.table>tbody>tr>td:nth-child(4),
+.menu-carte-table.table>thead>tr>th:nth-child(4) {
+   width: 2%; 
+}
+
+.menu-carte-table.table>tbody>tr>td:nth-child(5),
+.menu-carte-table.table>thead>tr>th:nth-child(5) {
+   width: 17%; 
+}
+
+.menu-carte-table.table>tbody>tr>td:nth-child(6),
+.menu-carte-table.table>thead>tr>th:nth-child(6) {
+   width: 2%; 
+}
+
+.menu-carte-table.table>tbody>tr>td:nth-child(7),
+.menu-carte-table.table>thead>tr>th:nth-child(7) {
+   width: 2%; 
+}
+
+.menu-carte-table.table>tbody>tr>td:nth-child(8),
+.menu-carte-table.table>thead>tr>th:nth-child(8) {
+   width: 6%; 
+}
+
+.menu-carte-table.table>tbody>tr>td:nth-child(9),
+.menu-carte-table.table>thead>tr>th:nth-child(9) {
+   width: 6%; 
+}
+
+.menu-carte-table.table>tbody>tr>td:nth-child(10),
+.menu-carte-table.table>thead>tr>th:nth-child(10) {
+   width: 6%; 
+}
+
+.menu-carte-table.table>tbody>tr>td:nth-child(11),
+.menu-carte-table.table>thead>tr>th:nth-child(11) {
+   width: 6%; 
+}
+
+.menu-carte-table.table>tbody>tr>td:nth-child(12),
+.menu-carte-table.table>thead>tr>th:nth-child(12) {
+   width: 6%; 
+}
+
+.menu-carte-table.table>tbody>tr>td:nth-child(13),
+.menu-carte-table.table>thead>tr>th:nth-child(13) {
+   width: 25%; 
+}
+
+//column width carte
+.carte-table.table>tbody>tr>td:nth-child(1), .carte-table.table>thead>tr>th:nth-child(1),
+.catalog-table.table>tbody>tr>td:nth-child(1), .catalog-table.table>thead>tr>th:nth-child(1) {
+   width: 3%; 
+}
+
+.carte-table.table>tbody>tr>td:nth-child(2), .carte-table.table>thead>tr>th:nth-child(2),
+.catalog-table.table>tbody>tr>td:nth-child(2), .catalog-table.table>thead>tr>th:nth-child(2) {
+   width: 13%; 
+}
+
+.carte-table.table>tbody>tr>td:nth-child(3), .carte-table.table>thead>tr>th:nth-child(3)
+.catalog-table.table>tbody>tr>td:nth-child(3), .catalog-table.table>thead>tr>th:nth-child(3) {
+   width: 2%; 
+}
+
+.carte-table.table>tbody>tr>td:nth-child(4), .carte-table.table>thead>tr>th:nth-child(4)
+.catalog-table.table>tbody>tr>td:nth-child(4), .catalog-table.table>thead>tr>th:nth-child(4) {
+   width: 2%; 
+}
+
+.carte-table.table>tbody>tr>td:nth-child(5), .carte-table.table>thead>tr>th:nth-child(5)
+.catalog-table.table>tbody>tr>td:nth-child(5), .catalog-table.table>thead>tr>th:nth-child(5) {
+   width: 27%; 
+}
+
+.carte-table.table>tbody>tr>td:nth-child(6), .carte-table.table>thead>tr>th:nth-child(6)
+.catalog-table.table>tbody>tr>td:nth-child(6), .catalog-table.table>thead>tr>th:nth-child(6) {
+   width: 2%; 
+}
+
+.carte-table.table>tbody>tr>td:nth-child(7), .carte-table.table>thead>tr>th:nth-child(7)
+.catalog-table.table>tbody>tr>td:nth-child(7), .catalog-table.table>thead>tr>th:nth-child(7) {
+   width: 2%; 
+}
+
+.carte-table.table>tbody>tr>td:nth-child(8), .carte-table.table>thead>tr>th:nth-child(8)
+.catalog-table.table>tbody>tr>td:nth-child(8), .catalog-table.table>thead>tr>th:nth-child(8) {
+   width: 4%; 
+}
+
+.carte-table.table>tbody>tr>td:nth-child(9), .carte-table.table>thead>tr>th:nth-child(9)
+.catalog-table.table>tbody>tr>td:nth-child(9), .catalog-table.table>thead>tr>th:nth-child(9) {
+   width: 4%; 
+}
+
+.carte-table.table>tbody>tr>td:nth-child(10), .carte-table.table>thead>tr>th:nth-child(10)
+.catalog-table.table>tbody>tr>td:nth-child(10), .catalog-table.table>thead>tr>th:nth-child(10) {
+   width: 4%; 
+}
+
+.carte-table.table>tbody>tr>td:nth-child(11), .carte-table.table>thead>tr>th:nth-child(11)
+.catalog-table.table>tbody>tr>td:nth-child(11), .catalog-table.table>thead>tr>th:nth-child(11) {
+   width: 4%; 
+}
+
+.carte-table.table>tbody>tr>td:nth-child(12), .carte-table.table>thead>tr>th:nth-child(12)
+.catalog-table.table>tbody>tr>td:nth-child(12), .catalog-table.table>thead>tr>th:nth-child(12) {
+   width: 4%; 
+}
+
+.carte-table.table>tbody>tr>td:nth-child(13), .carte-table.table>thead>tr>th:nth-child(13)
+.catalog-table.table>tbody>tr>td:nth-child(13), .catalog-table.table>thead>tr>th:nth-child(13) {
+   width: 4%; 
+}
+
+.carte-table.table>tbody>tr>td:nth-child(14), .carte-table.table>thead>tr>th:nth-child(14)
+.catalog-table.table>tbody>tr>td:nth-child(14), .catalog-table.table>thead>tr>th:nth-child(14) {
+   width: 25%; 
+}
+
+//column width menu
+.menu-table.table>tbody>tr>td:nth-child(1), .menu-table.table>thead>tr>th:nth-child(1) {
+   width: 5%; 
+}
+
+.menu-table.table>tbody>tr>td:nth-child(2), .menu-table.table>thead>tr>th:nth-child(2) {
+   width: 15%; 
+}
+
+.menu-table.table>tbody>tr>td:nth-child(3), .menu-table.table>thead>tr>th:nth-child(3) {
+   width: 3%; 
+}
+
+.menu-table.table>tbody>tr>td:nth-child(4), .menu-table.table>thead>tr>th:nth-child(4) {
+   width: 3%; 
+}
+
+.menu-table.table>tbody>tr>td:nth-child(5), .menu-table.table>thead>tr>th:nth-child(5) {
+   width: 17%; 
+}
+
+.menu-table.table>tbody>tr>td:nth-child(6), .menu-table.table>thead>tr>th:nth-child(6) {
+   width: 2%; 
+}
+
+.menu-table.table>tbody>tr>td:nth-child(7), .menu-table.table>thead>tr>th:nth-child(7) {
+   width: 2%; 
+}
+
+.menu-table.table>tbody>tr>td:nth-child(8), .menu-table.table>thead>tr>th:nth-child(8) {
+   width: 7%; 
+}
+
+.menu-table.table>tbody>tr>td:nth-child(9), .menu-table.table>thead>tr>th:nth-child(9) {
+   width: 7%; 
+}
+
+.menu-table.table>tbody>tr>td:nth-child(10), .menu-table.table>thead>tr>th:nth-child(10) {
+   width: 7%; 
+}
+
+.menu-table.table>tbody>tr>td:nth-child(11), .menu-table.table>thead>tr>th:nth-child(11) {
+   width: 7%; 
+}
+
+.menu-table.table>tbody>tr>td:nth-child(12), .menu-table.table>thead>tr>th:nth-child(12) {
+   width: 25%; 
+}
+
+//column width articles
+.articles-list.table>tbody>th>td:nth-child(1), .articles-list.table>thead>tr>th:nth-child(1) {
+   width: 5%; 
+}
+
+.articles-list.table>tbody>th>td:nth-child(2), .articles-list.table>thead>tr>th:nth-child(2) {
+   width: 20%; 
+}
+
+.articles-list.table>tbody>th>td:nth-child(3), .articles-list.table>thead>tr>th:nth-child(3) {
+   width: 10%; 
+}
+
+.articles-list.table>tbody>th>td:nth-child(4), .articles-list.table>thead>tr>th:nth-child(4) {
+   width: 15%; 
+}
+
+.articles-list.table>tbody>th>td:nth-child(5), .articles-list.table>thead>tr>th:nth-child(5) {
+   width: 10%; 
+}
+
+.articles-list.table>tbody>th>td:nth-child(6), .articles-list.table>thead>tr>th:nth-child(6) {
+   width: 10%; 
+}
+
+.articles-list.table>tbody>th>td:nth-child(7), .articles-list.table>thead>tr>th:nth-child(7) {
+   width: 10%; 
+}
+
+.articles-list.table>tbody>th>td:nth-child(8), .articles-list.table>thead>tr>th:nth-child(8) {
+   width: 20%; 
+}
+
+//column width ingredient-articles-list
+.ingredient-articles-list.table>tbody>tr>td:nth-child(1), .ingredient-articles-list.table>thead>tr>th:nth-child(1) {
+   width: 5%; 
+}
+
+.ingredient-articles-list.table>tbody>tr>td:nth-child(2), .ingredient-articles-list.table>thead>tr>th:nth-child(2) {
+   width: 15%; 
+}
+
+.ingredient-articles-list.table>tbody>tr>td:nth-child(3), .ingredient-articles-list.table>thead>tr>th:nth-child(3) {
+   width: 20%; 
+}
+
+.ingredient-articles-list.table>tbody>tr>td:nth-child(4), .ingredient-articles-list.table>thead>tr>th:nth-child(4) {
+   width: 20%; 
+}
+
+.ingredient-articles-list.table>tbody>tr>td:nth-child(5), .ingredient-articles-list.table>thead>tr>th:nth-child(5) {
+   width: 15%; 
+}
+
+.ingredient-articles-list.table>tbody>tr>td:nth-child(6), .ingredient-articles-list.table>thead>tr>th:nth-child(6) {
+   width: 25%; 
+}
+
+//column width admin-user-list
+
+#user-list.table>tbody>tr>td:nth-child(1), #user-list.table>thead>tr>th:nth-child(1) {
+   width: 5%; 
+   vertical-align:middle;
+}
+
+#user-list.table>tbody>tr>td:nth-child(2), #user-list.table>thead>tr>th:nth-child(2) {
+   width: 10%; 
+   vertical-align:middle;
+}
+
+#user-list.table>tbody>tr>td:nth-child(3), #user-list.table>thead>tr>th:nth-child(3) {
+   width: 15%; 
+   vertical-align:middle;
+}
+
+#user-list.table>tbody>tr>td:nth-child(4), #user-list.table>thead>tr>th:nth-child(4) {
+   width: 15%; 
+   vertical-align:middle;
+}
+
+#user-list.table>tbody>tr>td:nth-child(5), #user-list.table>thead>tr>th:nth-child(5) {
+   width: 25%; 
+   vertical-align:middle;
+}
+
+#user-list.table>tbody>tr>td:nth-child(6), #user-list.table>thead>tr>th:nth-child(6) {
+   width: 5%; 
+   vertical-align:middle;
+}
+
+#user-list.table>tbody>tr>td:nth-child(7), #user-list.table>thead>tr>th:nth-child(7) {
+   width: 25%; 
+   vertical-align:middle;
+}
+
+//column width admin-user-account-list
+
+#account-list.table>tbody>tr>td:nth-child(1), #account-list.table>thead>tr>th:nth-child(1) {
+   width: 5%; 
+   vertical-align:middle;
+}
+
+#account-list.table>tbody>tr>td:nth-child(2), #account-list.table>thead>tr>th:nth-child(2) {
+   width: 25%; 
+   vertical-align:middle;
+}
+
+#account-list.table>tbody>tr>td:nth-child(3), #account-list.table>thead>tr>th:nth-child(3) {
+   width: 10%; 
+   vertical-align:middle;
+}
+
+#account-list.table>tbody>tr>td:nth-child(4), #account-list.table>thead>tr>th:nth-child(4) {
+   width: 10%; 
+   vertical-align:middle;
+}
+
+#account-list.table>tbody>tr>td:nth-child(5), #account-list.table>thead>tr>th:nth-child(5) {
+   width: 10%; 
+   vertical-align:middle;
+}
+
+#account-list.table>tbody>tr>td:nth-child(6), #account-list.table>thead>tr>th:nth-child(6) {
+   width: 25%; 
+   vertical-align:middle;
+}
+
+//column width admin roles list
+
+#role-list.table>tbody>tr>td:nth-child(1), #role-list.table>thead>tr>th:nth-child(1) {
+   width: 5%; 
+   vertical-align:middle;
+}
+
+#role-list.table>tbody>tr>td:nth-child(2), #role-list.table>thead>tr>th:nth-child(2) {
+   width: 70%; 
+   vertical-align:middle;
+}
+
+#role-list.table>tbody>tr>td:nth-child(3), #role-list.table>thead>tr>th:nth-child(3) {
+   width: 25%; 
+   vertical-align:middle;
+}
+
+//column width where is elements list
+
+#whereis.table>tbody>tr>td:nth-child(1), #whereis.table>thead>tr>th:nth-child(1) {
+   width: 5%; 
+   vertical-align:middle;
+}
+
+#whereis.table>tbody>tr>td:nth-child(2), #whereis.table>thead>tr>th:nth-child(2) {
+   width: 30%; 
+   vertical-align:middle;
+}
+
+#whereis.table>tbody>tr>td:nth-child(3), #whereis.table>thead>tr>th:nth-child(3) {
+   width: 15%; 
+   vertical-align:middle;
+   text-align: center;
+}
+
+#whereis.table>tbody>tr>td:nth-child(4), #whereis.table>thead>tr>th:nth-child(4) {
+   width: 15%; 
+   vertical-align:middle;
+   text-align: center;
+}
+
+#whereis.table>tbody>tr>td:nth-child(5), #whereis.table>thead>tr>th:nth-child(5) {
+   width: 10%; 
+   vertical-align:middle;
+   text-align: center;
+}
+
+#whereis.table>tbody>tr>td:nth-child(6), #whereis.table>thead>tr>th:nth-child(6) {
+   width: 20%; 
+   vertical-align:middle;
+   text-align: center;
+}
+
+//column width cooking steps
+
+.steps-list.table>tbody>tr>td:nth-child(1), .steps-list.table>thead>tr>th:nth-child(1) {
+   width: 2%; 
+}
+
+.steps-list.table>tbody>tr>td:nth-child(2), .steps-list.table>thead>tr>th:nth-child(2) {
+   width: 2%; 
+}
+
+.steps-list.table>tbody>tr>td:nth-child(3), .steps-list.table>thead>tr>th:nth-child(3) {
+   width: 2%; 
+}
+
+.steps-list.table>tbody>tr>td:nth-child(4), .steps-list.table>thead>tr>th:nth-child(4) {
+   width: 10%; 
+}
+
+.steps-list.table>tbody>tr>td:nth-child(5), .steps-list.table>thead>tr>th:nth-child(5) {
+   width: 20%; 
+}
+
+.steps-list.table>tbody>tr>td:nth-child(6), .steps-list.table>thead>tr>th:nth-child(6) {
+   width: 10%; 
+}
+
+.steps-list.table>tbody>tr>td:nth-child(7), .steps-list.table>thead>tr>th:nth-child(7) {
+   width: 10%; 
+}
+
+.steps-list.table>tbody>tr>td:nth-child(8), .steps-list.table>thead>tr>th:nth-child(8) {
+   width: 8%; 
+   text-align: center;
+
+}.steps-list.table>tbody>tr>td:nth-child(9), .steps-list.table>thead>tr>th:nth-child(9) {
+   width: 5%; 
+   text-align: center;
+
+}.steps-list.table>tbody>tr>td:nth-child(10), .steps-list.table>thead>tr>th:nth-child(10) {
+   width: 6%; 
+   text-align: center;
+}
+
+.steps-list.table>tbody>tr>td:nth-child(11), .steps-list.table>thead>tr>th:nth-child(11) {
+   width: 25%; 
+}
+
+//column width cooking steps
+
+.providers-list.table>tbody>tr>td:nth-child(1), .providers-list.table>thead>tr>th:nth-child(1) {
+   width: 5%; 
+}
+
+.providers-list.table>tbody>tr>td:nth-child(2), .providers-list.table>thead>tr>th:nth-child(2) {
+   width: 40%; 
+}
+
+.providers-list.table>tbody>tr>td:nth-child(3), .providers-list.table>thead>tr>th:nth-child(3) {
+   width: 15%; 
+}
+
+.providers-list.table>tbody>tr>td:nth-child(4), .providers-list.table>thead>tr>th:nth-child(4) {
+   width: 15%; 
+}
+
+.providers-list.table>tbody>tr>td:nth-child(5), .providers-list.table>thead>tr>th:nth-child(5) {
+   width: 25%; 
+}
+
+//column width location prices
+
+.ingredient-location-cost.table>tbody>tr>td:nth-child(1), .ingredient-location-cost.table>thead>tr>th:nth-child(1) {
+   width: 10%; 
+}
+
+.ingredient-location-cost.table>tbody>tr>td:nth-child(2), .ingredient-location-cost.table>thead>tr>th:nth-child(2) {
+   width: 45%; 
+}
+
+.ingredient-location-cost.table>tbody>tr>td:nth-child(3), .ingredient-location-cost.table>thead>tr>th:nth-child(3) {
+   width: 45%; 
+}
+
+.cd-pagination > .pagination > .active > a, .cd-pagination > .pagination > .active > a:hover, .cd-pagination > .pagination > .active > a:focus, .cd-pagination > .pagination > .active > span, .cd-pagination > .pagination > .active > span:hover, .cd-pagination > .pagination > .active > span:focus {
+    z-index: 3;
+    color: #fff;
+    background-color: #a1a204;
+    border-color: #a1a204;
+    cursor: default;
+}
+
+.portlet.box > .cd-portlet-body {
+    padding: 0px;
+}
+
+.cd-tab-content {
+    padding-top: 0;
+    padding-left: 2%;
+    padding-right: 2%;
+    padding-bottom: 2%;
+    min-height: 630px;
+}
+
+.cd-navs {
+    background-color: #2C2C2C;
+}
+
+.cd-nav-pills > li.active > a, .cd-nav-pills > li.active > a:hover, .cd-nav-pills > li.active > a:focus {
+    background-color: #F9F9F9;
+    color: #a0a127;
+}
+
+.cd-nav-pills > li > a {
+    color: #91918c;
+    display: block;
+    width: 100%;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-weight: 600;
+    font-family: "Lato";
+    font-size: 12px;
+}
+
+.cd-nav-pills > li > a:hover, .cd-nav-pills > li > a:focus {
+    color: #ffffff;
+    background-color: #2C2C2C;
+}
+
+.form-control:focus {
+    border-color: #a0a127;
+    border-bottom-width: 2px !important;
+    border-bottom-color: rgba(162, 163, 25, 0.74) !important;
+}
+
+.control-label {
+    font-size: 11px;
+    margin-bottom: 5px;
+    color: #31312e;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.form-control {
+    width: 100%;
+    //height: 45px;
+    border: 1px solid rgba(161, 162, 4, 0.31);
+    //font-size: 16px !important;
+    //padding: 10px;
+    font-weight: 400;
+    font-family: "Lato" !important;
+    color: #606051;
+    background: rgba(255, 255, 255, 0.64);
+}
+
+.tabbable {
+    background-color: #F9F9F9;
+}
+
+.ingredient-label-image {
+    font-size: 11px;
+    color: #948D7C;
+    margin-bottom: 5px;
+    padding-left: 0px;
+    margin-top: 20px;
+}
+
+.packaging-label-image {
+  font-size: 11px;
+  color: #948D7C;
+  margin-bottom: 5px;
+  padding-left: 0px;
+  margin-top: 20px;
+}
+.panel-image-preview {
+    border: 1px solid #DFDFDF;
+    display: block;
+    margin-bottom: 20px;
+}
+
+.panel-image {
+    margin-bottom: 20px;
+}
+
+.allergen-card-content > span {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 12px;
+    margin-top: 5px;
+    color: grey;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.portlet.light {
+    background-color: #F9F9F9;
+}
+
+.input-group-addon{
+    border: 1px solid rgba(161, 162, 4, 0.31);
+}
+
+.tabbable-line > .nav-tabs > li > a {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 12px;
+}
+
+.tabbable-line > .nav-tabs > li.active > a {
+    color: #a0a127;
+}
+
+.tabbable-line > .nav-tabs > li.active {
+    border-bottom: 4px solid #a0a127;
+    position: relative;
+}
+
+.tabbable-line > .nav-tabs > li.open, .tabbable-line > .nav-tabs > li:hover {
+    background: none;
+    border-bottom: 4px solid #BCBD2B;
+}
+
+.portlet.box > .portlet-body {
+   background-color: #F9F9F9;
+}
+
+.page-container-bg-solid .tabbable-line>.tab-content {
+    border-top: 1px solid #dae2ea;
+}
+
+#new-ingredient {
+    padding-top:0px;
+}
+
+.pointer {
+    cursor: pointer;
+}
+
+.pagination-separator {
+    vertical-align: middle;
+    display: inline-block;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.pagination>li>a, .pagination>li>span {
+	color: #a1a204;
+}
+
+#ingredient-title{
+    border:none;
+}
+
+.label-cd {
+    background-color: #a1a204;
+}
+
+.cd-gold {
+    color: #a1a204;
+}
+
+.subfamily-row{
+    background-color: #e2e3be;
+}
+
+.toggle-row-visible td {
+  visibility: visible;
+  opacity: 1;
+  transition: visibility 0s linear 0s, opacity 300ms;
+}
+
+.toggle-row-hidden td {
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s linear 300ms, opacity 300ms;
+}
+
+.tabbable-line > .tab-content {
+    padding: 0px;
+}
+
+#addCookingStepModal {
+    padding: 35px;
+}
+
+.videoWrapper {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 */
+    padding-top: 25px;
+    height: 0;
+}
+.videoWrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.page-header.navbar.navbar-fixed-top {
+    z-index: 999;
+}
+
+.simple-notification {
+    background: #a0a127;
+}
+
+.form-control.disabled {
+    background-color: #efefef;
+}
+
+.form-control.text-danger {
+    color: red;
+}
+
+
+// Menu table properties
+.menu-table.table>tbody>tr>td, 
+.menu-carte-table.table>tbody>tr>td, 
+.carte-table.table>tbody>tr>td,
+.fixed-price-carte-table>tbody>tr>td,
+.catalog-table>tbody>tr>td {
+    border-top: none;
+    border-right: 1px solid #ddd;
+    vertical-align: bottom;
+}
+
+table.menu-table, 
+table.menu-carte-table, 
+table.carte-table,
+table.fixed-price-carte-table,
+table.catalog-table  {
+    border-collapse: separate;
+}
+
+.menu-table.table>tbody>tr>td:nth-child(2),
+.menu-table.table>tbody>tr>td:nth-child(3), 
+.menu-carte-table.table>tbody>tr>td:nth-child(2),
+.menu-carte-table.table>tbody>tr>td:nth-child(3), 
+.carte-table.table>tbody>tr>td:nth-child(2),
+.carte-table.table>tbody>tr>td:nth-child(3),
+.fixed-price-carte-table.table>tbody>tr>td:nth-child(2),
+.fixed-price-carte-table.table>tbody>tr>td:nth-child(3),
+.catalog-table.table>tbody>tr>td:nth-child(2),
+.catalog-table.table>tbody>tr>td:nth-child(3), {
+    border-right: none;
+    vertical-align: middle;
+}
+
+.menu-table.table>tbody>tr>td:nth-child(5),
+.menu-table.table>tbody>tr>td:nth-child(6),
+.menu-carte-table.table>tbody>tr>td:nth-child(5),
+.menu-carte-table.table>tbody>tr>td:nth-child(6),
+.carte-table.table>tbody>tr>td:nth-child(5),
+.carte-table.table>tbody>tr>td:nth-child(6),
+.fixed-price-carte-table.table>tbody>tr>td:nth-child(5),
+.fixed-price-carte-table.table>tbody>tr>td:nth-child(6),
+.catalog-table.table>tbody>tr>td:nth-child(5),
+.catalog-table.table>tbody>tr>td:nth-child(6) {
+    border-right: none;
+}
+
+.menu-table.table>tbody>tr>td:nth-child(4),
+.menu-carte-table.table>tbody>tr>td:nth-child(4),
+.carte-table.table>tbody>tr>td:nth-child(4),
+.fixed-price-carte-table.table>tbody>tr>td:nth-child(4),
+.catalog-table.table>tbody>tr>td:nth-child(4) {
+    vertical-align: middle;
+}
+
+.menu-table.table>tbody>tr>td:nth-child(1), .menu-table.table>tbody>tr>th:nth-child(1),
+.menu-table.table>tbody>tr>td:nth-child(2), .menu-table.table>tbody>tr>th:nth-child(2),
+.menu-table.table>tbody>tr>td:nth-child(5), .menu-table.table>tbody>tr>th:nth-child(5),
+.menu-table.table>tbody>tr>td:nth-child(8), .menu-table.table>tbody>tr>th:nth-child(8),
+.menu-table.table>tbody>tr>td:nth-child(9), .menu-table.table>tbody>tr>th:nth-child(9),
+.menu-table.table>tbody>tr>td:nth-child(10), .menu-table.table>tbody>tr>th:nth-child(10),
+.menu-table.table>tbody>tr>td:nth-child(11), .menu-table.table>tbody>tr>th:nth-child(11),
+.menu-carte-table.table>tbody>tr>td:nth-child(1), .menu-carte-table.table>tbody>tr>th:nth-child(1),
+.menu-carte-table.table>tbody>tr>td:nth-child(2), .menu-carte-table.table>tbody>tr>th:nth-child(2),
+.menu-carte-table.table>tbody>tr>td:nth-child(5), .menu-carte-table.table>tbody>tr>th:nth-child(5),
+.menu-carte-table.table>tbody>tr>td:nth-child(8), .menu-carte-table.table>tbody>tr>th:nth-child(8),
+.menu-carte-table.table>tbody>tr>td:nth-child(9), .menu-carte-table.table>tbody>tr>th:nth-child(9),
+.menu-carte-table.table>tbody>tr>td:nth-child(10), .menu-carte-table.table>tbody>tr>th:nth-child(10),
+.menu-carte-table.table>tbody>tr>td:nth-child(11), .menu-carte-table.table>tbody>tr>th:nth-child(11),
+.menu-carte-table.table>tbody>tr>td:nth-child(12), .menu-carte-table.table>tbody>tr>th:nth-child(12),
+.carte-table.table>tbody>tr>td:nth-child(1), .carte-table.table>tbody>tr>th:nth-child(1),
+.carte-table.table>tbody>tr>td:nth-child(2), .carte-table.table>tbody>tr>th:nth-child(2),
+.carte-table.table>tbody>tr>td:nth-child(5), .carte-table.table>tbody>tr>th:nth-child(5),
+.carte-table.table>tbody>tr>td:nth-child(8), .carte-table.table>tbody>tr>th:nth-child(8),
+.carte-table.table>tbody>tr>td:nth-child(9), .carte-table.table>tbody>tr>th:nth-child(9),
+.carte-table.table>tbody>tr>td:nth-child(10), .carte-table.table>tbody>tr>th:nth-child(10),
+.carte-table.table>tbody>tr>td:nth-child(11), .carte-table.table>tbody>tr>th:nth-child(11),
+.carte-table.table>tbody>tr>td:nth-child(12), .carte-table.table>tbody>tr>th:nth-child(12),
+.carte-table.table>tbody>tr>td:nth-child(13), .carte-table.table>tbody>tr>th:nth-child(13),
+.fixed-price-carte-table.table>tbody>tr>td:nth-child(1), .fixed-price-carte-table.table>tbody>tr>th:nth-child(1),
+.fixed-price-carte-table.table>tbody>tr>td:nth-child(2), .fixed-price-carte-table.table>tbody>tr>th:nth-child(2),
+.fixed-price-carte-table.table>tbody>tr>td:nth-child(5), .fixed-price-carte-table.table>tbody>tr>th:nth-child(5),
+.fixed-price-carte-table.table>tbody>tr>td:nth-child(8), .fixed-price-carte-table.table>tbody>tr>th:nth-child(8),
+.fixed-price-carte-table.table>tbody>tr>td:nth-child(9), .fixed-price-carte-table.table>tbody>tr>th:nth-child(9),
+.fixed-price-carte-table.table>tbody>tr>td:nth-child(10), .fixed-price-carte-table.table>tbody>tr>th:nth-child(10),
+.fixed-price-carte-table.table>tbody>tr>td:nth-child(11), .fixed-price-carte-table.table>tbody>tr>th:nth-child(11),
+.fixed-price-carte-table.table>tbody>tr>td:nth-child(12), .fixed-price-carte-table.table>tbody>tr>th:nth-child(12),
+.fixed-price-carte-table.table>tbody>tr>td:nth-child(13), .fixed-price-carte-table.table>tbody>tr>th:nth-child(13),
+.fixed-price-carte-table.table>tbody>tr>td:nth-child(14), .fixed-price-carte-table.table>tbody>tr>th:nth-child(14),
+.catalog-table.table>tbody>tr>td:nth-child(1), .catalog-table.table>tbody>tr>th:nth-child(1),
+.catalog-table.table>tbody>tr>td:nth-child(2), .catalog-table.table>tbody>tr>th:nth-child(2),
+.catalog-table.table>tbody>tr>td:nth-child(5), .catalog-table.table>tbody>tr>th:nth-child(5),
+.catalog-table.table>tbody>tr>td:nth-child(8), .catalog-table.table>tbody>tr>th:nth-child(8),
+.catalog-table.table>tbody>tr>td:nth-child(9), .catalog-table.table>tbody>tr>th:nth-child(9),
+.catalog-table.table>tbody>tr>td:nth-child(10), .catalog-table.table>tbody>tr>th:nth-child(10),
+.catalog-table.table>tbody>tr>td:nth-child(11), .catalog-table.table>tbody>tr>th:nth-child(11),
+.catalog-table.table>tbody>tr>td:nth-child(12), .catalog-table.table>tbody>tr>th:nth-child(12),
+.catalog-table.table>tbody>tr>td:nth-child(13), .catalog-table.table>tbody>tr>th:nth-child(13),{
+    text-align: center;
+}
+.hide-view-mode{
+  display:none;
+}
+
+@media print {
+  .do-not-print{
+    display: none;
+  }
+
+  .table-full-print{
+        transform: scale(.9);
+        margin-bottom: 5px;
+        margin-top:55px;
+        border:none;
+  }
+}
+
+//ng2-select
+.cd-select .ui-select-choices-row.active > a {
+    color: #fff;
+    text-decoration: none;
+    outline: 0;
+    background-color: #a1a204;
+}    
+
+.btn-link {
+  color: #a1a204;
+} 
+
+//prime-ng customization
+
+legend {
+  font-size: 11px;
+  color: #31312e;
+  font-weight: 600;
+  text-transform: uppercase;
+  // padding-top: 5px;
+  // padding-bottom: 5px;
+  font-family: "Lato"
+}
+
+.ui-state-highlight .control-div {
+  color: #fff;
+}
+
+.ui-multiselect {
+  width: 100%;
+  background: #fff;
+  color: #000;
+}
+
+.ui-multiselect .ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default {
+  background: #fff;
+  color: #000;
+}
+
+.ui-button, .ui-button span, button.ui-button.ui-state-default span, .ui-button.ui-state-default span {
+  font-weight: 200;
+}
+
+td.ui-editable-column {
+  font-weight: 300;
+}
+
+.ui-dropdown.ui-widget .ui-dropdown-trigger .fa, .ui-multiselect.ui-widget .ui-multiselect-trigger .fa {
+  margin-left: 0px;
+  color: #333333;
+}
+
+.ui-dropdown-trigger {
+  background: #eeeeee;
+}
+
+.ui-button {
+  font-weight: 400;
+}
+
+.ui-select-match-text {
+  font-size: 12px;
+}
+
+.panel-default {
+  border: 1px solid rgba(161, 162, 4, 0.31);
+}  
+
+.list-group-item {
+  border: none;
+}
+
+.panel-body {
+  padding-bottom: 0px;
+}  
+
+.green {
+  color: green;
+}
+
+.red {
+  color: red;
+}
+
+/* ------------- Login ---------------*/
+
+.logo {
+	background-color: #FFFFFF;
+}
+
+#cd-login {
+	margin-top: 10%;
+}
+
+.content  {
+	background-color: #fff;
+  border-radius: 7px;
+  max-width: 400px;
+  padding: 30px;
+  padding-top: 10px;
+  overflow: hidden;
+}
+
+.fullscreen-bg {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    overflow: hidden;
+    z-index: -100;
+    opacity: .4;
+}
+
+.fullscreen-bg-video {
+  	position: fixed;
+  	top: 50%; left: 50%;
+ 	 	z-index: -100;
+  	min-width: 100%;
+  	min-height: 100%;
+  	width: auto;
+  	height: auto;
+  	transform: translate(-50%, -50%);
+    z-index: -100;
+}
+
+.fullscreen-bg-img {
+  	position: fixed;
+  	top: 50%; left: 50%;
+ 	 	z-index: -100;
+  	min-width: 100%;
+  	min-height: 100%;
+  	width: auto;
+  	height: auto;
+  	transform: translate(-50%, -50%);
+    z-index: -100;
+}
+
+
+.login {
+	background-color: transparent;
+	height: 100%;
+}
+
+.login .copyright {
+  opacity: .9;
+  z-index: 9999;
+}
+
+#login_copis {
+    padding-left: 60px;
+    padding-top: 20px;
+}
+
+#login_copis h1 {
+    font-weight: 300;
+    color: #FFF;
+    text-shadow: 3px 2px 2px rgba(25, 21, 10, 0.59);
+    font-family: "Lato";
+    font-size: 50px;
+    line-height: 70px;
+}
+
+#login_copis h2 {
+    font-weight: 100;
+    font-size: 27px;
+    color: #DFE217;
+    margin-top: 0px;
+    text-shadow: 3px 2px 2px rgba(25, 21, 10, 0.5);
+    line-height: 35px;
+    font-style: italic;
+}
+
+#login-box-container {
+    color: #F00;
+    text-align: left;
+    padding-top: 25px;
+}
+
+#landing_but{
+    background: rgba(255, 255, 255, 0.84);
+    padding: 20px;
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 50px;
+    cursor: pointer;
+    max-width: 300px;
+    box-shadow: 2px 2px 2px #000;
+    color: #333;
+}
+
+.tooltip-inner {
+  background-color: #2C2C2C;
+  color: #fff;
+}
+
+.tooltip .tooltip-arrow {
+  border-bottom-color: #2C2C2C;
+}
+
+.text-muted {
+  color: #a0a127;
+}
+
+.accordion {
+  font-size: 12px !important;
+  margin-bottom: -15px !important;
+  color: #31312e !important;
+  font-weight: 600 !important;
+  text-transform: uppercase !important;
+  border: none !important;
+  background-color: #f9f9f9 !important;
+}
+
+.accordion-toggle {
+  font-size: 12px !important;
+  margin-bottom: -15px !important;
+  color: #31312e !important;
+  font-weight: 600 !important;
+  text-transform: uppercase !important;
+  border: none !important;
+  background-color: #f9f9f9 !important;
+}
+
+.card, .panel-body, .card-block {
+  border: none !important;
+  font-size: 12px !important;
+  background-color: #f9f9f9 !important;
+}
+
+.langFieldSelected {
+  font-weight: 600;
+  text-transform: uppercase;
+  color: #a0a127;
+  font-size: 11px;
+  font-family: "Lato" !important;
+}
+
+.noLangFieldSelected {
+  font-size: 11px;
+  font-family: "Lato" !important;
+  color: #31312e;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.margin {
+
+  @media (max-width: 540px) {
+    margin-top: 10px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+  }
+
+  @media (max-width: 768px) {
+    display: inline-block;
+    margin-top: 10px;
+    margin-right: 10px ;
+    margin-bottom: 10px ;
+  }
+
+  @media (max-width: 925px) {
+    display: inline-block ;
+    margin-right: 10px !important;
+  }
+
+  @media (max-width: 1200px) {
+    display: inline-block;
+    margin-right: 10px;
+  }
+
+  @media (max-width: 1900px) {
+    display: inline-block;
+    margin-right: 40px;
+  }
+
+}
+
+.options{
+  border: 1px solid #a0a127 ;
+  padding: 5px 10px;
+}
+
+.showSteps {
+   position: absolute;
+   z-index: 1;
+   right: 0;
+
+   // -webkit-transition: right .3s;  /* Chrome y Safari */
+   // -o-transition: right .3s;  /* Opera */
+   // -moz-transition: right .3s;  /* Mozilla Firefox */
+   // -ms-transition: right .3s;   /* Internet Explorer */
+   // transition: right .3s;  /* W3C */
+}
+
+.showNextStep {
+   position: absolute;
+   z-index: -1;
+   right: 0;
+
+   // -webkit-transition: right .3s;  /* Chrome y Safari */
+   // -o-transition: right .3s;  /* Opera */
+   // -moz-transition: right .3s;  /* Mozilla Firefox */
+   // -ms-transition: right .3s;   /* Internet Explorer */
+   // transition: right .3s;  /* W3C */
+}
+
+.kitchen-select {
+  display: inline-block;
+}
+.add-kitchen {
+  padding-top: 5%
+}
+.kitchen-select i{
+  font-weight: bold; 
+  font-style: normal;
+}
+.kitchen-select-border {
+  border-top: none !important;
+}
+
+.icon-button {
+  cursor: pointer;
+}
+.icon-button:hover {
+  font-size: 1.3em;
+}
+
+.grey-backround {
+  background-color: #eee !important;
+}
+
+.viewProviders {
+  border: 1px solid rgba(161, 162, 4, 0.31);
+  max-height: 184px;
+  width: 90%; 
+  color: #606051; 
+  font-size: 0.8em;
+  min-height: 34px;
+  overflow: auto;
+}
+
+.green-form {
+  border-color: rgba(161, 162, 4, 0.31) !important;
+}
+
+.grey {
+  color: #606055;
+}
+.modal-xl {
+    width: 60vw;
+}
+.white-backround{
+    background-color: white !important;
+}

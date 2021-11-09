@@ -1,0 +1,13 @@
+{
+  "name": "CookDesign API",
+  "version": "0.1.0",
+  "description": "Api with endpoints for the CookDesign web App",
+  "title": "Docs - CookDesign",
+  "url": "notyet",
+  "dest": "./apiDoc",
+  "options": {
+    "excludeFilters": [
+      "node_modules/"
+    ]
+  }
+}
